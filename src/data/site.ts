@@ -55,6 +55,191 @@ export type Article = {
 
 export const articles: Article[] = [
   {
+    slug: "mohali-property-search-trends-2026",
+    category: "Market Notes",
+    title: "Mohali property search trends in 2026: what buyers are really comparing",
+    excerpt:
+      "A practical look at the search phrases, locality questions, and buyer priorities shaping Mohali property decisions in 2026.",
+    date: "14 Jul 2026",
+    readTime: "9 min read",
+    image: "/images/gallery-commercial.jpg",
+    imageAlt:
+      "Modern commercial building visual for Mohali property search trends",
+    tags: [
+      "Property consultants in Mohali",
+      "2026 trends",
+      "Locality guide",
+    ],
+    sources: officialSourceLinks,
+    map: {
+      title: "Mohali and airport-side search context",
+      query: "Mohali Aerocity IT City Airport Road",
+      href: "https://www.google.com/maps/search/?api=1&query=Mohali%20Aerocity%20IT%20City%20Airport%20Road",
+    },
+    sections: [
+      {
+        heading: "Search terms are getting more local",
+        paragraphs: [
+          "A buyer rarely searches only for property in Mohali anymore. The useful searches are more specific: property consultants in Mohali, best property dealers in Mohali, property dealer in Aerocity Mohali, plots in Mohali, commercial property in Mohali, Kharar property consultant, Zirakpur property consultant, or flats near Airport Road Mohali.",
+          "These phrases show intent, not certainty. A person typing best property dealers in Mohali is usually looking for a trustworthy local advisor, quick response, location knowledge, and practical shortlisting. The website should answer that intent with useful guidance, not with exaggerated claims.",
+        ],
+      },
+      {
+        heading: "The main buyer questions behind the keywords",
+        paragraphs: [
+          "Most search phrases are really shorthand for a question. Property consultants in Mohali means the visitor wants someone who can compare areas and filter options. Plot dealer in Mohali means they may need help with location, paperwork comfort, access road, and development status. Commercial property Mohali usually means frontage, parking, permitted use, visibility, and tenant practicality.",
+          "Good local SEO should match these questions clearly. That is why a real estate website should include area guides, buyer checklists, document-check notes, seller preparation articles, and direct contact paths through phone and WhatsApp.",
+        ],
+      },
+      {
+        heading: "Connectivity is shaping shortlists",
+        paragraphs: [
+          "Across Indian real estate coverage in 2026, connectivity keeps appearing as a major buyer filter. In Mohali, that translates into practical interest around Aerocity, IT City, Airport Road, Kharar, Zirakpur, New Chandigarh, and other Tricity movement corridors.",
+          "Connectivity should still be checked on the ground. A location can look close on a map but feel different because of traffic turns, road width, last-mile access, parking, daily market distance, or construction activity. The right question is not only how far it is, but how usable the route is for the buyer's daily routine.",
+        ],
+      },
+      {
+        heading: "Premium demand does not remove budget discipline",
+        paragraphs: [
+          "Recent housing-market commentary has highlighted buyer interest in premium and better-located homes, but that does not mean every premium-looking property is automatically a better decision. In Mohali, buyers should compare the actual apartment, floor, plot, or commercial unit instead of reacting only to the word premium.",
+          "A stronger decision checks layout, usable area, parking, lift quality, maintenance expectations, possession status, approach road, legal comfort, and how much extra money may be needed after purchase.",
+        ],
+      },
+      {
+        heading: "Useful keyword groups for Mohali pages",
+        bullets: [
+          "Advisor intent: property consultants in Mohali, real estate consultant in Mohali, property dealer Mohali, best property dealers in Mohali.",
+          "Residential intent: flats in Mohali, independent floors in Mohali, villas in Mohali, premium homes in Mohali, residential property consultant Mohali.",
+          "Plot intent: plots in Mohali, plot dealer in Mohali, Aerocity plot consultant, GMADA Aerocity plot guidance.",
+          "Commercial intent: commercial property in Mohali, SCO in Mohali, office space Mohali, Airport Road commercial property.",
+          "Location intent: Aerocity Mohali, IT City Mohali, Airport Road Mohali, Kharar, Zirakpur, New Chandigarh.",
+        ],
+      },
+      {
+        heading: "How buyers should use search results",
+        paragraphs: [
+          "Search results are only the first filter. After finding a property consultant or dealer, buyers should still check response quality, local clarity, whether the advisor asks useful questions, and whether the options shared match the buyer's budget and purpose.",
+          "A good advisor should slow down the process when needed. If documentation, possession, pricing, or location clarity is weak, the next step should be verification, not pressure.",
+        ],
+      },
+      {
+        heading: "A practical shortlisting process",
+        bullets: [
+          "Write the exact purpose: self-use, rental income, office, shop, resale, plot holding, or family home.",
+          "Pick two or three location belts instead of searching the whole Tricity at once.",
+          "Compare options using the same points: budget, access, paperwork comfort, parking, surroundings, and future usability.",
+          "Ask for recent photos, location clarity, and basic payment breakup before travelling.",
+          "Use official portals and legal review before token, agreement, or transfer decisions.",
+        ],
+      },
+      {
+        heading: "How Vedang Properties can use this search intent",
+        paragraphs: [
+          "Vedang Properties can serve search visitors best by answering practical questions quickly: which locality fits their use case, what kind of property they want, what budget range is realistic, and what should be verified before a visit.",
+          "The goal is not to claim that every option is perfect. The goal is to help buyers and sellers in Mohali compare real choices with cleaner information and fewer wasted visits.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "premium-homes-mohali-2026-checklist",
+    category: "Buyer Guide",
+    title: "Premium homes in Mohali: how to judge luxury, location, and livability",
+    excerpt:
+      "A detailed checklist for buyers comparing premium apartments, villas, independent floors, and higher-budget homes in Mohali.",
+    date: "14 Jul 2026",
+    readTime: "9 min read",
+    image: "/images/gallery-villa.jpg",
+    imageAlt: "Premium home exterior visual for Mohali luxury home guidance",
+    tags: ["Premium homes", "Buyer checklist", "Mohali"],
+    map: {
+      title: "Premium home search context in Mohali",
+      query: "Premium homes Mohali Aerocity IT City Sector 126",
+      href: "https://www.google.com/maps/search/?api=1&query=Premium%20homes%20Mohali%20Aerocity%20IT%20City%20Sector%20126",
+    },
+    sections: [
+      {
+        heading: "Premium should mean practical quality",
+        paragraphs: [
+          "Premium homes in Mohali are often searched as luxury flats in Mohali, villas in Mohali, independent floors in Mohali, or premium residential property near Aerocity and IT City. The words sound attractive, but a buyer should translate them into measurable points.",
+          "A premium home should offer better daily comfort, stronger location logic, cleaner maintenance, useful parking, better construction feel, sensible layout, and a more reliable ownership or project context. If these are missing, the premium may be more about marketing than livability.",
+        ],
+      },
+      {
+        heading: "Start with the buyer profile",
+        paragraphs: [
+          "A family buying for self-use should judge a premium home differently from an investor or an NRI buyer looking for easier management. Self-use depends on commute, schools, markets, security, maintenance, room sizes, sunlight, and long-term comfort. Investment decisions depend more on tenant profile, holding cost, resale audience, documentation, and exit timing.",
+          "Before comparing properties, write down the non-negotiables: location belt, minimum usable space, parking requirement, floor preference, lift requirement, possession timeline, and budget ceiling after registry, interiors, and maintenance deposits.",
+        ],
+      },
+      {
+        heading: "Location: premium on map versus premium in real life",
+        paragraphs: [
+          "A property may be close to Airport Road, Aerocity, IT City, Kharar, or Zirakpur on the map, but the real experience depends on the exact approach road, traffic flow, nearby development, parking behavior, and day-to-day convenience.",
+          "Visit the surrounding area, not just the sample flat or house. Check how the entry feels, whether the road is comfortable at busy hours, whether nearby shops and services are practical, and whether ongoing construction may affect daily living for the next few years.",
+        ],
+      },
+      {
+        heading: "Layout and usable space",
+        bullets: [
+          "Check room dimensions, not only super area or headline size.",
+          "Look at storage, kitchen utility, balcony use, ventilation, and natural light.",
+          "For villas and floors, check stair comfort, parking placement, roof rights, and privacy.",
+          "For apartments, check lift count, corridor width, tower density, and floor plan efficiency.",
+          "Ask what is included: wardrobes, modular kitchen, air-conditioning, fixtures, parking, clubhouse, or other amenities.",
+        ],
+      },
+      {
+        heading: "Amenities should match usage",
+        paragraphs: [
+          "A long amenity list can look impressive, but it should be checked against real use. Buyers should ask whether the clubhouse, gym, park, pool, security, power backup, visitor parking, and maintenance team are operational, planned, or only promised.",
+          "Maintenance cost matters. Premium amenities can increase monthly charges, so buyers should understand what they are paying for and whether the facilities will actually be used by the family or tenant.",
+        ],
+      },
+      {
+        heading: "Premium budget should include after-purchase costs",
+        paragraphs: [
+          "A higher-budget home can still feel financially tight if the buyer only plans for the sale price. Registry, stamp duty, interiors, furniture, electrical work, parking, maintenance deposits, brokerage if applicable, loan processing, shifting, and repairs should be estimated before final decision.",
+          "For ready homes, inspect seepage, flooring, bathrooms, woodwork, electrical load, air-conditioning points, lift condition, and society maintenance. For under-construction or new inventory, understand payment schedule, possession timeline, and what happens if completion or handover takes longer than expected.",
+        ],
+      },
+      {
+        heading: "Builder, society, and paperwork comfort",
+        bullets: [
+          "Ask for project, ownership, allotment, registry, or transfer details based on property type.",
+          "For covered projects, check RERA applicability and project information where relevant.",
+          "For resale units, understand ownership chain, loan status, dues, and possession condition.",
+          "For independent floors or villas, clarify land share, access, parking, roof rights, and construction approvals where applicable.",
+          "Use a qualified legal professional before token, agreement, or final transfer.",
+        ],
+      },
+      {
+        heading: "Investment expectations need caution",
+        paragraphs: [
+          "Premium housing can attract attention, but no property consultant should promise fixed appreciation or guaranteed returns. The safer discussion is about location quality, rental audience, holding period, maintenance cost, property condition, and the likely future buyer or tenant profile.",
+          "If rental income is important, compare the tenant type that would realistically choose the property. A premium home with weak access, high maintenance, or poor daily convenience may be harder to rent than a simpler but better-located option.",
+        ],
+      },
+      {
+        heading: "Site visit checklist for premium homes",
+        bullets: [
+          "Visit during daylight and, if possible, once during a busier traffic window.",
+          "Check entry, parking, lift, security, maintenance, common areas, and nearby construction.",
+          "Ask for written clarity on inclusions, possession, dues, charges, and handover condition.",
+          "Compare at least two location belts before assuming one project is the obvious choice.",
+          "Do not let premium branding replace legal, financial, and practical checks.",
+        ],
+      },
+      {
+        heading: "How Vedang Properties can help",
+        paragraphs: [
+          "Vedang Properties can help premium-home buyers compare options across Mohali and nearby corridors by use case: family living, investment, rental, resale, villa, independent floor, or apartment.",
+          "The advisory focus is to filter options before visits, organize questions, compare practical strengths and limitations, and help the buyer move toward professional document review with better clarity.",
+        ],
+      },
+    ],
+  },
+  {
     slug: "buying-plot-mohali-shortlisting-checks",
     category: "Buyer Guide",
     title: "Buying a plot in Mohali: checks before shortlisting",
