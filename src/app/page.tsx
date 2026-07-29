@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { BrandLockup } from "@/components/BrandLockup";
 import { LeadForm } from "@/components/LeadForm";
+import { areaGuides } from "@/data/areas";
 import { contact, featuredArticles } from "@/data/site";
 import { coreSeoKeywords } from "@/data/seo";
 
@@ -23,64 +24,26 @@ const propertyTypes = [
   {
     title: "Buy a home",
     copy: "Apartments, builder floors, villas, and ready-to-move family homes.",
+    href: "/residential-property-mohali",
     icon: HomeIcon,
   },
   {
     title: "Plots and land",
     copy: "Residential plots, investment land, and location-led options.",
+    href: "/plot-dealer-mohali",
     icon: PlotIcon,
   },
   {
     title: "Commercial",
     copy: "SCO, showroom, office, and rental yield focused opportunities.",
+    href: "/commercial-property-mohali",
     icon: BuildingIcon,
   },
   {
     title: "Sell property",
     copy: "Owner leads, buyer matching, site visits, and documentation support.",
+    href: "/sell-property-mohali",
     icon: KeyIcon,
-  },
-];
-
-const localityMaps = [
-  {
-    title: "Aerocity",
-    copy: "Airport-side residential and commercial demand with quick access to MCC 2 and nearby sectors.",
-    mapQuery: "Aerocity Mohali",
-    mapUrl: "https://www.google.com/maps/search/?api=1&query=Aerocity%20Mohali",
-  },
-  {
-    title: "IT City",
-    copy: "Useful for buyers comparing office access, newer sectors, and investment-led property decisions.",
-    mapQuery: "IT City Mohali",
-    mapUrl: "https://www.google.com/maps/search/?api=1&query=IT%20City%20Mohali",
-  },
-  {
-    title: "Airport Road",
-    copy: "A key corridor for buyers who want connectivity between Mohali, Aerocity, and Zirakpur.",
-    mapQuery: "Airport Road Mohali",
-    mapUrl:
-      "https://www.google.com/maps/search/?api=1&query=Airport%20Road%20Mohali",
-  },
-  {
-    title: "Kharar",
-    copy: "Popular for budget-sensitive buyers comparing family homes, floors, and wider residential options.",
-    mapQuery: "Kharar Punjab",
-    mapUrl: "https://www.google.com/maps/search/?api=1&query=Kharar%20Punjab",
-  },
-  {
-    title: "Zirakpur",
-    copy: "Considered by buyers who need Tricity movement, highway access, and rental-oriented options.",
-    mapQuery: "Zirakpur Punjab",
-    mapUrl:
-      "https://www.google.com/maps/search/?api=1&query=Zirakpur%20Punjab",
-  },
-  {
-    title: "New Chandigarh",
-    copy: "A developing belt for buyers who are comfortable comparing longer-horizon property choices.",
-    mapQuery: "New Chandigarh",
-    mapUrl:
-      "https://www.google.com/maps/search/?api=1&query=New%20Chandigarh",
   },
 ];
 
@@ -283,9 +246,25 @@ export default function Home() {
                   <p className="mt-3 text-sm leading-6 text-slate-600">
                     {item.copy}
                   </p>
+                  <Link
+                    href={item.href}
+                    className="mt-5 inline-flex h-10 items-center rounded-md border border-[#10383a] px-4 text-sm font-semibold text-[#10383a] transition hover:bg-[#10383a] hover:text-white"
+                  >
+                    Explore service
+                    <ArrowIcon />
+                  </Link>
                 </article>
               );
             })}
+          </div>
+          <div className="mt-6">
+            <Link
+              href="/property-consultant-mohali"
+              className="inline-flex h-11 items-center rounded-md bg-[#10383a] px-5 text-sm font-semibold text-white transition hover:bg-[#0c2b2d]"
+            >
+              See the full property consultant service
+              <ArrowIcon />
+            </Link>
           </div>
         </div>
       </section>
@@ -310,7 +289,7 @@ export default function Home() {
           </div>
 
           <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-            {localityMaps.map((area) => (
+            {areaGuides.map((area) => (
               <article
                 key={area.title}
                 className="reveal overflow-hidden rounded-lg border border-black/10 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-slate-950/10"
@@ -331,20 +310,29 @@ export default function Home() {
                     Area guide
                   </p>
                   <h3 className="mt-1 text-xl font-semibold text-[#10383a]">
-                    {area.title}
+                    {area.shortTitle}
                   </h3>
                   <p className="mt-2 text-sm leading-6 text-slate-600">
                     {area.copy}
                   </p>
-                  <a
-                    href={area.mapUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="mt-5 inline-flex h-10 items-center justify-center gap-2 rounded-md border border-[#10383a] px-4 text-sm font-semibold text-[#10383a] transition hover:bg-[#10383a] hover:text-white"
-                  >
-                    View on Google Maps
-                    <ArrowIcon />
-                  </a>
+                  <div className="mt-5 flex flex-wrap gap-2">
+                    <Link
+                      href={`/areas/${area.slug}`}
+                      className="inline-flex h-10 items-center justify-center gap-2 rounded-md bg-[#10383a] px-4 text-sm font-semibold text-white transition hover:bg-[#0c2b2d]"
+                    >
+                      Read area guide
+                      <ArrowIcon />
+                    </Link>
+                    <a
+                      href={area.mapUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex h-10 items-center justify-center gap-2 rounded-md border border-[#10383a] px-4 text-sm font-semibold text-[#10383a] transition hover:bg-[#10383a] hover:text-white"
+                    >
+                      Google Maps
+                      <ArrowIcon />
+                    </a>
+                  </div>
                 </div>
               </article>
             ))}

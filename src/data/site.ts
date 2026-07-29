@@ -62,7 +62,7 @@ export const articles: Article[] = [
       "A practical look at the search phrases, locality questions, and buyer priorities shaping Mohali property decisions in 2026.",
     date: "14 Jul 2026",
     readTime: "9 min read",
-    image: "/images/gallery-commercial.jpg",
+    image: "/images/blog-area-comparison.jpg",
     imageAlt:
       "Modern commercial building visual for Mohali property search trends",
     tags: [
@@ -149,7 +149,7 @@ export const articles: Article[] = [
       "A detailed checklist for buyers comparing premium apartments, villas, independent floors, and higher-budget homes in Mohali.",
     date: "14 Jul 2026",
     readTime: "9 min read",
-    image: "/images/gallery-villa.jpg",
+    image: "/images/blog-premium-homes.jpg",
     imageAlt: "Premium home exterior visual for Mohali luxury home guidance",
     tags: ["Premium homes", "Buyer checklist", "Mohali"],
     map: {
@@ -247,7 +247,7 @@ export const articles: Article[] = [
       "A practical plot-buying guide for checking location, access, development status, paperwork comfort, and budget before making a site visit.",
     date: "03 Jul 2026",
     readTime: "7 min read",
-    image: "/images/gallery-home.jpg",
+    image: "/images/blog-plot-checks.jpg",
     imageAlt: "Independent home exterior used for Mohali plot buying guidance",
     tags: ["Plots", "Buyer checklist", "Mohali"],
     map: {
@@ -320,7 +320,7 @@ export const articles: Article[] = [
       "A clear commercial-property checklist covering frontage, parking, access, usage, visibility, paperwork, and rental practicality.",
     date: "03 Jul 2026",
     readTime: "7 min read",
-    image: "/images/gallery-commercial.jpg",
+    image: "/images/blog-commercial-checks.jpg",
     imageAlt: "Commercial building visual for Mohali commercial property guidance",
     tags: ["Commercial", "SCO", "Mohali"],
     map: {
@@ -392,7 +392,7 @@ export const articles: Article[] = [
       "A practical checklist for buyers comparing apartments, builder floors, plots, or commercial property in Mohali and nearby areas.",
     date: "19 Jun 2026",
     readTime: "7 min read",
-    image: "/images/gallery-residential.jpg",
+    image: "/images/blog-site-visit.jpg",
     imageAlt: "Home key visual for a Mohali buyer checklist",
     tags: ["Site visit", "Buyer checklist", "Mohali"],
     sections: [
@@ -462,7 +462,7 @@ export const articles: Article[] = [
       "A careful, non-technical guide to the checks buyers should request before moving ahead with a property decision.",
     date: "19 Jun 2026",
     readTime: "8 min read",
-    image: "/images/gallery-villa.jpg",
+    image: "/images/blog-verify-documents.jpg",
     imageAlt: "Premium home exterior for property verification guidance",
     tags: ["Documentation", "GMADA", "RERA"],
     sources: officialSourceLinks,
@@ -535,7 +535,7 @@ export const articles: Article[] = [
       "A neutral way to compare nearby property markets by use case, commute, budget comfort, and end-use instead of hype.",
     date: "19 Jun 2026",
     readTime: "7 min read",
-    image: "/images/gallery-commercial.jpg",
+    image: "/images/blog-document-checks.jpg",
     imageAlt: "Modern commercial building for locality comparison",
     tags: ["Locality guide", "Aerocity", "IT City"],
     map: {
@@ -613,7 +613,7 @@ export const articles: Article[] = [
       "A simple preparation list for owners who want serious buyer enquiries instead of repeated calls with unclear details.",
     date: "19 Jun 2026",
     readTime: "6 min read",
-    image: "/images/gallery-home.jpg",
+    image: "/images/blog-owner-checklist.jpg",
     imageAlt: "Independent home visual for owner property preparation",
     tags: ["Sell property", "Owner leads", "Resale"],
     sections: [

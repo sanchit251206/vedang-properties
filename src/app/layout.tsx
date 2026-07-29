@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { contact } from "@/data/site";
 import { absoluteUrl, coreSeoKeywords, siteUrl } from "@/data/seo";
 import "./globals.css";
+
+const googleAnalyticsMeasurementId = "G-RK86ELKQ6C";
 
 const localBusinessJsonLd = {
   "@context": "https://schema.org",
@@ -113,6 +116,18 @@ export default function RootLayout({
             __html: JSON.stringify(localBusinessJsonLd),
           }}
         />
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsMeasurementId}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){window.dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${googleAnalyticsMeasurementId}');
+          `}
+        </Script>
         {children}
       </body>
     </html>
