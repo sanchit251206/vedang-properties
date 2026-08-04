@@ -3,7 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { BrandLockup } from "@/components/BrandLockup";
 import { LeadForm } from "@/components/LeadForm";
+import { ListingsExplorer } from "@/components/ListingsExplorer";
 import { areaGuides } from "@/data/areas";
+import { listings } from "@/data/listings";
 import { contact, featuredArticles } from "@/data/site";
 import { coreSeoKeywords } from "@/data/seo";
 
@@ -266,6 +268,35 @@ export default function Home() {
               <ArrowIcon />
             </Link>
           </div>
+        </div>
+      </section>
+
+      <section id="listings" className="reveal bg-white py-16 md:py-20">
+        <div className="mx-auto max-w-7xl px-5 md:px-8">
+          <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+            <SectionHeading
+              kicker="Current property options"
+              title="Browse flats, plots, and land available for enquiry"
+              copy="Review the supplied property details, shortlist suitable options, and open each listing for location context and the checks to complete before a visit."
+            />
+            <Link
+              href="/listings"
+              className="inline-flex min-h-12 items-center justify-center gap-2 rounded-md bg-[#10383a] px-5 text-base font-semibold text-white transition hover:bg-[#0c2b2d]"
+            >
+              Open listings page
+              <ArrowIcon />
+            </Link>
+          </div>
+
+          <div className="mt-10">
+            <ListingsExplorer listings={listings} />
+          </div>
+
+          <p className="mt-6 rounded-lg bg-[#f7f3e8] p-4 text-sm leading-6 text-slate-600">
+            Availability, price, exact location and documentation are confirmed
+            on enquiry. Listing artwork is illustrative and does not replace a
+            property inspection.
+          </p>
         </div>
       </section>
 
@@ -543,6 +574,9 @@ function HeroSection({ whatsappHref }: { whatsappHref: string }) {
           <BrandLockup />
 
           <nav className="hidden items-center gap-6 text-sm font-medium text-white/80 lg:flex">
+            <a className="transition hover:text-white" href="#listings">
+              Listings
+            </a>
             <a className="transition hover:text-white" href="#property-types">
               Services
             </a>
