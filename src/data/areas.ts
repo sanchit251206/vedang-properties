@@ -11,6 +11,7 @@ export type AreaGuide = {
   metaDescription: string;
   image: string;
   imageAlt: string;
+  mapImage: string;
   copy: string;
   intro: string;
   localContext: string;
@@ -37,6 +38,7 @@ export const areaGuides: AreaGuide[] = [
       "Compare homes, plots, and commercial property in Aerocity Mohali with practical local guidance from Vedang Properties.",
     image: "/images/area-aerocity.jpg",
     imageAlt: "Modern residential house exterior for an Aerocity Mohali area guide",
+    mapImage: "/images/map-aerocity.png",
     copy:
       "Airport-side residential and commercial options with access to MCC 2 and nearby sectors.",
     intro:
@@ -129,6 +131,7 @@ export const areaGuides: AreaGuide[] = [
       "Explore residential, plot, and commercial property questions in IT City Mohali with a practical area guide from Vedang Properties.",
     image: "/images/area-it-city.jpg",
     imageAlt: "Modern commercial building exterior for an IT City Mohali area guide",
+    mapImage: "/images/map-it-city.png",
     copy:
       "A newer-sector context for buyers comparing work access, residential use, and longer-horizon decisions.",
     intro:
@@ -221,6 +224,7 @@ export const areaGuides: AreaGuide[] = [
       "Compare property options along Airport Road Mohali with practical guidance for homes, plots, and commercial property from Vedang Properties.",
     image: "/images/area-airport-road.jpg",
     imageAlt: "Urban road and modern building visual for an Airport Road Mohali area guide",
+    mapImage: "/images/map-airport-road.png",
     copy:
       "A connectivity-led corridor linking Mohali, Aerocity, and nearby Tricity routes.",
     intro:
@@ -313,6 +317,7 @@ export const areaGuides: AreaGuide[] = [
       "Get practical guidance for comparing homes, floors, plots, and property options in Kharar with Vedang Properties.",
     image: "/images/area-kharar.jpg",
     imageAlt: "Residential home exterior for a Kharar property area guide",
+    mapImage: "/images/map-kharar.png",
     copy:
       "A varied residential market where buyers compare budget, access, family use, and exact pocket carefully.",
     intro:
@@ -405,6 +410,7 @@ export const areaGuides: AreaGuide[] = [
       "Compare homes, commercial property, and rental-oriented options in Zirakpur with practical Tricity property guidance from Vedang Properties.",
     image: "/images/area-zirakpur.jpg",
     imageAlt: "Modern villa exterior for a Zirakpur property area guide",
+    mapImage: "/images/map-zirakpur.png",
     copy:
       "A Tricity movement corridor where buyers compare highway access, apartment living, commercial use, and rental practicality.",
     intro:
@@ -497,6 +503,7 @@ export const areaGuides: AreaGuide[] = [
       "Compare longer-horizon residential, plot, and investment property questions in New Chandigarh with Vedang Properties.",
     image: "/images/area-new-chandigarh.jpg",
     imageAlt: "Independent home exterior for a New Chandigarh property area guide",
+    mapImage: "/images/map-new-chandigarh.png",
     copy: "A developing belt for buyers comparing longer-horizon residential and land decisions.",
     intro:
       "New Chandigarh may suit buyers who are comfortable comparing a developing locality over a longer horizon. The decision needs a clear distinction between current on-ground convenience, planned development, property paperwork, and the buyer's timeline.",

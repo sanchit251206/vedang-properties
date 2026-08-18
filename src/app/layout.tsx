@@ -1,10 +1,25 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
+import { Inter } from "next/font/google";
 import Script from "next/script";
+import { MobileQuickBar } from "@/components/MobileQuickBar";
 import { contact } from "@/data/site";
 import { absoluteUrl, coreSeoKeywords, siteUrl } from "@/data/seo";
 import "./globals.css";
 
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-inter",
+});
+
 const googleAnalyticsMeasurementId = "G-RK86ELKQ6C";
+
+export const viewport: Viewport = {
+  themeColor: "#102f33",
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+};
 
 const localBusinessJsonLd = {
   "@context": "https://schema.org",
@@ -108,8 +123,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full antialiased">
-      <body className="flex min-h-full flex-col">
+    <html lang="en" className={`h-full antialiased ${inter.variable}`}>
+      <body className="flex min-h-full flex-col pb-16 font-sans lg:pb-0">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -118,9 +133,9 @@ export default function RootLayout({
         />
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsMeasurementId}`}
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
-        <Script id="google-analytics" strategy="afterInteractive">
+        <Script id="google-analytics" strategy="lazyOnload">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){window.dataLayer.push(arguments);}
@@ -129,7 +144,9 @@ export default function RootLayout({
           `}
         </Script>
         {children}
+        <MobileQuickBar />
       </body>
     </html>
   );
 }
+

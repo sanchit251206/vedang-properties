@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { BrandLockup } from "@/components/BrandLockup";
+import { SiteHeader } from "@/components/SiteHeader";
 import { articles, contact, officialSourceLinks } from "@/data/site";
 import { coreSeoKeywords } from "@/data/seo";
 
@@ -31,7 +31,7 @@ export default function BlogPage() {
 
   return (
     <main className="min-h-screen bg-[#f7f3e8] text-slate-950">
-      <BlogHeader whatsappHref={whatsappHref} />
+      <SiteHeader variant="dark" />
 
       <section className="bg-[#10383a] py-16 text-white md:py-20">
         <div className="mx-auto max-w-7xl px-5 md:px-8">
@@ -170,61 +170,6 @@ export default function BlogPage() {
   );
 }
 
-function BlogHeader({ whatsappHref }: { whatsappHref: string }) {
-  return (
-    <header className="bg-[#102f33] text-white">
-      <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-5 py-5 md:px-8">
-        <BrandLockup />
-
-        <div className="flex flex-wrap gap-3">
-          <Link
-            href="/"
-            className="inline-flex h-11 items-center justify-center gap-2 rounded-md border border-white/30 px-4 text-sm font-semibold text-white transition hover:border-white hover:bg-white/10"
-          >
-            <HomeIcon />
-            Home
-          </Link>
-          <a
-            href={`tel:${contact.tel}`}
-            className="inline-flex h-11 items-center justify-center gap-2 rounded-md border border-white/30 px-4 text-sm font-semibold text-white transition hover:border-white hover:bg-white/10"
-          >
-            <PhoneIcon />
-            Call {contact.phoneDisplay}
-          </a>
-          <a
-            href={whatsappHref}
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex h-11 items-center justify-center gap-2 rounded-md bg-[#d6a74e] px-4 text-sm font-semibold text-[#102f33] transition hover:bg-[#e0b862]"
-          >
-            <MessageIcon />
-            WhatsApp
-          </a>
-        </div>
-      </div>
-    </header>
-  );
-}
-
-function HomeIcon() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 shrink-0"
-      fill="none"
-      stroke="currentColor"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth="2"
-    >
-      <path d="m3 11 9-8 9 8" />
-      <path d="M5 10v10h14V10" />
-      <path d="M9 20v-6h6v6" />
-    </svg>
-  );
-}
-
 function MapPinIcon() {
   return (
     <svg
@@ -293,23 +238,6 @@ function MessageIcon() {
       <path d="M21 11.5a8.38 8.38 0 0 1-1.9 5.3 8.5 8.5 0 0 1-10.2 2.1L3 21l2.1-5.7A8.5 8.5 0 1 1 21 11.5Z" />
       <path d="M8 10h8" />
       <path d="M8 14h5" />
-    </svg>
-  );
-}
-
-function PhoneIcon() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 shrink-0"
-      fill="none"
-      stroke="currentColor"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth="2"
-    >
-      <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2.1Z" />
     </svg>
   );
 }

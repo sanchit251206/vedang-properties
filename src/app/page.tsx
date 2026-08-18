@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { BrandLockup } from "@/components/BrandLockup";
 import { LeadForm } from "@/components/LeadForm";
 import { ListingsExplorer } from "@/components/ListingsExplorer";
+import { MapFacade } from "@/components/MapFacade";
+import { SiteHeader } from "@/components/SiteHeader";
 import { areaGuides } from "@/data/areas";
 import { listings } from "@/data/listings";
 import { contact, featuredArticles } from "@/data/site";
@@ -188,17 +189,13 @@ export default function Home() {
           </div>
 
           <div className="overflow-hidden rounded-lg border border-black/10 bg-white shadow-sm">
-            <div className="relative aspect-[16/9] bg-slate-100">
-              <iframe
-                title="Vedang Properties Google map"
-                src={`https://www.google.com/maps?q=${encodeURIComponent(
-                  contact.googleMapsQuery,
-                )}&output=embed`}
-                className="h-full w-full border-0"
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
-            </div>
+            <MapFacade
+              title="Vedang Properties Office"
+              mapQuery={contact.googleMapsQuery}
+              mapUrl={contact.googleMapsUrl}
+              badgeText="Aerocity Office"
+              aspectRatio="aspect-[16/9]"
+            />
             <div className="grid gap-4 p-5 md:grid-cols-[1fr_auto] md:items-center">
               <div>
                 <p className="text-sm font-semibold uppercase text-[#b85f45]">
@@ -325,17 +322,14 @@ export default function Home() {
                 key={area.title}
                 className="reveal overflow-hidden rounded-lg border border-black/10 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-slate-950/10"
               >
-                <div className="relative aspect-[16/10] overflow-hidden bg-slate-100">
-                  <iframe
-                    title={`${area.title} map`}
-                    src={`https://www.google.com/maps?q=${encodeURIComponent(
-                      area.mapQuery,
-                    )}&output=embed`}
-                    className="h-full w-full border-0"
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                  />
-                </div>
+                <MapFacade
+                  title={`${area.shortTitle} Locality`}
+                  mapQuery={area.mapQuery}
+                  mapUrl={area.mapUrl}
+                  mapImage={area.mapImage}
+                  badgeText="Area Guide"
+                  aspectRatio="aspect-[16/10]"
+                />
                 <div className="p-5">
                   <p className="text-sm font-semibold text-[#b85f45]">
                     Area guide
@@ -559,61 +553,19 @@ function HeroSection({ whatsappHref }: { whatsappHref: string }) {
     <section className="relative min-h-[88vh] overflow-hidden bg-[#102f33] text-white">
       <Image
         src="/images/gallery-home.jpg"
-        alt="Modern residential property exterior"
+        alt="Modern residential property exterior in Mohali"
         fill
         priority
         className="object-cover"
         sizes="100vw"
       />
-      <div className="absolute inset-0 bg-[#061c1f]/58" />
-      <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(6,28,31,0.96),rgba(6,28,31,0.74),rgba(6,28,31,0.28))]" />
+      <div className="absolute inset-0 bg-[#061c1f]/60" />
+      <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(6,28,31,0.96),rgba(6,28,31,0.78),rgba(6,28,31,0.35))]" />
       <div className="absolute inset-x-0 bottom-0 h-48 bg-[linear-gradient(0deg,rgba(6,28,31,0.96),rgba(6,28,31,0))]" />
 
-      <div className="relative z-10 mx-auto flex min-h-[88vh] max-w-7xl flex-col px-5 md:px-8">
-        <header className="flex flex-wrap items-center justify-between gap-4 py-5">
-          <BrandLockup />
+      <SiteHeader variant="hero" />
 
-          <nav className="hidden items-center gap-6 text-sm font-medium text-white/80 lg:flex">
-            <a className="transition hover:text-white" href="#listings">
-              Listings
-            </a>
-            <a className="transition hover:text-white" href="#property-types">
-              Services
-            </a>
-            <a className="transition hover:text-white" href="#areas">
-              Areas
-            </a>
-            <a className="transition hover:text-white" href="#google-profile">
-              Reviews
-            </a>
-            <a className="transition hover:text-white" href="#blog">
-              Blog
-            </a>
-            <a className="transition hover:text-white" href="#contact">
-              Contact
-            </a>
-          </nav>
-
-          <div className="flex flex-wrap gap-3">
-            <a
-              href={`tel:${contact.tel}`}
-              className="inline-flex h-11 items-center justify-center gap-2 rounded-md border border-white/30 px-4 text-sm font-semibold text-white transition hover:border-white hover:bg-white/10"
-            >
-              <PhoneIcon />
-              Call now
-            </a>
-            <a
-              href={whatsappHref}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex h-11 items-center justify-center gap-2 rounded-md bg-[#d6a74e] px-4 text-sm font-semibold text-[#102f33] transition hover:bg-[#e0b862]"
-            >
-              <MessageIcon />
-              WhatsApp
-            </a>
-          </div>
-        </header>
-
+      <div className="relative z-10 mx-auto flex min-h-[calc(88vh-80px)] max-w-7xl flex-col px-5 md:px-8">
         <div className="grid flex-1 items-center gap-10 py-8 lg:grid-cols-[minmax(0,1fr)_440px] lg:py-12">
           <div className="max-w-3xl">
             <p className="inline-flex rounded-md bg-white/12 px-3 py-2 text-sm font-semibold text-[#f2d68c] ring-1 ring-white/15">

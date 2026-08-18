@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { ListingCard } from "@/components/ListingCard";
 import { ListingsFooter } from "@/components/ListingsFooter";
 import { ListingsHeader } from "@/components/ListingsHeader";
+import { MapFacade } from "@/components/MapFacade";
 import { getListing, listings } from "@/data/listings";
 import { contact } from "@/data/site";
 import { absoluteUrl } from "@/data/seo";
@@ -338,17 +339,13 @@ export default async function ListingPage({ params }: ListingPageProps) {
             </a>
           </div>
           <div className="mt-7 overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm">
-            <div className="aspect-[16/7] min-h-[300px]">
-              <iframe
-                title={`${listing.location} map context`}
-                src={`https://www.google.com/maps?q=${encodeURIComponent(
-                  listing.mapQuery,
-                )}&output=embed`}
-                className="h-full w-full border-0"
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
-            </div>
+            <MapFacade
+              title={`${listing.location} Context`}
+              mapQuery={listing.mapQuery}
+              mapUrl={mapHref}
+              badgeText="Locality Map"
+              aspectRatio="aspect-[16/7]"
+            />
             <p className="p-5 text-sm leading-6 text-slate-600">
               This map shows approximate locality context. Ask Vedang
               Properties to confirm the exact visit point; it is not a plot

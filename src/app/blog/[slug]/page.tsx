@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { BrandLockup } from "@/components/BrandLockup";
+import { MapFacade } from "@/components/MapFacade";
+import { SiteHeader } from "@/components/SiteHeader";
 import { articles, contact } from "@/data/site";
 import { absoluteUrl, coreSeoKeywords } from "@/data/seo";
 
@@ -76,37 +77,7 @@ export default async function BlogArticlePage({
 
   return (
     <main className="min-h-screen bg-[#f7f3e8] text-slate-950">
-      <header className="bg-[#102f33] text-white">
-        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-5 py-5 md:px-8">
-          <BrandLockup />
-
-          <div className="flex flex-wrap gap-3">
-            <Link
-              href="/"
-              className="inline-flex h-11 items-center justify-center gap-2 rounded-md border border-white/30 px-4 text-sm font-semibold text-white transition hover:border-white hover:bg-white/10"
-            >
-              <HomeIcon />
-              Home
-            </Link>
-            <a
-              href={`tel:${contact.tel}`}
-              className="inline-flex h-11 items-center justify-center gap-2 rounded-md border border-white/30 px-4 text-sm font-semibold text-white transition hover:border-white hover:bg-white/10"
-            >
-              <PhoneIcon />
-              Call {contact.phoneDisplay}
-            </a>
-            <a
-              href={whatsappHref}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex h-11 items-center justify-center gap-2 rounded-md bg-[#d6a74e] px-4 text-sm font-semibold text-[#102f33] transition hover:bg-[#e0b862]"
-            >
-              <MessageIcon />
-              WhatsApp
-            </a>
-          </div>
-        </div>
-      </header>
+      <SiteHeader variant="dark" />
 
       <article>
         <section className="bg-[#10383a] py-14 text-white md:py-20">
@@ -193,17 +164,13 @@ export default async function BlogArticlePage({
 
               {article.map ? (
                 <section className="mt-10 overflow-hidden rounded-lg border border-slate-200 bg-[#f7f3e8]">
-                  <div className="relative aspect-[16/10] bg-slate-100">
-                    <iframe
-                      title={article.map.title}
-                      src={`https://www.google.com/maps?q=${encodeURIComponent(
-                        article.map.query,
-                      )}&output=embed`}
-                      className="h-full w-full border-0"
-                      loading="lazy"
-                      referrerPolicy="no-referrer-when-downgrade"
-                    />
-                  </div>
+                  <MapFacade
+                    title={article.map.title}
+                    mapQuery={article.map.query}
+                    mapUrl={article.map.href}
+                    badgeText="Map Context"
+                    aspectRatio="aspect-[16/10]"
+                  />
                   <div className="flex flex-col gap-4 p-5 sm:flex-row sm:items-center sm:justify-between">
                     <div>
                       <p className="text-sm font-semibold uppercase text-[#b85f45]">
@@ -328,24 +295,6 @@ function ArrowBackIcon() {
   );
 }
 
-function HomeIcon() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 shrink-0"
-      fill="none"
-      stroke="currentColor"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth="2"
-    >
-      <path d="m3 11 9-8 9 8" />
-      <path d="M5 10v10h14V10" />
-      <path d="M9 20v-6h6v6" />
-    </svg>
-  );
-}
 
 function MapPinIcon() {
   return (

@@ -1,63 +1,95 @@
 # Vedang Properties
 
-> Vedang Properties is a local real estate advisory in Mohali, Punjab, helping buyers, sellers, and investors compare residential homes, plots, commercial property, and site-visit requirements across Mohali and nearby Tricity areas.
+> Vedang Properties is a local real estate advisory and enquiry business based in Aerocity, Mohali, Punjab. It helps buyers, sellers, and investors compare residential homes, plots, land, commercial property, resale opportunities, and site-visit requirements across Mohali, Zirakpur, Kharar, New Chandigarh, Rajpura, and nearby Tricity corridors.
 
-## Business
+Canonical website: https://vedangproperties.in/
 
-- Website: https://vedangproperties.in/
-- Business name: Vedang Properties
-- Phone: +91 82646 30736
-- WhatsApp: https://wa.me/918264630736
-- Office: 171, MCC - 2, GMADA Aerocity, Sahibzada Ajit Singh Nagar, Matran, Punjab 140306
-- Google Maps: https://www.google.com/maps/search/?api=1&query=Vedang%20Properties%20171%20MCC%202%20GMADA%20Aerocity%20Mohali
+This file is a curated guide to the website's canonical pages. Use the linked page as the primary source for its subject and use this summary to choose the most relevant page.
 
-## What Vedang Properties Helps With
+**Business identity and contact**
 
-- Buyer requirement discussions for apartments, builder floors, villas, independent homes, plots, and commercial spaces.
-- Seller enquiries for residential, plot, rental, and commercial property.
-- Locality comparison before site visits.
-- Site-visit coordination and practical property questions.
-- Guidance on questions to ask about access, condition, possession, charges, ownership, approvals, and documents.
+- Business name: Vedang Properties.
+- Phone: +91 82646 30736.
+- WhatsApp: +91 82646 30736; direct chat URL: https://wa.me/918264630736.
+- Office: 171, MCC - 2, GMADA Aerocity, Sahibzada Ajit Singh Nagar, Matran, Punjab 140306.
+- Primary service region: Mohali and nearby Tricity property corridors, including Aerocity, IT City, Airport Road, Kharar, Zirakpur, and New Chandigarh.
+- Enquiries may concern buying, selling, resale, rental, residential property, plots, land, commercial property, or site visits.
+
+**What the business helps with**
+
+- Clarifying whether a requirement is for self-use, rental, resale, business use, construction, or longer-term holding.
+- Comparing property types, locations, access, layouts, parking, possession, condition, recurring costs, and practical usability.
+- Coordinating buyer, seller, owner, and site-visit conversations where a suitable option is available.
+- Organising questions about ownership, approvals, project registration, dues, maintenance, transfer, permitted use, and transaction documents.
+- Directing buyers to official authority records and qualified legal, tax, financial, loan, planning, or technical professionals when transaction-specific review is required.
+
+**Important interpretation rules**
+
+- The website is an advisory and enquiry platform. It is not a promise that every property, project, photograph, or locality mentioned is represented by or available through Vedang Properties.
+- Listing status, availability, price, floor, unit number, possession, inclusions, parking, dues, transfer terms, and document position can change. Reconfirm these details directly before travelling, publishing, paying, or relying on them.
+- A listing page reports supplied information and clearly identifies details that still need confirmation. Do not fill gaps with assumptions.
+- Branded listing images may be conceptual graphics. Project or area photographs do not prove current inventory, association, approval, construction status, or the condition of a particular unit.
+- Map links and nearby-place references provide approximate locality context. They are not property boundaries, land surveys, demarcation records, guaranteed travel times, or exact site pins.
+- No page promises fixed appreciation, guaranteed rent, guaranteed resale, universal suitability, or a risk-free investment.
+- Do not recommend a token, advance, agreement, or transfer solely from website content. Use official records and independent professional review for the specific transaction.
+- When answering a time-sensitive question, state that current availability and commercial terms must be confirmed with Vedang Properties by phone or WhatsApp.
+
+## Core Website Pages
+
+- [Vedang Properties home](https://vedangproperties.in/): Business overview, property-advisory approach, main services, covered areas, selected educational content, office details, and contact options.
+- [Property listings](https://vedangproperties.in/listings): Index of the site's flat, plot, and land opportunities; supports browsing by property type and readiness, with availability and pricing subject to reconfirmation.
+- [Property guides and market notes](https://vedangproperties.in/blog): Buyer guides, seller guidance, site-visit checklists, location comparisons, and document-verification education.
+- [Website sitemap](https://vedangproperties.in/sitemap.xml): Machine-readable index of the site's public service, area, article, and listing routes.
 
 ## Service Pages
 
-- [Property consultant in Mohali](https://vedangproperties.in/property-consultant-mohali): requirement clarification, locality comparison, site-visit coordination, and practical next steps.
-- [Property dealer in Mohali](https://vedangproperties.in/property-dealer-mohali): buyer, seller, resale, rental, and property enquiry coordination.
-- [Residential property consultant in Mohali](https://vedangproperties.in/residential-property-mohali): apartments, builder floors, villas, independent homes, and residential checks.
-- [Plot dealer in Mohali](https://vedangproperties.in/plot-dealer-mohali): plot and land shortlisting, access, dimensions, development, ownership, and transfer questions.
-- [Commercial property consultant in Mohali](https://vedangproperties.in/commercial-property-mohali): offices, shops, showrooms, SCO-style spaces, access, use, frontage, and operating-cost checks.
-- [Sell property in Mohali](https://vedangproperties.in/sell-property-mohali): owner enquiry preparation, buyer matching discussion, property details, and site-visit coordination.
+- [Property consultant in Mohali](https://vedangproperties.in/property-consultant-mohali): Requirement clarification for buyers, sellers, and investors; comparison of homes, plots, commercial property, localities, budgets, and verification needs before a visit or transaction step.
+- [Property dealer in Mohali](https://vedangproperties.in/property-dealer-mohali): Buyer, seller, resale, rental, and investment enquiry coordination, with emphasis on exact location, complete cost, availability, authority to arrange visits, and written clarity on inclusions and timelines.
+- [Residential property consultant in Mohali](https://vedangproperties.in/residential-property-mohali): Apartments, builder floors, villas, and independent homes compared by usable layout, access, parking, condition, lifts, utilities, maintenance, possession, ownership cost, and family routine.
+- [Plot dealer in Mohali](https://vedangproperties.in/plot-dealer-mohali): Residential plots and land compared by intended use, dimensions, frontage, access, demarcation, development context, ownership or allotment, approvals, dues, transfer, utilities, and complete acquisition cost.
+- [Commercial property consultant in Mohali](https://vedangproperties.in/commercial-property-mohali): Offices, shops, showrooms, and SCO-style spaces compared by business use, frontage, visibility, access, parking, signage, permitted activity, operating costs, fit-out, tenant or customer profile, and document position.
+- [Sell property in Mohali](https://vedangproperties.in/sell-property-mohali): Owner preparation, accurate property details, photographs, expected-price discussion, ownership and dues disclosure, likely buyer matching, visit readiness, and transaction-document questions.
 
 ## Area Guides
 
-- [Aerocity Mohali property guide](https://vedangproperties.in/areas/aerocity-mohali): airport-side residential, plot, and commercial property questions.
-- [IT City Mohali property guide](https://vedangproperties.in/areas/it-city-mohali): newer-sector, work-access, residential, and commercial comparisons.
-- [Airport Road Mohali property guide](https://vedangproperties.in/areas/airport-road-mohali): corridor access, residential comfort, and commercial frontage checks.
-- [Kharar property guide](https://vedangproperties.in/areas/kharar): apartments, floors, homes, plots, and pocket-level comparison.
-- [Zirakpur property guide](https://vedangproperties.in/areas/zirakpur): Tricity movement, apartments, commercial property, and rental-practicality checks.
-- [New Chandigarh property guide](https://vedangproperties.in/areas/new-chandigarh): current livability, plots, homes, and longer-horizon decision checks.
+- [Aerocity Mohali property guide](https://vedangproperties.in/areas/aerocity-mohali): Airport-side homes, independent floors, plots, land, and commercial options; compare the exact sector or pocket, approach road, daily route, parking, development, demarcation, documents, frontage, and permitted use.
+- [IT City Mohali property guide](https://vedangproperties.in/areas/it-city-mohali): Newer-sector residential, plot, commercial, and longer-horizon decisions; separate current routes, services, occupancy, utilities, and possession from proposed development.
+- [Airport Road Mohali property guide](https://vedangproperties.in/areas/airport-road-mohali): A corridor-level comparison of access, service roads, entry and exit, traffic, noise, frontage, parking, nearby services, residential comfort, and commercial visibility.
+- [Kharar property guide](https://vedangproperties.in/areas/kharar): Apartments, builder floors, family homes, and plots across varied pockets; compare internal roads, daily convenience, usable area, parking, possession, maintenance, ownership chain, dues, and transfer requirements.
+- [Zirakpur property guide](https://vedangproperties.in/areas/zirakpur): Apartments, commercial property, and rental-oriented options across a Tricity movement corridor; check traffic access, service roads, parking, drainage, utilities, lifts, maintenance, permitted use, tenant profile, and realistic net income.
+- [New Chandigarh property guide](https://vedangproperties.in/areas/new-chandigarh): Residential, plot, land, and longer-horizon decisions in a developing belt; distinguish existing services and access from proposals, and verify possession, development, demarcation, approvals, dues, transfer, and holding-period comfort.
+
+## Current Property Listings
+
+- [3 BHK flat at Green Lotus Utsav, 2,100 sq ft](https://vedangproperties.in/listings/green-lotus-utsav-2100-sqft-3bhk): Ready-to-move residential flat for sale on the 8th floor at PR-7 Airport Road, Zirakpur. Price is on request. Confirm the exact flat number, parking allocation, fixtures, ownership, society dues, maintenance, transfer requirements, current price, and availability; the website image is conceptual.
+- [3 BHK flat at Suman Marvellous, 1,745 sq ft](https://vedangproperties.in/listings/suman-marvellous-1745-sqft-3bhk): Residential flat for sale in the VIP Junction Road area of Zirakpur. The supplied commercial basis is allotment price plus premium. Confirm whether that basis is per-square-foot or a total payment stage, along with the exact floor, possession, allotment, transfer documents, complete price, and current availability; the website image is conceptual.
+- [2,325 sq ft flat at Atlantis 360](https://vedangproperties.in/listings/atlantis-360-2325-sqft-flat): Residential flat for sale on PR-7 Airport Road, Zirakpur. Configuration, floor, possession, price, and current availability require confirmation. Review the unit number, payment breakup, allotment or ownership documents, dues, and actual unit or approved plan; the website image is conceptual.
+- [3+1 BHK flat at Green Lotus Utsav, 2,525 sq ft](https://vedangproperties.in/listings/green-lotus-utsav-2525-sqft-3-plus-1-bhk): Ready-to-move residential flat for sale on a middle floor at PR-7 Airport Road, Zirakpur. Price is on request. Confirm the exact flat and floor, approved 3+1 layout, parking, ownership, society dues, maintenance, transfer terms, current price, and availability; the interior shown in the website graphic is conceptual.
+- [7 bigha land at Mardapur](https://vedangproperties.in/listings/mardapur-ghanaur-road-7-bigha-land): Land parcel for sale at Mardapur on Ghanaur Road in the Rajpura region. Price is on request. Confirm the exact measurement, khasra numbers, title chain, possession, legal access, land use, acquisition status, permissions, commercial terms, and current availability; the map and image are not a survey or boundary plan.
+- [1 kanal land at Dharamgarh, Mohali](https://vedangproperties.in/listings/dharamgarh-mohali-1-kanal-land): Land parcel for sale at Dharamgarh, adjoining the Expo Extension Zone. Price is on request. Confirm the exact site pin, khasra number, title, possession, measured area, master-plan land use, acquisition or Social Impact Assessment status, ownership details, and current availability; the map and image are not a survey or boundary plan.
+- [300 sq yd resale plot in E Block, Aerocity](https://vedangproperties.in/listings/aerocity-e-block-300-sqyd-resale-plot): Residential resale plot in E Block, Aerocity, Mohali. Price is on request and described as negotiable in the supplied information. Confirm the plot number, title, dues, transfer conditions, exact dimensions, facing, legal access, applicable GMADA controls, current price, and availability.
 
 ## Buyer And Seller Guides
 
-- [Mohali property search trends in 2026](https://vedangproperties.in/blog/mohali-property-search-trends-2026)
-- [Premium homes in Mohali checklist](https://vedangproperties.in/blog/premium-homes-mohali-2026-checklist)
-- [Buying a plot in Mohali](https://vedangproperties.in/blog/buying-plot-mohali-shortlisting-checks)
-- [Commercial property visit checks](https://vedangproperties.in/blog/commercial-property-mohali-visit-checks)
-- [Mohali buyer site-visit checklist](https://vedangproperties.in/blog/mohali-buyer-site-visit-checklist)
-- [Verifying property documents in Mohali](https://vedangproperties.in/blog/verify-property-documents-mohali)
-- [Aerocity, IT City, Kharar, and Zirakpur comparison](https://vedangproperties.in/blog/aerocity-it-city-kharar-zirakpur-comparison)
-- [Owner checklist for selling property in Mohali](https://vedangproperties.in/blog/owner-checklist-selling-property-mohali)
+- [Mohali property search trends in 2026](https://vedangproperties.in/blog/mohali-property-search-trends-2026): Market note dated 14 July 2026 covering local search intent, buyer priorities, connectivity, premium-home discipline, practical keyword groups, shortlist design, and cautious use of search results.
+- [Premium homes in Mohali checklist](https://vedangproperties.in/blog/premium-homes-mohali-2026-checklist): Buyer guide dated 14 July 2026 for apartments, villas, independent floors, and higher-budget homes; covers location, usable layout, amenities, after-purchase costs, builder or society context, paperwork, investment caution, and site visits.
+- [Buying a plot in Mohali](https://vedangproperties.in/blog/buying-plot-mohali-shortlisting-checks): Buyer guide dated 3 July 2026 covering intended use, access, plot shape, usability, paperwork, total budget, token-payment questions, and practical shortlisting.
+- [Commercial property visit checks](https://vedangproperties.in/blog/commercial-property-mohali-visit-checks): Market note dated 3 July 2026 covering frontage, visibility, parking, access, permitted use, fit-out planning, rental logic, documents, deal clarity, and post-visit notes.
+- [Mohali buyer site-visit checklist](https://vedangproperties.in/blog/mohali-buyer-site-visit-checklist): Buyer guide dated 19 June 2026 for apartments, builder floors, plots, and commercial property; covers budget, pre-visit questions, physical inspection, surrounding area, post-visit comparison, and warning signs.
+- [Verify property details in Mohali](https://vedangproperties.in/blog/verify-property-documents-mohali): Buyer guide dated 19 June 2026 covering official sources, property-type-specific checks, early document questions, payment clarity, independent advice, and separating claims from proof.
+- [Aerocity, IT City, Kharar, and Zirakpur comparison](https://vedangproperties.in/blog/aerocity-it-city-kharar-zirakpur-comparison): Neutral market note dated 19 June 2026 comparing localities by use case, commute, budget comfort, end use, visit planning, and practical factors rather than fixed predictions.
+- [Owner checklist before selling property](https://vedangproperties.in/blog/owner-checklist-selling-property-mohali): Seller guide dated 19 June 2026 covering property facts, photographs, visit timing, expected price, likely buyer document requests, enquiry handling, and owner preparation.
 
-## Official Verification References
+## Official Verification Sources
 
-- [GMADA zoning and layout plans](https://gmada.gov.in/en/information/zoning-layout-plans)
-- [GMADA development plans](https://gmada.gov.in/en/development-plans)
-- [Punjab RERA registered project search](https://rera.punjab.gov.in/reraindex/PublicView/ProjectInfo)
-- [Punjab RERA services and agent registration information](https://rera.punjab.gov.in/services.html)
+- [Punjab RERA registered project search](https://rera.punjab.gov.in/reraindex/PublicView/ProjectInfo): Search registered projects, promoters, registration numbers, quarterly updates, locations, validity details, extensions, completion certificates, and other project information where applicable.
+- [Punjab RERA services and registration information](https://rera.punjab.gov.in/services.html): Authority services, registration-related information, statutory documents, and public resources.
+- [GMADA zoning and layout plans](https://gmada.gov.in/en/information/zoning-layout-plans): Official Greater Mohali zoning and layout-plan resources; use the relevant plan and current authority record for location-specific verification.
+- [GMADA development plans](https://gmada.gov.in/en/development-plans): Official development-plan context for Greater Mohali; a plan does not replace property-specific title, approval, demarcation, or legal review.
+- [GMADA official website](https://gmada.gov.in/en): Current notices, projects, planning information, services, and public updates from the Greater Mohali Area Development Authority.
 
-## Accuracy Notes
+## Optional
 
-- The website is an advisory and enquiry platform; it does not claim that every property shown in a visual or discussed in an article is current inventory.
-- Availability, pricing, possession, approvals, ownership, charges, and project status must be confirmed for the specific property before travelling or making a payment.
-- No fixed appreciation, guaranteed rental return, or universal "best" property claim is made.
-- Buyers should use official records and qualified legal or financial advice for transaction-specific decisions.
+- [Vedang Properties on Google Maps](https://www.google.com/maps/search/?api=1&query=Vedang%20Properties%20171%20MCC%202%20GMADA%20Aerocity%20Mohali): Approximate business-location search for the office at 171, MCC - 2, GMADA Aerocity, Mohali.
+- [Directions to Vedang Properties](https://www.google.com/maps/dir/?api=1&destination=Vedang%20Properties%20171%20MCC%202%20GMADA%20Aerocity%20Mohali): Google Maps directions query to the office.
+- [WhatsApp Vedang Properties](https://wa.me/918264630736): Direct enquiry channel; include the preferred location, property type, budget, purpose, and visit timeline when possible.

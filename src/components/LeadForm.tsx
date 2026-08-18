@@ -67,23 +67,26 @@ export function LeadForm({ whatsappNumber, compact = false }: LeadFormProps) {
       </div>
 
       <div className={compact ? "grid gap-3" : "grid gap-4 sm:grid-cols-2"}>
-        <label className="grid gap-2 text-sm font-medium text-slate-700 sm:col-span-2">
-          Name
+        <label className="grid gap-1.5 text-sm font-medium text-slate-700 sm:col-span-2">
+          <span>Your name <span className="text-red-500">*</span></span>
           <input
             required
+            name="name"
+            autoComplete="name"
             value={lead.name}
             onChange={(event) => updateLead("name", event.target.value)}
-            placeholder="Your name"
-            className="h-12 rounded-md border border-slate-200 bg-white px-3 text-base text-slate-950 outline-none transition placeholder:text-slate-400 focus:border-[#d6a74e] focus:ring-4 focus:ring-[#d6a74e]/20"
+            placeholder="e.g. Rajat Sharma"
+            className="h-12 w-full rounded-md border border-slate-300 bg-white px-3.5 text-base text-slate-950 outline-none transition placeholder:text-slate-400 focus:border-[#d6a74e] focus:ring-4 focus:ring-[#d6a74e]/20"
           />
         </label>
 
-        <label className="grid gap-2 text-sm font-medium text-slate-700">
-          I want to
+        <label className="grid gap-1.5 text-sm font-medium text-slate-700">
+          <span>I want to</span>
           <select
+            name="purpose"
             value={lead.purpose}
             onChange={(event) => updateLead("purpose", event.target.value)}
-            className="h-12 rounded-md border border-slate-200 bg-white px-3 text-base text-slate-950 outline-none transition focus:border-[#d6a74e] focus:ring-4 focus:ring-[#d6a74e]/20"
+            className="h-12 w-full rounded-md border border-slate-300 bg-white px-3 text-base text-slate-950 outline-none transition focus:border-[#d6a74e] focus:ring-4 focus:ring-[#d6a74e]/20"
           >
             <option>Buy</option>
             <option>Sell</option>
@@ -93,14 +96,15 @@ export function LeadForm({ whatsappNumber, compact = false }: LeadFormProps) {
           </select>
         </label>
 
-        <label className="grid gap-2 text-sm font-medium text-slate-700">
-          Property type
+        <label className="grid gap-1.5 text-sm font-medium text-slate-700">
+          <span>Property type</span>
           <select
+            name="propertyType"
             value={lead.propertyType}
             onChange={(event) =>
               updateLead("propertyType", event.target.value)
             }
-            className="h-12 rounded-md border border-slate-200 bg-white px-3 text-base text-slate-950 outline-none transition focus:border-[#d6a74e] focus:ring-4 focus:ring-[#d6a74e]/20"
+            className="h-12 w-full rounded-md border border-slate-300 bg-white px-3 text-base text-slate-950 outline-none transition focus:border-[#d6a74e] focus:ring-4 focus:ring-[#d6a74e]/20"
           >
             <option>Residential</option>
             <option>Plot or land</option>
@@ -110,47 +114,51 @@ export function LeadForm({ whatsappNumber, compact = false }: LeadFormProps) {
           </select>
         </label>
 
-        <label className="grid gap-2 text-sm font-medium text-slate-700">
-          Preferred location
+        <label className="grid gap-1.5 text-sm font-medium text-slate-700">
+          <span>Preferred location</span>
           <input
+            name="location"
             value={lead.location}
             onChange={(event) => updateLead("location", event.target.value)}
             placeholder="Aerocity, IT City, Kharar..."
-            className="h-12 rounded-md border border-slate-200 bg-white px-3 text-base text-slate-950 outline-none transition placeholder:text-slate-400 focus:border-[#d6a74e] focus:ring-4 focus:ring-[#d6a74e]/20"
+            className="h-12 w-full rounded-md border border-slate-300 bg-white px-3.5 text-base text-slate-950 outline-none transition placeholder:text-slate-400 focus:border-[#d6a74e] focus:ring-4 focus:ring-[#d6a74e]/20"
           />
         </label>
 
-        <label className="grid gap-2 text-sm font-medium text-slate-700">
-          Budget
+        <label className="grid gap-1.5 text-sm font-medium text-slate-700">
+          <span>Budget</span>
           <input
+            name="budget"
             value={lead.budget}
             onChange={(event) => updateLead("budget", event.target.value)}
-            placeholder="50L, 1Cr, flexible..."
-            className="h-12 rounded-md border border-slate-200 bg-white px-3 text-base text-slate-950 outline-none transition placeholder:text-slate-400 focus:border-[#d6a74e] focus:ring-4 focus:ring-[#d6a74e]/20"
+            placeholder="e.g. 60 Lakhs, 1.2 Cr"
+            className="h-12 w-full rounded-md border border-slate-300 bg-white px-3.5 text-base text-slate-950 outline-none transition placeholder:text-slate-400 focus:border-[#d6a74e] focus:ring-4 focus:ring-[#d6a74e]/20"
           />
         </label>
 
-        <label className="grid gap-2 text-sm font-medium text-slate-700 sm:col-span-2">
-          Phone number
+        <label className="grid gap-1.5 text-sm font-medium text-slate-700 sm:col-span-2">
+          <span>Phone number <span className="text-red-500">*</span></span>
           <input
             required
+            name="phone"
+            autoComplete="tel"
             value={lead.phone}
             onChange={(event) => updateLead("phone", event.target.value)}
-            placeholder="+91..."
+            placeholder="+91 98765 43210"
             inputMode="tel"
-            className="h-12 rounded-md border border-slate-200 bg-white px-3 text-base text-slate-950 outline-none transition placeholder:text-slate-400 focus:border-[#d6a74e] focus:ring-4 focus:ring-[#d6a74e]/20"
+            className="h-12 w-full rounded-md border border-slate-300 bg-white px-3.5 text-base text-slate-950 outline-none transition placeholder:text-slate-400 focus:border-[#d6a74e] focus:ring-4 focus:ring-[#d6a74e]/20"
           />
         </label>
       </div>
 
       <button
         type="submit"
-        className="mt-5 inline-flex h-12 w-full items-center justify-center gap-2 rounded-md bg-[#10383a] px-5 text-base font-semibold text-white transition hover:bg-[#0c2b2d] focus:outline-none focus:ring-4 focus:ring-[#10383a]/25"
+        className="mt-5 inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-md bg-[#10383a] px-5 text-base font-semibold text-white shadow-md transition hover:bg-[#0c2b2d] focus:outline-none focus:ring-4 focus:ring-[#10383a]/25 active:scale-[0.99]"
       >
         <svg
           aria-hidden="true"
           viewBox="0 0 24 24"
-          className="h-5 w-5"
+          className="h-5 w-5 shrink-0"
           fill="none"
           stroke="currentColor"
           strokeWidth="2"
@@ -160,7 +168,7 @@ export function LeadForm({ whatsappNumber, compact = false }: LeadFormProps) {
           <path d="M21 11.5a8.38 8.38 0 0 1-1.9 5.3 8.5 8.5 0 0 1-10.2 2.1L3 21l2.1-5.7A8.5 8.5 0 1 1 21 11.5Z" />
           <path d="m9.5 9.5 1.3 1.3a1 1 0 0 1 0 1.4l-.4.4a6 6 0 0 0 2.9 2.9l.4-.4a1 1 0 0 1 1.4 0l1.3 1.3" />
         </svg>
-        Send enquiry on WhatsApp
+        <span>Send enquiry on WhatsApp</span>
       </button>
     </form>
   );

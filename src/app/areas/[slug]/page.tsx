@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { BrandLockup } from "@/components/BrandLockup";
 import { LeadForm } from "@/components/LeadForm";
+import { MapFacade } from "@/components/MapFacade";
+import { SiteHeader } from "@/components/SiteHeader";
 import { areaGuides } from "@/data/areas";
 import { contact } from "@/data/site";
 import { absoluteUrl } from "@/data/seo";
@@ -122,39 +123,7 @@ export default async function AreaPage({ params }: AreaPageProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <header className="bg-[#10383a] text-white">
-        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-5 py-5 md:px-8">
-          <BrandLockup />
-          <nav className="flex flex-wrap items-center justify-end gap-2 text-sm font-semibold">
-            <Link
-              href="/"
-              className="inline-flex h-10 items-center justify-center rounded-md border border-white/30 px-4 transition hover:border-white hover:bg-white/10"
-            >
-              Home
-            </Link>
-            <Link
-              href="/#areas"
-              className="hidden h-10 items-center justify-center rounded-md px-4 text-white/80 transition hover:bg-white/10 hover:text-white sm:inline-flex"
-            >
-              All areas
-            </Link>
-            <a
-              href={`tel:${contact.tel}`}
-              className="hidden h-10 items-center justify-center rounded-md border border-white/30 px-4 transition hover:border-white hover:bg-white/10 md:inline-flex"
-            >
-              Call {contact.phoneDisplay}
-            </a>
-            <a
-              href={whatsappHref}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex h-10 items-center justify-center rounded-md bg-[#d6a74e] px-4 text-[#102f33] transition hover:bg-[#e0b862]"
-            >
-              WhatsApp
-            </a>
-          </nav>
-        </div>
-      </header>
+      <SiteHeader variant="teal" />
 
       <section className="bg-[#10383a] pb-14 text-white md:pb-20">
         <div className="mx-auto grid max-w-7xl items-center gap-10 px-5 md:px-8 lg:grid-cols-[1.05fr_0.95fr]">
@@ -343,17 +312,14 @@ export default async function AreaPage({ params }: AreaPageProps) {
             </a>
           </div>
           <div className="mt-8 overflow-hidden rounded-lg border border-slate-200 bg-slate-100 shadow-sm">
-            <div className="aspect-[16/7] min-h-[280px]">
-              <iframe
-                title={`${area.shortTitle} Google Map`}
-                src={`https://www.google.com/maps?q=${encodeURIComponent(
-                  area.mapQuery,
-                )}&output=embed`}
-                className="h-full w-full border-0"
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
-            </div>
+            <MapFacade
+              title={`${area.shortTitle} Map`}
+              mapQuery={area.mapQuery}
+              mapUrl={area.mapUrl}
+              mapImage={area.mapImage}
+              badgeText="Locality Map"
+              aspectRatio="aspect-[16/7]"
+            />
             <div className="flex flex-col gap-3 p-5 sm:flex-row sm:items-center sm:justify-between">
               <p className="text-sm leading-6 text-slate-600">
                 Map area: {area.mapQuery}. Confirm the exact property address before travelling.

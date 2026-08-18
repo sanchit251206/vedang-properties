@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { BrandLockup } from "@/components/BrandLockup";
 import { LeadForm } from "@/components/LeadForm";
+import { SiteHeader } from "@/components/SiteHeader";
 import { serviceGuides } from "@/data/services";
 import { contact } from "@/data/site";
 import { absoluteUrl, coreSeoKeywords } from "@/data/seo";
@@ -132,45 +132,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <header className="bg-[#10383a] text-white">
-        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-5 py-5 md:px-8">
-          <BrandLockup />
-          <nav className="flex flex-wrap items-center justify-end gap-2 text-sm font-semibold">
-            <Link
-              href="/"
-              className="inline-flex h-10 items-center justify-center rounded-md border border-white/30 px-4 transition hover:border-white hover:bg-white/10"
-            >
-              Home
-            </Link>
-            <Link
-              href="/#areas"
-              className="hidden h-10 items-center justify-center rounded-md px-4 text-white/80 transition hover:bg-white/10 hover:text-white sm:inline-flex"
-            >
-              Areas
-            </Link>
-            <Link
-              href="/blog"
-              className="hidden h-10 items-center justify-center rounded-md px-4 text-white/80 transition hover:bg-white/10 hover:text-white sm:inline-flex"
-            >
-              Blog
-            </Link>
-            <a
-              href={`tel:${contact.tel}`}
-              className="hidden h-10 items-center justify-center rounded-md border border-white/30 px-4 transition hover:border-white hover:bg-white/10 md:inline-flex"
-            >
-              Call {contact.phoneDisplay}
-            </a>
-            <a
-              href={whatsappHref}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex h-10 items-center justify-center rounded-md bg-[#d6a74e] px-4 text-[#102f33] transition hover:bg-[#e0b862]"
-            >
-              WhatsApp
-            </a>
-          </nav>
-        </div>
-      </header>
+      <SiteHeader variant="teal" />
 
       <section className="bg-[#10383a] pb-14 text-white md:pb-20">
         <div className="mx-auto grid max-w-7xl items-center gap-10 px-5 md:px-8 lg:grid-cols-[1fr_430px]">
