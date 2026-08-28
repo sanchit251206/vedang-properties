@@ -32,6 +32,9 @@ const localBusinessJsonLd = {
   url: siteUrl,
   image: absoluteUrl("/images/vedang-logo-card.png"),
   logo: absoluteUrl("/images/vedang-logo-mark.png"),
+  priceRange: "₹₹ - ₹₹₹₹",
+  currenciesAccepted: "INR",
+  paymentAccepted: "Cash, Cheque, Bank Transfer, UPI",
   address: {
     "@type": "PostalAddress",
     streetAddress: "171, MCC - 2, GMADA Aerocity",
@@ -40,6 +43,43 @@ const localBusinessJsonLd = {
     postalCode: "140306",
     addressCountry: "IN",
   },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: "30.6554",
+    longitude: "76.8197",
+  },
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+      ],
+      opens: "09:30",
+      closes: "19:30",
+    },
+  ],
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: contact.tel,
+    contactType: "customer service",
+    areaServed: "IN",
+    availableLanguage: ["English", "Hindi", "Punjabi"],
+  },
+  sameAs: Array.from(
+    new Set(
+      [
+        contact.googleProfileUrl,
+        contact.googleMapsUrl,
+        contact.googleDirectionsUrl,
+        `https://wa.me/${contact.whatsapp}`,
+      ].filter((item): item is string => Boolean(item)),
+    ),
+  ),
   areaServed: [
     "Mohali",
     "Aerocity Mohali",
@@ -117,6 +157,19 @@ export const metadata: Metadata = {
   },
 };
 
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": `${siteUrl}/#website`,
+  url: siteUrl,
+  name: "Vedang Properties",
+  description:
+    "Property consultants in Mohali for residential homes, plots, commercial property, and buyer/seller guidance.",
+  publisher: {
+    "@id": `${siteUrl}/#localbusiness`,
+  },
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -128,7 +181,7 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(localBusinessJsonLd),
+            __html: JSON.stringify([localBusinessJsonLd, websiteJsonLd]),
           }}
         />
         <Script

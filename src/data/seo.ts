@@ -10,7 +10,7 @@ export const siteUrl =
   normalizeSiteUrl(process.env.NEXT_PUBLIC_SITE_URL) ??
   normalizeSiteUrl(process.env.VERCEL_PROJECT_PRODUCTION_URL) ??
   normalizeSiteUrl(process.env.VERCEL_URL) ??
-  "http://localhost:3000";
+  "https://vedangproperties.in";
 
 export const absoluteUrl = (path: string) => new URL(path, siteUrl).toString();
 

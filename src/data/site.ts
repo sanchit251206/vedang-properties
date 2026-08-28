@@ -1,6 +1,11 @@
 const vedangGoogleQuery =
   "Vedang Properties 171 MCC 2 GMADA Aerocity Mohali";
 
+// Verified Google Business Profile Share URL
+const googleProfileUrl =
+  process.env.NEXT_PUBLIC_GOOGLE_PROFILE_URL?.trim() ||
+  "https://share.google/OPXRIxW7Er3fVmykt";
+
 export const contact = {
   phoneDisplay: "+91 82646 30736",
   tel: "+918264630736",
@@ -8,10 +13,9 @@ export const contact = {
   addressShort: "#171 MCC 2, Aerocity, Mohali",
   addressFull:
     "171, MCC - 2, GMADA Aerocity, Sahibzada Ajit Singh Nagar, Matran, Punjab 140306",
+  googleProfileUrl,
   googleMapsQuery: vedangGoogleQuery,
-  googleMapsUrl: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-    vedangGoogleQuery,
-  )}`,
+  googleMapsUrl: googleProfileUrl,
   googleDirectionsUrl: `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(
     vedangGoogleQuery,
   )}`,

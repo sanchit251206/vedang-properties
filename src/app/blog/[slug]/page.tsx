@@ -75,8 +75,76 @@ export default async function BlogArticlePage({
     whatsappText,
   )}`;
 
+  const articleUrl = absoluteUrl(`/blog/${article.slug}`);
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": `${articleUrl}#article`,
+        isPartOf: {
+          "@type": "WebPage",
+          "@id": `${articleUrl}#webpage`,
+          url: articleUrl,
+          name: article.title,
+          description: article.excerpt,
+        },
+        headline: article.title,
+        description: article.excerpt,
+        image: absoluteUrl(article.image),
+        author: {
+          "@type": "Organization",
+          name: "Vedang Properties",
+          url: absoluteUrl("/"),
+        },
+        publisher: {
+          "@type": "Organization",
+          name: "Vedang Properties",
+          url: absoluteUrl("/"),
+          logo: {
+            "@type": "ImageObject",
+            url: absoluteUrl("/images/vedang-logo-mark.png"),
+          },
+        },
+        mainEntityOfPage: {
+          "@type": "WebPage",
+          "@id": articleUrl,
+        },
+        keywords: article.tags.join(", "),
+        articleSection: article.category,
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Home",
+            item: absoluteUrl("/"),
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Articles",
+            item: absoluteUrl("/blog"),
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: article.title,
+            item: articleUrl,
+          },
+        ],
+      },
+    ],
+  };
+
   return (
     <main className="min-h-screen bg-[#f7f3e8] text-slate-950">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <SiteHeader variant="dark" />
 
       <article>

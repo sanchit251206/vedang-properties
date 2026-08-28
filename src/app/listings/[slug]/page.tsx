@@ -68,16 +68,49 @@ export default async function ListingPage({ params }: ListingPageProps) {
     })
     .slice(0, 3);
 
+  const listingUrl = absoluteUrl(`/listings/${listing.slug}`);
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
       {
         "@type": "WebPage",
-        "@id": `${absoluteUrl(`/listings/${listing.slug}`)}#webpage`,
-        url: absoluteUrl(`/listings/${listing.slug}`),
+        "@id": `${listingUrl}#webpage`,
+        url: listingUrl,
         name: listing.title,
         description: listing.summary,
         primaryImageOfPage: absoluteUrl(listing.image),
+      },
+      {
+        "@type": "RealEstateListing",
+        "@id": `${listingUrl}#listing`,
+        name: listing.title,
+        description: listing.summary,
+        url: listingUrl,
+        image: absoluteUrl(listing.image),
+        category: listing.category,
+        offers: {
+          "@type": "Offer",
+          priceCurrency: "INR",
+          priceSpecification: {
+            "@type": "PriceSpecification",
+            priceCurrency: "INR",
+            description: listing.priceNote || listing.price,
+          },
+          availability: "https://schema.org/InStock",
+          seller: {
+            "@type": "RealEstateAgent",
+            name: "Vedang Properties",
+            url: absoluteUrl("/"),
+            telephone: contact.tel,
+          },
+        },
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: listing.locality,
+          addressRegion: "Punjab",
+          addressCountry: "IN",
+          streetAddress: listing.location,
+        },
       },
       {
         "@type": "BreadcrumbList",
@@ -98,7 +131,7 @@ export default async function ListingPage({ params }: ListingPageProps) {
             "@type": "ListItem",
             position: 3,
             name: listing.title,
-            item: absoluteUrl(`/listings/${listing.slug}`),
+            item: listingUrl,
           },
         ],
       },

@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { SiteHeader } from "@/components/SiteHeader";
 import { articles, contact, officialSourceLinks } from "@/data/site";
-import { coreSeoKeywords } from "@/data/seo";
+import { absoluteUrl, coreSeoKeywords } from "@/data/seo";
 
 export const metadata: Metadata = {
   title: "Mohali Property Guides and Real Estate Articles",
@@ -29,8 +29,60 @@ export default function BlogPage() {
     whatsappText,
   )}`;
 
+  const blogUrl = absoluteUrl("/blog");
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Blog",
+        "@id": `${blogUrl}#blog`,
+        name: "Mohali Property Guides & Real Estate Articles",
+        description:
+          "Practical Mohali property guides, buyer checklists, seller notes, and area comparisons from Vedang Properties.",
+        url: blogUrl,
+        publisher: {
+          "@type": "Organization",
+          name: "Vedang Properties",
+          url: absoluteUrl("/"),
+          logo: {
+            "@type": "ImageObject",
+            url: absoluteUrl("/images/vedang-logo-mark.png"),
+          },
+        },
+        blogPost: articles.map((article) => ({
+          "@type": "BlogPosting",
+          headline: article.title,
+          description: article.excerpt,
+          url: absoluteUrl(`/blog/${article.slug}`),
+          image: absoluteUrl(article.image),
+        })),
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Home",
+            item: absoluteUrl("/"),
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Articles",
+            item: blogUrl,
+          },
+        ],
+      },
+    ],
+  };
+
   return (
     <main className="min-h-screen bg-[#f7f3e8] text-slate-950">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <SiteHeader variant="dark" />
 
       <section className="bg-[#10383a] py-16 text-white md:py-20">
