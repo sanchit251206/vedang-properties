@@ -55,6 +55,7 @@ export function LeadForm({ whatsappNumber, compact = false }: LeadFormProps) {
   return (
     <form
       onSubmit={handleSubmit}
+      suppressHydrationWarning
       className="rounded-lg border border-white/50 bg-white/95 p-5 text-slate-950 shadow-2xl shadow-slate-950/20 backdrop-blur md:p-6"
     >
       <div className="mb-5">
@@ -76,6 +77,7 @@ export function LeadForm({ whatsappNumber, compact = false }: LeadFormProps) {
             value={lead.name}
             onChange={(event) => updateLead("name", event.target.value)}
             placeholder="e.g. Rajat Sharma"
+            suppressHydrationWarning
             className="h-12 w-full rounded-md border border-slate-300 bg-white px-3.5 text-base text-slate-950 outline-none transition placeholder:text-slate-400 focus:border-[#d6a74e] focus:ring-4 focus:ring-[#d6a74e]/20"
           />
         </label>
@@ -86,6 +88,7 @@ export function LeadForm({ whatsappNumber, compact = false }: LeadFormProps) {
             name="purpose"
             value={lead.purpose}
             onChange={(event) => updateLead("purpose", event.target.value)}
+            suppressHydrationWarning
             className="h-12 w-full rounded-md border border-slate-300 bg-white px-3 text-base text-slate-950 outline-none transition focus:border-[#d6a74e] focus:ring-4 focus:ring-[#d6a74e]/20"
           >
             <option>Buy</option>
@@ -104,6 +107,7 @@ export function LeadForm({ whatsappNumber, compact = false }: LeadFormProps) {
             onChange={(event) =>
               updateLead("propertyType", event.target.value)
             }
+            suppressHydrationWarning
             className="h-12 w-full rounded-md border border-slate-300 bg-white px-3 text-base text-slate-950 outline-none transition focus:border-[#d6a74e] focus:ring-4 focus:ring-[#d6a74e]/20"
           >
             <option>Residential</option>
@@ -121,6 +125,7 @@ export function LeadForm({ whatsappNumber, compact = false }: LeadFormProps) {
             value={lead.location}
             onChange={(event) => updateLead("location", event.target.value)}
             placeholder="Aerocity, IT City, Kharar..."
+            suppressHydrationWarning
             className="h-12 w-full rounded-md border border-slate-300 bg-white px-3.5 text-base text-slate-950 outline-none transition placeholder:text-slate-400 focus:border-[#d6a74e] focus:ring-4 focus:ring-[#d6a74e]/20"
           />
         </label>
@@ -132,6 +137,7 @@ export function LeadForm({ whatsappNumber, compact = false }: LeadFormProps) {
             value={lead.budget}
             onChange={(event) => updateLead("budget", event.target.value)}
             placeholder="e.g. 60 Lakhs, 1.2 Cr"
+            suppressHydrationWarning
             className="h-12 w-full rounded-md border border-slate-300 bg-white px-3.5 text-base text-slate-950 outline-none transition placeholder:text-slate-400 focus:border-[#d6a74e] focus:ring-4 focus:ring-[#d6a74e]/20"
           />
         </label>
@@ -146,6 +152,7 @@ export function LeadForm({ whatsappNumber, compact = false }: LeadFormProps) {
             onChange={(event) => updateLead("phone", event.target.value)}
             placeholder="+91 98765 43210"
             inputMode="tel"
+            suppressHydrationWarning
             className="h-12 w-full rounded-md border border-slate-300 bg-white px-3.5 text-base text-slate-950 outline-none transition placeholder:text-slate-400 focus:border-[#d6a74e] focus:ring-4 focus:ring-[#d6a74e]/20"
           />
         </label>
@@ -153,6 +160,7 @@ export function LeadForm({ whatsappNumber, compact = false }: LeadFormProps) {
 
       <button
         type="submit"
+        suppressHydrationWarning
         className="mt-5 inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-md bg-[#10383a] px-5 text-base font-semibold text-white shadow-md transition hover:bg-[#0c2b2d] focus:outline-none focus:ring-4 focus:ring-[#10383a]/25 active:scale-[0.99]"
       >
         <svg

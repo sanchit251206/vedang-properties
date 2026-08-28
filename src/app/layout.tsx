@@ -176,8 +176,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`h-full antialiased ${inter.variable}`}>
-      <body className="flex min-h-full flex-col pb-16 font-sans lg:pb-0">
+    <html
+      lang="en"
+      className={`h-full antialiased ${inter.variable}`}
+      suppressHydrationWarning
+    >
+      <body
+        className="flex min-h-full flex-col pb-16 font-sans lg:pb-0"
+        suppressHydrationWarning
+      >
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
