@@ -203,7 +203,7 @@ export const articles: Article[] = [
       {
         heading: "Premium budget should include after-purchase costs",
         paragraphs: [
-          "A higher-budget home can still feel financially tight if the buyer only plans for the sale price. Registry, stamp duty, interiors, furniture, electrical work, parking, maintenance deposits, brokerage if applicable, loan processing, shifting, and repairs should be estimated before final decision.",
+          "A higher-budget home can still feel financially tight if the buyer only plans for the sale price. Registry, stamp duty, interiors, furniture, electrical work, parking, maintenance deposits, loan processing, shifting, and repairs should be estimated before final decision.",
           "For ready homes, inspect seepage, flooring, bathrooms, woodwork, electrical load, air-conditioning points, lift condition, and society maintenance. For under-construction or new inventory, understand payment schedule, possession timeline, and what happens if completion or handover takes longer than expected.",
         ],
       },
@@ -410,7 +410,7 @@ export const articles: Article[] = [
       {
         heading: "Clarify your real budget",
         paragraphs: [
-          "Many buyers begin with a headline budget but later discover additional costs that affect the final decision. Before visiting, keep a working estimate for registry, taxes, brokerage if applicable, maintenance deposits, parking, interiors, loan processing, shifting, and immediate repairs.",
+          "Many buyers begin with a headline budget but later discover additional costs that affect the final decision. Before visiting, keep a working estimate for registry, taxes, maintenance deposits, parking, interiors, loan processing, shifting, and immediate repairs.",
           "A practical budget also includes flexibility. If two properties are close in price, compare what each one saves or costs over time: commute, maintenance, fit-out work, parking comfort, and resale or rental practicality.",
         ],
       },
@@ -497,7 +497,7 @@ export const articles: Article[] = [
           "Project, colony, or plot approval status where applicable.",
           "RERA details for covered projects where RERA registration applies.",
           "Current demand, dues, maintenance, or transfer-related payment information.",
-          "Written breakup of price, taxes, brokerage, maintenance, and other charges.",
+          "Written breakup of price, taxes, maintenance, and other charges.",
         ],
       },
       {

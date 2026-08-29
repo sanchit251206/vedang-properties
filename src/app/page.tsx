@@ -5,6 +5,7 @@ import { LeadForm } from "@/components/LeadForm";
 import { ListingsExplorer } from "@/components/ListingsExplorer";
 import { MapFacade } from "@/components/MapFacade";
 import { SiteHeader } from "@/components/SiteHeader";
+import { SiteFooter } from "@/components/SiteFooter";
 import { areaGuides } from "@/data/areas";
 import { listings } from "@/data/listings";
 import { contact, featuredArticles } from "@/data/site";
@@ -544,6 +545,8 @@ export default function Home() {
           <LeadForm whatsappNumber={contact.whatsapp} />
         </div>
       </section>
+
+      <SiteFooter />
     </main>
   );
 }

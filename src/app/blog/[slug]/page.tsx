@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { MapFacade } from "@/components/MapFacade";
 import { SiteHeader } from "@/components/SiteHeader";
+import { SiteFooter } from "@/components/SiteFooter";
 import { articles, contact } from "@/data/site";
 import { absoluteUrl, coreSeoKeywords } from "@/data/seo";
 
@@ -341,6 +342,8 @@ export default async function BlogArticlePage({
           </div>
         </section>
       </article>
+
+      <SiteFooter />
     </main>
   );
 }

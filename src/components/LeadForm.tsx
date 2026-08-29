@@ -1,6 +1,7 @@
 "use client";
 
 import { FormEvent, useState } from "react";
+import Link from "next/link";
 
 type LeadFormProps = {
   whatsappNumber: string;
@@ -178,6 +179,18 @@ export function LeadForm({ whatsappNumber, compact = false }: LeadFormProps) {
         </svg>
         <span>Send enquiry on WhatsApp</span>
       </button>
+
+      <p className="mt-3 text-center text-xs text-slate-500">
+        By submitting, you agree to our{" "}
+        <Link href="/privacy-policy" className="text-[#10383a] underline hover:text-[#d6a74e]">
+          Privacy Policy
+        </Link>{" "}
+        and{" "}
+        <Link href="/terms" className="text-[#10383a] underline hover:text-[#d6a74e]">
+          Terms
+        </Link>
+        . No spam guaranteed.
+      </p>
     </form>
   );
 }

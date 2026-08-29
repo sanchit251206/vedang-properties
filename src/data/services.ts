@@ -35,8 +35,8 @@ export const serviceGuides: ServiceGuide[] = [
     kicker: "Local property guidance",
     intro:
       "Vedang Properties helps buyers, sellers, and investors understand the requirement first, compare suitable property options, and decide what needs to be checked before a site visit or transaction step.",
-    image: "/images/aerocity-apartment-v2.png",
-    imageAlt: "Residential apartment visual for a Mohali property consultant service page",
+    image: "/images/blog-verify-documents.jpg",
+    imageAlt: "Modern residential building in Mohali for property consultancy guidance",
     sections: [
       {
         heading: "What a local property consultant should do",
@@ -122,8 +122,8 @@ export const serviceGuides: ServiceGuide[] = [
     kicker: "Buyer and seller coordination",
     intro:
       "People searching for a property dealer in Mohali usually need more than a phone number. They need a relevant shortlist, clear location information, site-visit coordination, and practical questions before they commit time or money.",
-    image: "/images/it-city-commercial-v2.png",
-    imageAlt: "Commercial property visual for a Mohali property dealer service page",
+    image: "/images/gallery-commercial.jpg",
+    imageAlt: "Commercial glass frontage building in Mohali for property dealer advisory",
     sections: [
       {
         heading: "Property dealer and property consultant are not the same conversation",
@@ -164,7 +164,7 @@ export const serviceGuides: ServiceGuide[] = [
       "Ask whether the property is direct owner, resale, project, rental, or another type of enquiry.",
       "Confirm the exact location and whether the person arranging the visit has permission to do so.",
       "Compare the complete cost, not only the advertised price or expected rent.",
-      "Clarify brokerage, inclusions, timelines, and separate payable items in writing.",
+      "Clarify inclusions, possession timelines, and separate payable items in writing.",
       "Use Punjab RERA and qualified professional checks where the property or transaction requires them.",
     ],
     faqs: [
@@ -209,8 +209,8 @@ export const serviceGuides: ServiceGuide[] = [
     kicker: "Homes for practical living",
     intro:
       "Residential property decisions are personal and expensive. Vedang Properties helps families and individual buyers compare homes by use, access, layout, condition, documents, and complete ownership cost before a visit.",
-    image: "/images/kharar-family-home-v2.png",
-    imageAlt: "Family home visual for a residential property consultant in Mohali page",
+    image: "/images/gallery-home.jpg",
+    imageAlt: "Modern residential family home in Mohali",
     sections: [
       {
         heading: "Residential property is more than bedroom count",
@@ -296,8 +296,8 @@ export const serviceGuides: ServiceGuide[] = [
     kicker: "Plot and land guidance",
     intro:
       "Plot decisions need more than a rate and a location pin. Vedang Properties helps buyers compare the intended use, access, dimensions, development context, budget, and document questions before a site visit or token decision.",
-    image: "/images/sector-82-plot-v2.png",
-    imageAlt: "Residential plot visual for a plot dealer in Mohali service page",
+    image: "/images/blog-plot-checks.jpg",
+    imageAlt: "Residential plot and land development in Mohali",
     sections: [
       {
         heading: "Begin with the reason for buying the plot",
@@ -383,8 +383,8 @@ export const serviceGuides: ServiceGuide[] = [
     kicker: "Commercial property decisions",
     intro:
       "Commercial property should be evaluated by how the business will actually use it. Vedang Properties helps buyers and owners compare access, visibility, frontage, permitted use, parking, operating costs, property condition, and likely customer or tenant needs.",
-    image: "/images/zirakpur-office-v2.png",
-    imageAlt: "Office building visual for a commercial property consultant in Mohali page",
+    image: "/images/blog-commercial-checks.jpg",
+    imageAlt: "Modern commercial building and SCO complex in Mohali",
     sections: [
       {
         heading: "Start with the business model",
@@ -470,8 +470,8 @@ export const serviceGuides: ServiceGuide[] = [
     kicker: "Owner enquiries",
     intro:
       "Selling a property begins with accurate information. Vedang Properties helps owners organise the property details, understand the likely buyer or tenant conversation, and discuss the next step without making an unsupported promise about price or time.",
-    image: "/images/new-chandigarh-villa-v2.png",
-    imageAlt: "Villa exterior visual for an owner selling property in Mohali page",
+    image: "/images/blog-owner-checklist.jpg",
+    imageAlt: "Independent residential villa exterior for owner property sale in Mohali",
     sections: [
       {
         heading: "Prepare the property information first",

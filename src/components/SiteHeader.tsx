@@ -36,12 +36,13 @@ export function SiteHeader({ variant = "hero" }: SiteHeaderProps) {
   }, [isOpen]);
 
   const navLinks = [
+    { label: "About", href: "/about" },
     { label: "Listings", href: "/listings" },
     { label: "Services", href: "/#property-types" },
     { label: "Areas", href: "/#areas" },
-    { label: "Reviews", href: "/#google-profile" },
     { label: "Blog", href: "/blog" },
-    { label: "Contact", href: "/#contact" },
+    { label: "FAQs", href: "/faqs" },
+    { label: "Contact", href: "/contact" },
   ];
 
   const headerBgClass =

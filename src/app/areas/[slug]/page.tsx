@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { LeadForm } from "@/components/LeadForm";
 import { MapFacade } from "@/components/MapFacade";
 import { SiteHeader } from "@/components/SiteHeader";
+import { SiteFooter } from "@/components/SiteFooter";
 import { areaGuides } from "@/data/areas";
 import { contact } from "@/data/site";
 import { absoluteUrl } from "@/data/seo";
@@ -375,14 +376,7 @@ export default async function AreaPage({ params }: AreaPageProps) {
         </div>
       </section>
 
-      <footer className="bg-[#102f33] py-8 text-white">
-        <div className="mx-auto flex max-w-7xl flex-col gap-3 px-5 text-sm text-white/70 md:flex-row md:items-center md:justify-between md:px-8">
-          <p>Vedang Properties · {contact.addressShort}</p>
-          <Link href="/" className="font-semibold text-[#d6a74e] hover:text-[#e0b862]">
-            Back to home
-          </Link>
-        </div>
-      </footer>
+      <SiteFooter />
     </main>
   );
 }
