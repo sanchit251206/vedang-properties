@@ -68,7 +68,11 @@ export function ListingCard({ listing }: { listing: PropertyListing }) {
         <div className="mt-auto pt-5">
           <div className="flex items-end justify-between gap-3 border-t border-slate-200 pt-4">
             <div>
-              <p className="text-xs font-medium text-slate-500">Asking price</p>
+              <p className="text-xs font-medium text-slate-500">
+                {listing.transaction.toLowerCase().includes("lease")
+                  ? "Lease terms"
+                  : "Asking price"}
+              </p>
               <p className="mt-1 font-semibold text-[#10383a]">{listing.price}</p>
             </div>
             <p className="text-right text-xs font-medium text-[#4f7f66]">

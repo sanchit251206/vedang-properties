@@ -4,12 +4,18 @@ import { useMemo, useState } from "react";
 import { ListingCard } from "@/components/ListingCard";
 import type { PropertyListing } from "@/data/listings";
 
-type FilterValue = "All" | "Flats" | "Plots & land" | "Ready to move";
+type FilterValue =
+  | "All"
+  | "Flats"
+  | "Plots & land"
+  | "Commercial"
+  | "Ready to move";
 
 const filters: FilterValue[] = [
   "All",
   "Flats",
   "Plots & land",
+  "Commercial",
   "Ready to move",
 ];
 
@@ -25,6 +31,10 @@ export function ListingsExplorer({ listings }: { listings: PropertyListing[] }) 
       return listings.filter((listing) =>
         ["Plot", "Land"].includes(listing.category),
       );
+    }
+
+    if (activeFilter === "Commercial") {
+      return listings.filter((listing) => listing.category === "Commercial");
     }
 
     if (activeFilter === "Ready to move") {

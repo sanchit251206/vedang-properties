@@ -1,4 +1,4 @@
-export type ListingCategory = "Flat" | "Plot" | "Land";
+export type ListingCategory = "Flat" | "Plot" | "Land" | "Commercial";
 
 export type ListingFact = {
   label: string;
@@ -321,6 +321,94 @@ export const listings: PropertyListing[] = [
       "Confirm the plot number, title, dues, transfer conditions and exact site dimensions.",
       "Check facing, legal access and applicable GMADA building or development controls.",
       "Nearby references are approximate area context; confirm travel times from the exact pin.",
+    ],
+  },
+  {
+    slug: "it-city-sector-83-15000-sqft-commercial-lease",
+    title: "15,000 sq ft Commercial Space at IT City Sector 83",
+    shortTitle: "IT City Sector 83 · 15,000 sq ft",
+    category: "Commercial",
+    status: "Available",
+    transaction: "For lease",
+    location: "Sector 83, IT City, Mohali",
+    locality: "Mohali",
+    mapQuery: "Sector 83 IT City Mohali Punjab",
+    price: "On request",
+    priceNote:
+      "Lease rent, maintenance terms, security deposit, and lock-in period to be confirmed on enquiry based on furnishing selection.",
+    image: "/images/listings/it-city-sector-83-15000-sqft-lease.png",
+    imageAlt:
+      "Branded conceptual listing graphic for 15,000 sq ft commercial office space for lease in Sector 83 IT City Mohali",
+    summary:
+      "A premium 15,000 sq ft commercial office space is available for lease in Sector 83, IT City Mohali, offering furnished, semi-furnished, and bare-shell options.",
+    description: [
+      "This prominent commercial space in Mohali's premier IT City (Sector 83) is ideally suited for tech firms, corporate headquarters, BPO/KPO operations, fintech companies, and enterprise teams seeking an established business address.",
+      "The property offers comprehensive layout flexibility: plug-and-play fully furnished workstations and executive cabins, semi-furnished layouts ready for fast customized deployment, or bare-shell space for bespoke corporate fit-outs.",
+      "Strategically situated with quick, signal-free access to Chandigarh International Airport Road (PR-7), Aerocity, and Sector 82 Industrial Area, providing seamless daily commute across Chandigarh, Mohali, Panchkula, and Zirakpur.",
+    ],
+    facts: [
+      { label: "Property type", value: "Commercial office space" },
+      { label: "Total area", value: "15,000 sq ft" },
+      { label: "Fit-out options", value: "Furnished · Semi-furnished · Bare shell" },
+      { label: "Sector / Location", value: "Sector 83, IT City" },
+      { label: "Possession", value: "Available immediately" },
+      { label: "Transaction", value: "For lease" },
+    ],
+    nearby: [
+      "Chandigarh International Airport (IXC) via Airport Road",
+      "Sector 82 Industrial Area & Aerocity commercial hub",
+      "Major IT & tech campuses across IT City Mohali",
+      "Signal-free connectivity to PR-7 Airport Road and Mohali bypass",
+      "Restaurants, executive cafeterias, and public transit links",
+    ],
+    verification: [
+      "Confirm specific floor level, carpet vs super built-up area efficiency, and demised layout plan.",
+      "Verify reserved parking allocation, 100% power backup capacity (kVA), and HVAC specifications.",
+      "Review lease term structure, lock-in period, maintenance charges (CAM), and security deposit terms before agreement signing.",
+    ],
+  },
+  {
+    slug: "banur-tepla-road-5-5-bigha-plot",
+    title: "5.5 Bigha Plot on Banur–Tepla Road",
+    shortTitle: "Banur–Tepla Road · 5.5 bigha",
+    category: "Plot",
+    status: "Available",
+    transaction: "For sale",
+    location: "Banur–Tepla Road, near Rajpura / Mohali corridor",
+    locality: "Banur",
+    mapQuery: "Banur Tepla Road Punjab",
+    price: "On request",
+    priceNote:
+      "Confirm asking rate per bigha, total consideration, and payment timeline directly on enquiry.",
+    image: "/images/listings/banur-tepla-road-5-5-bigha-plot.png",
+    imageAlt:
+      "Branded conceptual listing graphic for 5.5 bigha plot on Banur Tepla Road",
+    summary:
+      "A strategic 5.5 bigha plot is available for sale on the high-growth Banur–Tepla Road corridor, ideal for warehousing, industrial, commercial, or investment development.",
+    description: [
+      "Positioned along the rapidly developing Banur–Tepla Road highway belt, this 5.5 bigha parcel offers prime connectivity linking Mohali, Banur, Rajpura, and the Ambala/Delhi (NH-44) highway network.",
+      "The corridor has emerged as one of the most sought-after logistics, warehousing, industrial, and commercial investment hubs in the southern Tricity periphery due to convenient heavy-vehicle movement, broad road widths, and lower land cost base.",
+      "Prospective buyers can evaluate the site for warehousing complexes, industrial sheds, agro-processing units, institutional projects, or strategic land banking with strong potential for capital appreciation.",
+    ],
+    facts: [
+      { label: "Property type", value: "Highway plot / Land parcel" },
+      { label: "Size", value: "5.5 bigha" },
+      { label: "Road frontage", value: "Banur–Tepla Road" },
+      { label: "Region", value: "Banur / Rajpura / Mohali corridor" },
+      { label: "Potential use", value: "Warehousing · Industrial · Commercial · Investment" },
+      { label: "Transaction", value: "For sale" },
+    ],
+    nearby: [
+      "Banur–Tepla Road industrial and warehousing corridor",
+      "Chandigarh–Patiala National Highway connectivity",
+      "NH-44 (Delhi–Amritsar Highway) junction via Tepla / Ambala",
+      "Rajpura logistics cluster and railway freight connectivity",
+      "Direct transit route toward Mohali International Airport Road",
+    ],
+    verification: [
+      "Confirm exact khasra numbers, revenue record (jamabandi), title registry, and physical possession.",
+      "Verify road frontage dimension, access permissions, CLU (Change of Land Use) status, and zoning guidelines.",
+      "Conduct an independent boundary demarcation survey and legal document verification prior to financial commitment.",
     ],
   },
 ];

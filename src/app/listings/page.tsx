@@ -10,12 +10,12 @@ import { absoluteUrl } from "@/data/seo";
 export const metadata: Metadata = {
   title: "Property Listings in Mohali & Tricity",
   description:
-    "Browse current flats, residential plots and land listings from Vedang Properties across Mohali, Aerocity, Zirakpur and Rajpura.",
+    "Browse current flats, residential plots, commercial office spaces, and land listings from Vedang Properties across Mohali, Aerocity, IT City, Zirakpur, Banur, and Rajpura.",
   alternates: { canonical: "/listings" },
   openGraph: {
     title: "Property Listings in Mohali & Tricity | Vedang Properties",
     description:
-      "Current flats, plots and land options with practical details, location context and direct enquiry support.",
+      "Current flats, plots, commercial offices, and land options with practical details, location context and direct enquiry support.",
     url: "/listings",
     images: [absoluteUrl("/images/listings/aerocity-e-block-300-sqyd-plot.png")],
   },

@@ -28,8 +28,16 @@ export async function generateMetadata({
     return {};
   }
 
+  const transactionText = listing.transaction.toLowerCase().includes("lease")
+    ? "for Lease"
+    : listing.transaction.toLowerCase().includes("rent")
+    ? "for Rent"
+    : listing.transaction.toLowerCase().includes("resale")
+    ? "for Resale"
+    : "for Sale";
+
   return {
-    title: `${listing.title} for Sale`,
+    title: `${listing.title} ${transactionText}`,
     description: `${listing.summary} View details, nearby connectivity, map context and enquiry information from Vedang Properties.`,
     alternates: { canonical: `/listings/${listing.slug}` },
     openGraph: {
@@ -183,7 +191,11 @@ export default async function ListingPage({ params }: ListingPageProps) {
 
               <div className="mt-7 rounded-xl border border-white/15 bg-white/8 p-5 sm:flex sm:items-center sm:justify-between sm:gap-6">
                 <div>
-                  <p className="text-sm text-white/60">Asking price</p>
+                  <p className="text-sm text-white/60">
+                    {listing.transaction.toLowerCase().includes("lease")
+                      ? "Lease terms"
+                      : "Asking price"}
+                  </p>
                   <p className="mt-1 text-2xl font-semibold text-[#d6a74e]">
                     {listing.price}
                   </p>
@@ -254,7 +266,9 @@ export default async function ListingPage({ params }: ListingPageProps) {
                 About this listing
               </p>
               <h2 className="mt-3 text-3xl font-semibold text-[#10383a]">
-                What buyers should know
+                {listing.transaction.toLowerCase().includes("lease")
+                  ? "What tenants should know"
+                  : "What buyers should know"}
               </h2>
               <div className="mt-5 grid gap-4 text-lg leading-8 text-slate-600">
                 {listing.description.map((paragraph) => (
@@ -327,7 +341,9 @@ export default async function ListingPage({ params }: ListingPageProps) {
 
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.1em] text-[#b85f45]">
-              Buyer verification
+              {listing.transaction.toLowerCase().includes("lease")
+                ? "Tenant verification"
+                : "Buyer verification"}
             </p>
             <h2 className="mt-3 text-3xl font-semibold text-[#10383a]">
               Check before you proceed
