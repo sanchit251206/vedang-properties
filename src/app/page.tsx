@@ -82,7 +82,7 @@ const googleProfileActions = [
   {
     title: "Review on Google",
     copy: "Share feedback after a completed visit or consultation.",
-    href: contact.googleMapsUrl,
+    href: contact.googleReviewUrl,
     icon: EditIcon,
   },
 ];

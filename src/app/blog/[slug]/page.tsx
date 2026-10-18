@@ -187,14 +187,14 @@ export default async function BlogArticlePage({
           </div>
         </section>
 
-        <section className="reveal py-12 md:py-16">
+        <section className="py-12 md:py-16">
           <div className="mx-auto grid max-w-7xl gap-8 px-5 lg:grid-cols-[minmax(0,760px)_320px] md:px-8">
-            <div className="reveal rounded-lg border border-black/10 bg-white p-6 shadow-sm md:p-8">
+            <div className="rounded-lg border border-black/10 bg-white p-6 shadow-sm md:p-8">
               <div className="flex flex-wrap gap-2">
                 {article.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="rounded-md bg-[#edf3ef] px-2.5 py-1 text-xs font-medium text-[#285846]"
+                    className="rounded-md bg-[#edf3ef] px-2.5 py-1 text-xs font-semibold text-[#285846]"
                   >
                     {tag}
                   </span>
@@ -204,13 +204,13 @@ export default async function BlogArticlePage({
               <div className="mt-8 grid gap-9">
                 {article.sections.map((section) => (
                   <section key={section.heading}>
-                    <h2 className="text-2xl font-semibold text-[#10383a]">
+                    <h2 className="text-2xl font-bold text-[#10383a]">
                       {section.heading}
                     </h2>
                     {section.paragraphs?.map((paragraph) => (
                       <p
                         key={paragraph}
-                        className="mt-4 leading-8 text-slate-700"
+                        className="mt-4 leading-8 text-slate-900 text-base"
                       >
                         {paragraph}
                       </p>
@@ -220,7 +220,7 @@ export default async function BlogArticlePage({
                         {section.bullets.map((bullet) => (
                           <li key={bullet} className="flex gap-3">
                             <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-[#b85f45]" />
-                            <span className="leading-7 text-slate-700">
+                            <span className="leading-7 text-slate-900 text-base whitespace-pre-line">
                               {bullet}
                             </span>
                           </li>
@@ -241,11 +241,11 @@ export default async function BlogArticlePage({
                     aspectRatio="aspect-[16/10]"
                   />
                   <div className="flex flex-col gap-4 p-5 sm:flex-row sm:items-center sm:justify-between">
-                    <div>
-                      <p className="text-sm font-semibold uppercase text-[#b85f45]">
+                    <div className="min-w-0 flex-1">
+                      <p className="text-xs font-bold uppercase tracking-wider text-[#b85f45]">
                         Map context
                       </p>
-                      <h2 className="mt-1 text-2xl font-semibold text-[#10383a]">
+                      <h2 className="mt-1 text-xl font-bold text-[#10383a] md:text-2xl">
                         {article.map.title}
                       </h2>
                     </div>
@@ -253,7 +253,7 @@ export default async function BlogArticlePage({
                       href={article.map.href}
                       target="_blank"
                       rel="noreferrer"
-                      className="inline-flex h-10 items-center justify-center gap-2 rounded-md border border-[#10383a] px-4 text-sm font-semibold text-[#10383a] transition hover:bg-[#10383a] hover:text-white"
+                      className="inline-flex h-11 shrink-0 whitespace-nowrap items-center justify-center gap-2 rounded-md border-2 border-[#10383a] px-5 text-sm font-bold text-[#10383a] transition hover:bg-[#10383a] hover:text-white"
                     >
                       View on Google Maps
                       <ArrowForwardIcon />
@@ -263,7 +263,7 @@ export default async function BlogArticlePage({
               ) : null}
             </div>
 
-            <aside className="reveal h-fit rounded-lg border border-black/10 bg-white p-5 shadow-sm">
+            <aside className="h-fit rounded-lg border border-black/10 bg-white p-5 shadow-sm">
               <p className="text-sm font-semibold uppercase text-[#b85f45]">
                 Careful guidance
               </p>

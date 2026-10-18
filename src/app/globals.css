@@ -46,8 +46,8 @@ a {
 @media (prefers-reduced-motion: no-preference) {
   @supports (animation-timeline: view()) {
     .reveal {
-      animation: reveal-up both;
-      animation-range: entry 6% cover 26%;
+      animation: reveal-up both ease-out;
+      animation-range: entry 0% cover 15%;
       animation-timeline: view();
     }
   }

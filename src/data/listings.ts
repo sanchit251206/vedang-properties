@@ -384,11 +384,11 @@ export const listings: PropertyListing[] = [
     imageAlt:
       "Branded conceptual listing graphic for 5.5 bigha plot on Banur Tepla Road",
     summary:
-      "A strategic 5.5 bigha plot is available for sale on the high-growth Banur–Tepla Road corridor, ideal for warehousing, industrial, commercial, or investment development.",
+      "A 5.5 bigha plot is available for sale on Banur–Tepla Road, which buyers may consider for warehousing, industrial, commercial, or long-term holding use, subject to verification.",
     description: [
-      "Positioned along the rapidly developing Banur–Tepla Road highway belt, this 5.5 bigha parcel offers prime connectivity linking Mohali, Banur, Rajpura, and the Ambala/Delhi (NH-44) highway network.",
-      "The corridor has emerged as one of the most sought-after logistics, warehousing, industrial, and commercial investment hubs in the southern Tricity periphery due to convenient heavy-vehicle movement, broad road widths, and lower land cost base.",
-      "Prospective buyers can evaluate the site for warehousing complexes, industrial sheds, agro-processing units, institutional projects, or strategic land banking with strong potential for capital appreciation.",
+      "This 5.5 bigha parcel is on the Banur–Tepla Road corridor, with road links toward Mohali, Banur, Rajpura, and the Ambala and Delhi (NH-44) highway network. Actual access, frontage and travel times should be checked on site.",
+      "Buyers may evaluate the site for warehousing, industrial sheds, agro-processing, institutional use, or longer-term holding. Whether any of these uses is permitted depends on the land-use status, zoning and approvals, which must be confirmed from official records.",
+      "No appreciation, return or development outcome is promised. Please complete independent legal and technical verification before making any payment.",
     ],
     facts: [
       { label: "Property type", value: "Highway plot / Land parcel" },
@@ -409,6 +409,54 @@ export const listings: PropertyListing[] = [
       "Confirm exact khasra numbers, revenue record (jamabandi), title registry, and physical possession.",
       "Verify road frontage dimension, access permissions, CLU (Change of Land Use) status, and zoning guidelines.",
       "Conduct an independent boundary demarcation survey and legal document verification prior to financial commitment.",
+    ],
+  },
+  {
+    slug: "amellia-kothi-mohali-150-sqyd-resale-plot",
+    title: "150 sq yd Plot in Amellia Kothi, Mohali",
+    shortTitle: "Amellia Kothi · 150 sq yd Plot",
+    category: "Plot",
+    status: "Resale",
+    transaction: "For resale",
+    location: "Amellia Kothi, Mohali",
+    locality: "Mohali",
+    mapQuery: "Amellia Kothi Mohali Punjab",
+    price: "On request",
+    priceNote:
+      "Asking price is negotiable, confirm availability and terms upon enquiry.",
+    image: "/images/listings/amellia-kothi-150-sqyd-brochure.png",
+    imageAlt:
+      "Branded conceptual listing graphic for a 150 square yard residential resale plot in Amellia Kothi Mohali",
+    summary:
+      "A 150 sq yd (approx. 1,350 sq ft) residential plot is available on resale in Amellia Kothi, Mohali, situated 100 metres from Grecian Super Specialty Hospital with direct connectivity to Phase 9 Industrial Area and JLPL Sector 66A.",
+    description: [
+      "This 150 square yard residential plot in Amellia Kothi, Mohali is offered on resale through Vedang Properties for buyers comparing an established residential pocket with immediate access to Mohali's commercial and healthcare corridors.",
+      "The location provides exceptional everyday connectivity: situated just 100 metres from Grecian Super Specialty Hospital, within 1 km of Phase 9 Industrial Area and JLPL Sector 66A, and only 3.3 km from CP67 Mall in Sector 67.",
+      "With Chandigarh International Airport (IXC) reachable in under 15 minutes (7.9 km) and ISBT Sector 43 Chandigarh just 3 km away, the property suits independent family home construction, builder floor development, or medium-term residential holding.",
+      "Exact site boundaries, facing, approach road dimensions, title documentation, mutation records, and GMADA/municipal clearances will be cross-verified directly with the owner upon enquiry before any commitment.",
+    ],
+    facts: [
+      { label: "Property type", value: "Residential plot" },
+      { label: "Size", value: "150 sq yd (approx. 1,350 sq ft)" },
+      { label: "Location", value: "Amellia Kothi, Mohali" },
+      { label: "Price", value: "On request · negotiable" },
+      { label: "Transaction", value: "Resale" },
+      { label: "Proximity", value: "100m to Grecian Hospital" },
+    ],
+    nearby: [
+      "Grecian Super Specialty Mohali (0.1 km / 100 metres)",
+      "IVY Hospital Kharar Road Mohali (0.7 km)",
+      "Phase 9 Industrial Area, Mohali (1 km)",
+      "JLPL Sector 66A, Mohali (1 km)",
+      "ISBT Sector 43 Chandigarh (3 km)",
+      "CP67 Mall, Sector 67 (3.3 km)",
+      "Chandigarh Sector 17 Plaza (7.2 km)",
+      "Chandigarh International Airport / IXC (7.9 km)",
+    ],
+    verification: [
+      "Confirm exact plot number, boundary demarcation, registry, and physical possession on site.",
+      "Verify title chain, encumbrance status, and municipal or authority approvals prior to token agreement.",
+      "Review road width, utility connections, and building bylaws for residential construction.",
     ],
   },
 ];

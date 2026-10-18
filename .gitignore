@@ -49,3 +49,7 @@ next-env.d.ts
 google-business/
 scripts/
 vedang-properties-*.png
+
+# local leads storage
+/data/
+data/leads.json

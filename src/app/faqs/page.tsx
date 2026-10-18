@@ -32,7 +32,7 @@ const faqCategories = [
       },
       {
         q: "What are the typical registry and stamp duty charges in Punjab?",
-        a: "In Punjab, stamp duty on property registration generally ranges between 5% to 7% of the circle rate or sale consideration (plus applicable infrastructure cess and registration fees). Concessions are often available when properties are registered in the name of female buyers. Consult our team or a legal advisor for current exact circle rates and district revenue updates.",
+        a: "In Punjab, stamp duty is 5% for female sole buyers (benefiting from a 2% state concession), 7% for male sole buyers, and 6% for joint ownership (male + female). In addition, a 1% registration fee (subject to applicable state caps) and statutory infrastructure cesses apply. Charges are calculated on the higher of the transaction consideration or the government circle/collector rate. Read our detailed guide for full sector-specific guidance.",
       },
       {
         q: "What documents must I verify before buying a flat or builder floor?",

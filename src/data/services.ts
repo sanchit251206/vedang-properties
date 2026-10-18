@@ -89,7 +89,7 @@ export const serviceGuides: ServiceGuide[] = [
       {
         question: "Does Vedang Properties publish live property listings?",
         answer:
-          "The website is an advisory and enquiry platform rather than a public live-listing catalogue. Share the requirement directly so current suitability can be discussed before a visit.",
+          "Selected current options are shown on the Listings page, and other options may be available on request. Availability, price and details are confirmed on enquiry, so share the requirement directly before a visit.",
       },
       {
         question: "Can a consultant verify property documents?",

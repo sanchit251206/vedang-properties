@@ -211,7 +211,7 @@ export const areaGuides: AreaGuide[] = [
       {
         question: "Does Vedang Properties provide IT City property listings?",
         answer:
-          "The website is an advisory and enquiry platform, not a public live-listing catalogue. Share your requirement directly so current suitability can be discussed before a visit.",
+          "Selected current options are shown on the Listings page, and other options may be available on request. Share your requirement directly so current suitability can be discussed before a visit.",
       },
     ],
   },

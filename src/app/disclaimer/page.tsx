@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
-import { contact, officialSourceLinks } from "@/data/site";
+import { contact } from "@/data/site";
 import { absoluteUrl } from "@/data/seo";
 
 export const metadata: Metadata = {

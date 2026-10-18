@@ -6,6 +6,13 @@ const googleProfileUrl =
   process.env.NEXT_PUBLIC_GOOGLE_PROFILE_URL?.trim() ||
   "https://share.google/OPXRIxW7Er3fVmykt";
 
+// Direct "write a review" link, e.g.
+// https://search.google.com/local/writereview?placeid=<YOUR_PLACE_ID>
+// Set NEXT_PUBLIC_GOOGLE_REVIEW_URL once the Place ID is known. Until then the
+// profile link is used, where the "Write a review" button is available.
+const googleReviewUrl =
+  process.env.NEXT_PUBLIC_GOOGLE_REVIEW_URL?.trim() || googleProfileUrl;
+
 export const contact = {
   phoneDisplay: "+91 82646 30736",
   tel: "+918264630736",
@@ -13,7 +20,11 @@ export const contact = {
   addressShort: "#171 MCC 2, Aerocity, Mohali",
   addressFull:
     "171, MCC - 2, GMADA Aerocity, Sahibzada Ajit Singh Nagar, Matran, Punjab 140306",
+  // Office hours: single source of truth (mirrors Google Business Profile dashboard).
+  hoursDisplay:
+    "Monday – Sunday: 9:30 AM – 8:00 PM (Open all 7 days) | Online inquiries: 24 hours",
   googleProfileUrl,
+  googleReviewUrl,
   googleMapsQuery: vedangGoogleQuery,
   googleMapsUrl: googleProfileUrl,
   googleDirectionsUrl: `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(
@@ -49,7 +60,7 @@ export type Article = {
   imageAlt: string;
   tags: string[];
   sections: ArticleSection[];
-  sources?: typeof officialSourceLinks;
+  sources?: { label: string; href: string }[];
   map?: {
     title: string;
     query: string;
@@ -58,6 +69,164 @@ export type Article = {
 };
 
 export const articles: Article[] = [
+  {
+    slug: "stamp-duty-and-property-registration-mohali-2026",
+    category: "Buyer Guide",
+    title:
+      "Punjab stamp duty and property registration charges in Mohali (2026 statutory guide)",
+    excerpt:
+      "A complete, mathematically worked-out statutory guide to Punjab stamp duty rates, women's concessions, SAS Nagar collector rates, NGDRS online portal procedures, and GMADA transfer fees.",
+    date: "16 Oct 2026",
+    readTime: "12 min read",
+    image: "/images/blog-verify-documents.jpg",
+    imageAlt:
+      "Official property registration and document verification in Mohali Punjab",
+    tags: [
+      "Stamp duty Mohali",
+      "Punjab property registry",
+      "NGDRS Punjab",
+      "Collector rates SAS Nagar",
+      "GMADA transfer fee",
+      "Legal due diligence",
+    ],
+    sources: [
+      {
+        label: "NGDRS Punjab (Official Registration & Appointment Portal)",
+        href: "https://punjab.ngdrs.gov.in/",
+      },
+      {
+        label: "IGRS Punjab (District Collector Rates SAS Nagar)",
+        href: "https://igrspunjab.gov.in/",
+      },
+      {
+        label: "PLRS Jamabandi & Digital Land Records (Fard & Mutation)",
+        href: "https://plrs.org.in/",
+      },
+      {
+        label: "PUDA / GMADA Online Citizen Services (NDC & Ownership Change)",
+        href: "https://puda.gov.in/",
+      },
+      {
+        label: "SHCIL Punjab e-Stamping Verification",
+        href: "https://www.shcilestamp.com/",
+      },
+      {
+        label: "SAS Nagar District Administration (DAC Sector 76)",
+        href: "https://sasnagar.punjab.gov.in/",
+      },
+    ],
+    map: {
+      title: "Sub-Registrar Office SAS Nagar Mohali (Tehsil Complex, DAC Sector 76)",
+      query:
+        "Sub Registrar Office Mohali SAS Nagar District Administrative Complex Sector 76",
+      href: "https://www.google.com/maps/search/?api=1&query=Sub+Registrar+Office+Mohali+SAS+Nagar+District+Administrative+Complex+Sector+76",
+    },
+    sections: [
+      {
+        heading: "The true acquisition cost equation in SAS Nagar (Mohali)",
+        paragraphs: [
+          "When purchasing real estate across Mohali, Aerocity, IT City, Kharar, or Zirakpur, many buyers mistakenly budget solely for the agreed base property price. In Punjab, however, mandatory statutory levies—primarily stamp duty, the state registration fee, and rural/social infrastructure cesses—add between 6% and 9% to the total capital outlay.",
+          "Failing to account for these government charges in advance leads to unexpected liquidity shortfalls when executing deeds at the Sub-Registrar's office. Understanding Punjab's statutory fee structure allows families to legally optimize their ownership setup through government-notified concessions.",
+        ],
+      },
+      {
+        heading: "Punjab stamp duty rate matrix (2026 statutory rates)",
+        paragraphs: [
+          "Under the Indian Stamp Act, 1899 (as amended by the State of Punjab), stamp duty is a mandatory state tax payable on instruments of conveyance, sale, gift, and exchange. Punjab revenue rules offer progressive, gender-differentiated duty tiers specifically to encourage property ownership among women:",
+        ],
+        bullets: [
+          "Sole Female Buyer: 5% Total Duty — Includes 3% Basic Stamp Duty (with a 2% statutory state concession for women), plus 1% Punjab Social Security Fund (PSSF) Cess, and 1% Punjab Rural Infrastructure Development Board (PRIDB) Cess.",
+          "Sole Male Buyer: 7% Total Duty — Includes 5% Basic Stamp Duty, plus 1% PSSF Cess, and 1% PRIDB Cess.",
+          "Joint Ownership (Male + Female, e.g., Husband & Wife): 6% Total Duty — Blended 4% Basic Stamp Duty, plus 1% PSSF Cess, and 1% PRIDB Cess (yielding an effective 1% net saving across the transaction).",
+          "Joint Ownership (Female + Female): 5% Total Duty — Retains the full 2% statutory concession across the entire consideration.",
+          "Joint Ownership (Male + Male): 7% Total Duty — Standard rate applied across the entire valuation.",
+          "Registration Fee: Flat 1% of the total transaction or collector value (levied uniformly across all categories by the Punjab Revenue Department).",
+          "Pasting / Computer Facilitation Fee: ₹500 to ₹1,000 per deed at the Sub-Registrar counter.",
+        ],
+      },
+      {
+        heading: "Circle rate (Collector rate) versus Agreement value: Section 47-A",
+        paragraphs: [
+          "Under Punjab Stamp Rules, stamp duty and registration fees must be computed on whichever figure is HIGHER: the actual transaction/agreement consideration, or the notified District Collector Rate (Circle Rate) published by the SAS Nagar District Administration.",
+          "Collector rates vary substantially across Mohali's micro-markets. For instance, GMADA-planned urban estates (Aerocity Blocks A–G, IT City Sectors 82–83, and EcoCity New Chandigarh) command different per-square-yard benchmark rates than municipal sectors (Sectors 68–71) or suburban growth belts (Kharar, Majri, and Zirakpur). Buyers can cross-reference the official notified rates on the IGRS Punjab portal (igrspunjab.gov.in) before drawing stamp paper.",
+          "Important Legal Note (Section 47-A): If an agreement is registered below the prevailing collector rate, the Sub-Registrar will impound the instrument and forward it to the Collector under Section 47-A of the Indian Stamp Act for recovery of deficit stamp duty, along with penal interest (typically 12% to 18% per annum) and statutory fines.",
+        ],
+      },
+      {
+        heading:
+          "Worked Calculation 1: 3 BHK Apartment in Sector 82 / Airport Road (₹80 Lakhs)",
+        paragraphs: [
+          "Consider a buyer purchasing a 3-bedroom luxury flat near Airport Road with an agreed market and collector valuation of ₹80,00,000 (₹80 Lakhs). Here is the exact mathematical comparison of government charges based on deed structuring:",
+        ],
+        bullets: [
+          "Option A: Registered solely in Husband's name (Male)\n• Stamp Duty (7%): ₹5,60,000\n• Registration Fee (1%): ₹80,000\n• Total Government Registry Outlay: ₹6,40,000",
+          "Option B: Registered solely in Wife's name (Female)\n• Stamp Duty (5%): ₹4,00,000\n• Registration Fee (1%): ₹80,000\n• Total Government Registry Outlay: ₹4,80,000\n• Direct Financial Saving: ₹1,60,000 (A direct 2.0% cash saving on total purchase cost).",
+          "Option C: Joint Registration (Husband & Wife)\n• Stamp Duty (6%): ₹4,80,000\n• Registration Fee (1%): ₹80,000\n• Total Government Registry Outlay: ₹5,60,000\n• Direct Financial Saving: ₹80,000 (A balanced compromise combining legal co-ownership and stamp savings).",
+        ],
+      },
+      {
+        heading:
+          "Worked Calculation 2: GMADA Plotted Land in Aerocity / IT City (₹1.50 Crore)",
+        paragraphs: [
+          "For plotted developments in GMADA Aerocity (Blocks A–G) or IT City, transaction structures vary depending on whether the property is being transferred prior to conveyance (Direct Allotment Transfer via GMADA) or registered as a Freehold Conveyance Deed at the Sub-Registrar office.",
+          "When executing a Freehold Registered Sale Deed on a 200 sq. yard plot with an evaluated value of ₹1,50,00,000 (₹1.50 Crore):",
+        ],
+        bullets: [
+          "Male Sole Buyer: 7% Stamp Duty (₹10,50,000) + 1% Registration (₹1,50,000) = ₹12,00,000 Total Statutory Dues.",
+          "Female Sole Buyer: 5% Stamp Duty (₹7,50,000) + 1% Registration (₹1,50,000) = ₹9,00,000 Total Statutory Dues (₹3,00,000 saved).",
+          "Joint (Husband + Wife): 6% Stamp Duty (₹9,00,000) + 1% Registration (₹1,50,000) = ₹10,50,000 Total Statutory Dues (₹1,50,000 saved).",
+          "GMADA Transfer Permission (Unregistered Plot Rights): If buying an un-conveyed allotment, transfer occurs through GMADA/PUDA citizen e-services. GMADA levies an administrative transfer fee (subject to current PUDA policy notifications) rather than immediate full Sub-Registrar stamp duty. Once the allotment is fully paid up, the final buyer executes the Conveyance Deed paying applicable stamp duty.",
+        ],
+      },
+      {
+        heading:
+          "The 6-step Mohali property registration workflow on NGDRS Punjab",
+        paragraphs: [
+          "Property registration in Mohali (SAS Nagar) is executed digitally through the National Generic Document Registration System (NGDRS Punjab portal at punjab.ngdrs.gov.in). The practical workflow consists of six mandatory steps:",
+        ],
+        bullets: [
+          "Step 1: Document Due Diligence & Clearance — Verify chain deeds, title clearance, GMADA No Dues Certificate (NDC), or Municipal Corporation SAS Nagar property tax clearance receipts.",
+          "Step 2: Sale Deed Drafting — Have a licensed Punjab document writer or property advocate draft the conveyance deed, specifying exact Khasra/Khatauni numbers, plot coordinates, carpet area, consideration breakdown, and boundary schedules.",
+          "Step 3: Procuring e-Stamp Certificate — Purchase the e-Stamp certificate through authorized Stock Holding Corporation of India (SHCIL) branches, approved Punjab banks, or directly via NGDRS online net-banking payment.",
+          "Step 4: NGDRS Online Entry & Appointment Scheduling — Upload the deed draft, buyer/seller demographic details, Aadhaar credentials, and property valuations onto punjab.ngdrs.gov.in, and schedule a physical appointment slot at Tehsil SAS Nagar.",
+          "Step 5: Physical Execution at Sub-Registrar Office — Buyer, seller, and two independent adult witnesses visit the Sub-Registrar Office (Tehsil Complex at the District Administrative Complex, Sector 76, Mohali). Biometric thumbprints and digital webcam photographs are captured before the Sub-Registrar.",
+          "Step 6: Document Endorsement & Collection — The Sub-Registrar reviews the deed and authorizes digital registration. The certified registered deed is signed, assigned a unique registration number/volume/page, and handed over or made downloadable within 24 to 48 hours.",
+        ],
+      },
+      {
+        heading: "Mandatory document checklist for Sub-Registrar SAS Nagar",
+        bullets: [
+          "Original Parent Title Deed / Allotment Letter / Re-allotment Letter establishing an unbroken ownership chain.",
+          "GMADA No Due Certificate (NDC) or Municipal Corporation Mohali Property Tax Clearance Receipt.",
+          "Non-Encumbrance Certificate (Form 15/16) obtained from the Sub-Registrar office confirming zero mortgages or litigation liens.",
+          "Approved building plan and Completion Certificate / Occupancy Certificate (mandatory for built floors, villas, and commercial SCOs).",
+          "Original E-Stamp Paper with verifiable Unique Identification Number (UIN) matching the calculated statutory duty.",
+          "Bank receipt or online challan verifying full payment of the 1% registration fee and pasting charges.",
+          "Aadhaar Card and PAN Card (or Form 60/61) of the buyer, seller, and two credible adult witnesses.",
+          "Two passport-sized photographs of both parties with attested signatures.",
+        ],
+      },
+      {
+        heading:
+          "Post-registration imperatives: Mutation (Inteqal) & Utility transfers",
+        paragraphs: [
+          "A registered sale deed proves that a legal conveyance occurred between the parties, but it does NOT automatically update government revenue or municipal records. To ensure absolute legal defensibility and prevent unauthorized third-party claims, two subsequent actions are essential:",
+        ],
+        bullets: [
+          "1. Digital Mutation (Inteqal) via PLRS: File for mutation at the local Tehsil Sewa Kendra or online through the Punjab Land Records Society (plrs.org.in). The Patwari and Kanungo verify the deed and update the Jamabandi (record of rights) to reflect the buyer's name. Always collect the certified Roznamcha and Fard copy once sanctioned.",
+          "2. GMADA Ownership Endorsement: For GMADA-allotted properties in Aerocity, IT City, or Sector 76–80, submit the registered conveyance deed on puda.gov.in for the issuance of a fresh Re-allotment Letter in your name.",
+          "3. Utility Account Transfers: Update the electricity meter with Punjab State Power Corporation Limited (PSPCL), municipal water connection, and property tax records using certified copies of the registered deed and mutation order.",
+        ],
+      },
+      {
+        heading: "How Vedang Properties assists in purchase due diligence",
+        paragraphs: [
+          "At Vedang Properties, based at #171 MCC-2 in GMADA Aerocity, we guide clients through the entire transaction lifecycle before any financial commitment is made.",
+          "We review GMADA allotments, cross-verify circle rates, calculate precise statutory liabilities, coordinate with certified deed advocates, and accompany you through the Sub-Registrar execution at Sector 76 DAC. We believe grounded clarity and total legal transparency are the foundation of every sound property investment in Mohali.",
+        ],
+      },
+    ],
+  },
   {
     slug: "mohali-property-search-trends-2026",
     category: "Market Notes",

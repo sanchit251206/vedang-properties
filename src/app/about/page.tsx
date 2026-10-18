@@ -44,24 +44,26 @@ const values = [
 
 const milestones = [
   {
+    figure: "5.0 ★",
+    label: "35 Google Reviews",
+    subtext:
+      "Verified rating on Google Business Profile from clients across Mohali & Tricity.",
+  },
+  {
+    figure: "7 Days",
+    label: "Open for Consultations",
+    subtext:
+      "Monday – Sunday 9:30 AM–8:00 PM at MCC-2 Aerocity | Online 24 hours.",
+  },
+  {
     figure: "100%",
     label: "Local Tricity Focus",
     subtext: "Deep expertise in Mohali, Aerocity, IT City, Kharar & Zirakpur.",
   },
   {
-    figure: "171",
-    label: "Aerocity Office Hub",
-    subtext: "MCC-2, GMADA Aerocity office for in-person consultations.",
-  },
-  {
     figure: "4+",
     label: "Property Verticals",
     subtext: "Residential homes, plots, commercial spaces, and seller listings.",
-  },
-  {
-    figure: "5.0 ★",
-    label: "Google Verified Profile",
-    subtext: "Transparent client feedback and direct directions on Google Maps.",
   },
 ];
 
@@ -91,6 +93,29 @@ export default function AboutPage() {
             postalCode: "140306",
             addressCountry: "IN",
           },
+          aggregateRating: {
+            "@type": "AggregateRating",
+            ratingValue: "5.0",
+            reviewCount: "35",
+            bestRating: "5",
+            worstRating: "1",
+          },
+          openingHoursSpecification: [
+            {
+              "@type": "OpeningHoursSpecification",
+              dayOfWeek: [
+                "Sunday",
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday",
+              ],
+              opens: "09:30",
+              closes: "20:00",
+            },
+          ],
         },
       },
       {
@@ -291,7 +316,7 @@ export default function AboutPage() {
                 <strong>Address:</strong> {contact.addressFull}
               </p>
               <p>
-                <strong>Timings:</strong> Monday – Saturday: 9:30 AM – 7:30 PM
+                <strong>Timings:</strong> {contact.hoursDisplay}
               </p>
               <p>
                 <strong>Phone:</strong> {contact.phoneDisplay}

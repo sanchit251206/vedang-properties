@@ -36,6 +36,24 @@ export function LeadForm({ whatsappNumber, compact = false }: LeadFormProps) {
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
+    const formData = new FormData(event.currentTarget);
+    const honeypot = String(formData.get("hp_field") ?? "");
+    const sourcePage = window.location.pathname;
+
+    // Save the lead on the server first so it is not lost if the visitor never
+    // sends the WhatsApp message. keepalive lets the request finish even though
+    // the WhatsApp tab opens straight away; it is deliberately not awaited so
+    // the browser does not block the popup.
+    void fetch("/api/leads", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ ...lead, sourcePage, website: honeypot }),
+      keepalive: true,
+    }).catch(() => {
+      // WhatsApp still opens below, so the enquiry can still be sent.
+    });
+
+
     const message = [
       "Hello Vedang Properties,",
       `My name: ${lead.name}`,
@@ -156,6 +174,13 @@ export function LeadForm({ whatsappNumber, compact = false }: LeadFormProps) {
             suppressHydrationWarning
             className="h-12 w-full rounded-md border border-slate-300 bg-white px-3.5 text-base text-slate-950 outline-none transition placeholder:text-slate-400 focus:border-[#d6a74e] focus:ring-4 focus:ring-[#d6a74e]/20"
           />
+        </label>
+      </div>
+
+      <div aria-hidden="true" className="absolute -left-[9999px] h-0 w-0 overflow-hidden">
+        <label>
+          Leave this field empty
+          <input type="text" name="hp_field" tabIndex={-1} autoComplete="off" />
         </label>
       </div>
 

@@ -52,6 +52,7 @@ const localBusinessJsonLd = {
     {
       "@type": "OpeningHoursSpecification",
       dayOfWeek: [
+        "Sunday",
         "Monday",
         "Tuesday",
         "Wednesday",
@@ -60,9 +61,16 @@ const localBusinessJsonLd = {
         "Saturday",
       ],
       opens: "09:30",
-      closes: "19:30",
+      closes: "20:00",
     },
   ],
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "5.0",
+    reviewCount: "35",
+    bestRating: "5",
+    worstRating: "1",
+  },
   contactPoint: {
     "@type": "ContactPoint",
     telephone: contact.tel,
