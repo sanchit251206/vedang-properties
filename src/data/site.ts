@@ -43,10 +43,39 @@ export const officialSourceLinks = [
   },
 ];
 
+export type SectionLink = {
+  label: string;
+  href: string;
+  isExternal?: boolean;
+  variant?:
+    | "primary"
+    | "secondary"
+    | "google"
+    | "review"
+    | "direction"
+    | "guide"
+    | "area";
+};
+
+export type GoogleProfileCard = {
+  businessName: string;
+  ratingText?: string;
+  address: string;
+  profileUrl: string;
+  reviewsUrl?: string;
+  directionsUrl?: string;
+  badge?: string;
+};
+
 export type ArticleSection = {
   heading: string;
   paragraphs?: string[];
   bullets?: string[];
+  image?: string;
+  imageAlt?: string;
+  imageCaption?: string;
+  links?: SectionLink[];
+  googleProfileCard?: GoogleProfileCard;
 };
 
 export type Article = {
@@ -69,6 +98,423 @@ export type Article = {
 };
 
 export const articles: Article[] = [
+  {
+    slug: "top-10-property-dealers-in-mohali-2026-guide",
+    category: "Market Notes",
+    title:
+      "Top 10 property dealers and real estate consultants in Mohali (2026 selection & due diligence guide)",
+    excerpt:
+      "A practical, verified guide to the top property dealers and real estate consultants in Mohali, SAS Nagar, and Aerocity—categorized by micro-market specialization, RERA compliance, and buyer due diligence.",
+    date: "22 Oct 2026",
+    readTime: "14 min read",
+    image: "/images/blog-area-comparison.jpg",
+    imageAlt:
+      "Top property dealers and real estate consultants in Mohali SAS Nagar",
+    tags: [
+      "Property dealers in Mohali",
+      "Real estate consultants",
+      "Best property dealers in Mohali",
+      "Aerocity Mohali",
+      "GMADA plots",
+      "Mohali real estate 2026",
+    ],
+    sources: [
+      {
+        label: "Punjab RERA Official Portal",
+        href: "https://rera.punjab.gov.in/",
+      },
+      {
+        label: "GMADA Official Citizen Services",
+        href: "https://gmada.gov.in/en",
+      },
+      {
+        label: "IGRS Punjab Collector Rates (SAS Nagar)",
+        href: "https://igrspunjab.gov.in/",
+      },
+      {
+        label: "NGDRS Punjab Registration Portal",
+        href: "https://punjab.ngdrs.gov.in/",
+      },
+      {
+        label: "PUDA Citizen Services (NDC & Ownership Change)",
+        href: "https://puda.gov.in/",
+      },
+    ],
+    map: {
+      title: "Mohali Real Estate Advisory Hub & Aerocity Corridor",
+      query: "Vedang Properties 171 MCC 2 GMADA Aerocity Mohali",
+      href: "https://www.google.com/maps/search/?api=1&query=Vedang+Properties+171+MCC+2+GMADA+Aerocity+Mohali",
+    },
+    sections: [
+      {
+        heading:
+          "Why choosing the right property consultant in Mohali matters in 2026",
+        paragraphs: [
+          "Mohali (SAS Nagar) has evolved from a satellite town of Chandigarh into one of North India's most dynamic real estate corridors. With mega infrastructure developments across PR-7 Airport Road, GMADA Aerocity, IT City (Sectors 82–83), and New Chandigarh, thousands of homebuyers, commercial investors, and NRI families enter the market every month.",
+          "However, navigating Mohali's property landscape is fundamentally different from buying in mature metropolitan centers like Delhi or Mumbai. Here, the market is strictly divided between GMADA-planned urban estates, private builder societies, municipal corporation sectors, and suburban expansion belts. Each comes with distinct documentation, transfer rules, and statutory fee calculations.",
+          "Working with an unverified or inexperienced broker often means inflated price quotes, undisclosed authority dues, circle rate discrepancies leading to Section 47-A stamp duty penalties, or disputes over land mutation (Inteqal). Choosing an authentic, corridor-specialized property consultant is the single most critical decision in protecting your capital.",
+        ],
+      },
+      {
+        heading:
+          "The 5 essential due diligence filters before hiring a Mohali property dealer",
+        bullets: [
+          "1. Punjab RERA Registration & Compliance: Under the Real Estate (Regulation and Development) Act, any agent brokering registered builder projects must hold a valid Punjab RERA agent license (verifiable on rera.punjab.gov.in). Never work with unverified operators who cannot provide credentials.",
+          "2. Physical On-Ground Office Presence: Mohali has seen an influx of fly-by-night brokers who operate exclusively from cars or phone numbers. Always insist on visiting a dealer's physical office in Mohali or Aerocity to verify their local roots, staff permanence, and community standing.",
+          "3. Deep Familiarity with GMADA & PUDA Citizen Portals: For plotted land in Aerocity, IT City, or EcoCity, the consultant must demonstrate hands-on fluency with the PUDA citizen portal (puda.gov.in), No Dues Certificate (NDC) generation, Letter of Intent (LOI) verification, and official ownership transfer procedures.",
+          "4. Circle Rate (Collector Rate) Transparency: In Punjab, stamp duty must be calculated on the higher of the transaction value or the notified SAS Nagar Collector Rate. An honest consultant calculates statutory government levies upfront so buyers aren't blindsided by liquidity shortages at the Tehsil complex.",
+          "5. Clear, Written Brokerage Terms: Trustworthy consultants maintain standard, transparent fee structures (typically 1% on secondary market transactions or flat statutory advisory fees), with zero hidden markups or intermediary price inflation.",
+        ],
+      },
+      {
+        heading:
+          "Top 10 property dealers and real estate consultants in Mohali by specialization",
+        paragraphs: [
+          "Rather than relying on an arbitrary ranking, the most practical way to evaluate real estate consultants in Mohali is by their micro-market specialization, corridor focus, and on-ground track record.",
+          "Below is a detailed, objective review of Mohali's 10 most established real estate agencies and consultancies for 2026, helping you choose the right partner for your exact property requirement:",
+        ],
+      },
+      {
+        heading:
+          "1. Vedang Properties – GMADA Aerocity, IT City & Airport Road Plotted Specialist",
+        image: "/images/vedang-properties-areas-we-serve-landscape.png",
+        imageAlt:
+          "Vedang Properties - Verified Google Business Profile & Mohali Advisory",
+        imageCaption:
+          "Verified Business Profile & Micro-markets: Vedang Properties, #171 MCC-2, GMADA Aerocity, Mohali",
+        googleProfileCard: {
+          businessName: "Vedang Properties",
+          ratingText: "5.0 ★ Rating on Google (Verified Business Profile)",
+          address:
+            "171, MCC - 2, GMADA Aerocity, Sahibzada Ajit Singh Nagar, Punjab 140306",
+          profileUrl:
+            "https://share.google/OPXRIxW7Er3fVmykt",
+          reviewsUrl:
+            "https://share.google/OPXRIxW7Er3fVmykt",
+          directionsUrl:
+            "https://www.google.com/maps/dir/?api=1&destination=Vedang%20Properties%20171%20MCC%202%20GMADA%20Aerocity%20Mohali",
+          badge: "Verified Google Business Profile",
+        },
+        bullets: [
+          "Headquarters: #171 MCC 2, GMADA Aerocity, SAS Nagar, Punjab 140306 | Phone: +91 82646 30736.",
+          "Core Specialization: GMADA Plotted Land (Aerocity Blocks A to G, IT City Sectors 82 & 83), Airport Road Commercial SCOs & Showrooms, Premium Independent Builder Floors, and Statutory Legal Due Diligence.",
+          "Key Strengths: Stationed directly on-ground in Aerocity MCC-2, Vedang Properties has earned a reputation for zero-pressure advisory and rigorous document scrutiny. They provide mathematically worked-out statutory breakdowns covering Punjab stamp duty (including women's concessions), collector rate cross-verifications, and complete Sub-Registrar execution support at the Sector 76 District Administrative Complex.",
+          "Best Suited For: Buyers seeking GMADA-approved residential or commercial plots, investors seeking prime Airport Road commercial frontage, and NRI clients requiring end-to-end legal title verification and digital mutation tracking.",
+        ],
+        links: [
+          {
+            label: "Open Verified Google Business Profile",
+            href: "https://share.google/OPXRIxW7Er3fVmykt",
+            isExternal: true,
+            variant: "google",
+          },
+          {
+            label: "Get Office Directions on Google Maps",
+            href: "https://www.google.com/maps/dir/?api=1&destination=Vedang%20Properties%20171%20MCC%202%20GMADA%20Aerocity%20Mohali",
+            isExternal: true,
+            variant: "direction",
+          },
+          {
+            label: "Read Google Reviews",
+            href: "https://share.google/OPXRIxW7Er3fVmykt",
+            isExternal: true,
+            variant: "review",
+          },
+          {
+            label: "Explore GMADA Aerocity Plots & Location Guide",
+            href: "/areas/aerocity-mohali",
+            isExternal: false,
+            variant: "area",
+          },
+          {
+            label: "Explore IT City Sector 82–83 Guide",
+            href: "/areas/it-city-mohali",
+            isExternal: false,
+            variant: "area",
+          },
+          {
+            label: "Airport Road Commercial Corridor",
+            href: "/areas/airport-road-mohali",
+            isExternal: false,
+            variant: "area",
+          },
+          {
+            label: "Punjab Stamp Duty & Registry Calculation Guide (2026)",
+            href: "/blog/stamp-duty-and-property-registration-mohali-2026",
+            isExternal: false,
+            variant: "guide",
+          },
+          {
+            label: "Checklist Before Shortlisting a Plot in Mohali",
+            href: "/blog/buying-plot-mohali-shortlisting-checks",
+            isExternal: false,
+            variant: "guide",
+          },
+          {
+            label: "Commercial Property & SCO Due Diligence",
+            href: "/blog/commercial-property-mohali-visit-checks",
+            isExternal: false,
+            variant: "guide",
+          },
+          {
+            label: "Schedule In-Person Advisory at Aerocity Office",
+            href: "/contact",
+            isExternal: false,
+            variant: "primary",
+          },
+        ],
+      },
+      {
+        heading:
+          "2. Whitestone Realty – Aerocity & Airport Road Luxury High-Rise Living",
+        bullets: [
+          "Location: Aerocity / Airport Road Corridor, Mohali.",
+          "Core Specialization: Luxury High-Rise Gated Communities, Designer Builder Floors, and NRI Residential Portfolios.",
+          "Key Strengths: Whitestone Realty maintains a prominent presence on the Airport Road belt, handling primary developer inventory in landmark multi-story projects (such as Uptown Skylla and the Marbella Grand catchment) as well as independent floors.",
+          "Best Suited For: High-net-worth families and overseas buyers looking for luxury multi-story apartments with modern clubhouse amenities along the airport movement belt.",
+        ],
+        links: [
+          {
+            label: "Whitestone Realty Google Business Profile",
+            href: "https://www.google.com/maps/search/?api=1&query=Whitestone+Realty+Aerocity+Mohali",
+            isExternal: true,
+            variant: "google",
+          },
+          {
+            label: "Official Website (Whitestone Realty)",
+            href: "https://whitestonerealty.net/",
+            isExternal: true,
+            variant: "primary",
+          },
+        ],
+      },
+      {
+        heading:
+          "3. Royals Property Consultant – Core Mohali Municipal Sectors & Resale Kothis",
+        bullets: [
+          "Location: SAS Nagar Central Sectors, Mohali.",
+          "Core Specialization: Established Urban Estates (Sectors 68, 69, 70, 71, and 76–80), Resale Kothis, and Municipal Commercial Booths.",
+          "Key Strengths: Backed by over a decade of local market presence, Royals Property Consultant (led by RERA-certified advisors) has a deep seller network within Mohali's mature municipal sectors where independent kothis and built homes dominate.",
+          "Best Suited For: End-users wanting ready-to-move family residences in mature sectors close to established schools, hospitals (Fortis, Max), and Chandigarh borders.",
+        ],
+        links: [
+          {
+            label: "Royals Property Consultant Google Business Profile",
+            href: "https://www.google.com/maps/search/?api=1&query=Royals+Property+Consultant+Mohali",
+            isExternal: true,
+            variant: "google",
+          },
+          {
+            label: "Official Website (Royals Property)",
+            href: "https://royalspropertyconsultant.com/",
+            isExternal: true,
+            variant: "primary",
+          },
+        ],
+      },
+      {
+        heading:
+          "4. Aero Infra Property Dealers – Aerocity Commercial & JLPL Industrial Belt",
+        bullets: [
+          "Location: JLPL Industrial Area & Aerocity, Mohali.",
+          "Core Specialization: Industrial Plots, Warehousing Facilities, JLPL IT Park Spaces, and Commercial Parcels.",
+          "Key Strengths: Strong focus on business and light-industrial real estate, helping entrepreneurs, logistics providers, and corporate offices secure clear-title industrial land parcels and commercial spaces.",
+          "Best Suited For: Corporate clients, factory owners, warehousing operators, and commercial investors seeking frontage on the PR-7 highway.",
+        ],
+        links: [
+          {
+            label: "Aero Infra Property Dealers Google Business Profile",
+            href: "https://www.google.com/maps/search/?api=1&query=Aero+Infra+Property+Dealers+Aerocity+Mohali",
+            isExternal: true,
+            variant: "google",
+          },
+        ],
+      },
+      {
+        heading:
+          "5. Trendz Properties – GMADA Urban Estates & Fresh Builder Collaborations",
+        bullets: [
+          "Location: Mohali & Greater Tricity.",
+          "Core Specialization: GMADA Plotted Townships, Builder Floors, and New Project Allotments.",
+          "Key Strengths: Wide network across fresh developer launches and joint-venture plotted developments across the Tricity periphery.",
+          "Best Suited For: Buyers looking to compare multiple developer-driven townships across Mohali and adjoining Zirakpur corridors.",
+        ],
+        links: [
+          {
+            label: "Trendz Properties Google Business Profile",
+            href: "https://www.google.com/maps/search/?api=1&query=Trendz+Properties+Mohali",
+            isExternal: true,
+            variant: "google",
+          },
+        ],
+      },
+      {
+        heading:
+          "6. Fortune Real Estate – Central Mohali (Sectors 70–71) & Commercial Booths",
+        bullets: [
+          "Location: Sector 70, Mohali.",
+          "Core Specialization: Commercial SCOs, Bay Shops, Double-Story Booths, and Residential Resales in Central Mohali.",
+          "Key Strengths: Deep local penetration in high-density commercial markets like Sector 70 and Mattaur market, with excellent landlord connections for commercial leasing.",
+          "Best Suited For: Retailers, clinics, and business owners looking to lease or buy established commercial shops with ready footfall.",
+        ],
+        links: [
+          {
+            label: "Fortune Real Estates Google Business Profile",
+            href: "https://www.google.com/maps/search/?api=1&query=Fortune+Real+Estates+Sector+70+Mohali",
+            isExternal: true,
+            variant: "google",
+          },
+          {
+            label: "Official Website (Fortune Real Estates)",
+            href: "https://fortunerealestates.co.in/",
+            isExternal: true,
+            variant: "primary",
+          },
+        ],
+      },
+      {
+        heading:
+          "7. Taneja Realtors – Suburban Mohali (Kharar, Sunny Enclave & Landran)",
+        bullets: [
+          "Location: Kharar-Mohali Highway.",
+          "Core Specialization: Affordable Residential Apartments, 2/3 BHK Budget Builder Floors, and Plotted Colonies in Suburban Mohali.",
+          "Key Strengths: Strong grasp of the fast-growing suburban corridor connecting Mohali to Kharar, Landran, and Kurali, catering to university staff, IT employees, and first-time home buyers.",
+          "Best Suited For: Budget-conscious buyers seeking homes under ₹35 to ₹55 Lakhs within commuting distance of Mohali's IT corridor.",
+        ],
+        links: [
+          {
+            label: "Taneja Realtors Google Business Profile",
+            href: "https://www.google.com/maps/search/?api=1&query=Taneja+Realtors+Mohali+Kharar",
+            isExternal: true,
+            variant: "google",
+          },
+        ],
+      },
+      {
+        heading:
+          "8. Alvis Estates – PR-7 Airport Road & Zirakpur Gated Communities",
+        bullets: [
+          "Location: Airport Road / Zirakpur-Mohali Border.",
+          "Core Specialization: Premium High-Rise Societies, Ready-to-Move Group Housings, and Highway Commercial Hubs.",
+          "Key Strengths: Comprehensive portfolio of multi-story apartment options spanning the Mohali-Zirakpur boundary, providing comparative analysis across major private developers.",
+          "Best Suited For: Buyers prioritizing expressway connectivity to Delhi, Panchkula, and Chandigarh who prefer gated society security over independent plotted land.",
+        ],
+        links: [
+          {
+            label: "Alvis Estates Google Business Profile",
+            href: "https://www.google.com/maps/search/?api=1&query=Alvis+Estates+Airport+Road+Mohali",
+            isExternal: true,
+            variant: "google",
+          },
+          {
+            label: "Official Website (Alvis Estates)",
+            href: "https://alvisestates.in/",
+            isExternal: true,
+            variant: "primary",
+          },
+        ],
+      },
+      {
+        heading:
+          "9. Guru Estates – New Chandigarh (EcoCity 1 & 2, Medicity & Mullanpur)",
+        bullets: [
+          "Location: New Chandigarh (Mullanpur) / North Mohali.",
+          "Core Specialization: EcoCity Master Planned Plots, Medicity, Omaxe New Chandigarh, and DLF Hyde Park Properties.",
+          "Key Strengths: Specialized knowledge of GMADA's New Chandigarh master plan, mountain-view residential sectors, and mega-township regulations.",
+          "Best Suited For: High-budget investors and families looking for luxury township living in New Chandigarh's low-density green corridors.",
+        ],
+        links: [
+          {
+            label: "Guru Estates Google Business Profile",
+            href: "https://www.google.com/maps/search/?api=1&query=Guru+Estates+New+Chandigarh+Mohali",
+            isExternal: true,
+            variant: "google",
+          },
+        ],
+      },
+      {
+        heading:
+          "10. AJ Estates & Pioneer Property – Institutional Belts & Rental Portfolios",
+        bullets: [
+          "Location: Mohali.",
+          "Core Specialization: Institutional Land Parcels, Mixed-Use Investor Portfolios, and Residential Rental Management.",
+          "Key Strengths: Longstanding presence in the Tricity real estate market with broad contacts among institutional investors and corporate tenants.",
+          "Best Suited For: Passive investors seeking hands-off rental management or portfolio diversification across commercial and residential assets.",
+        ],
+        links: [
+          {
+            label: "AJ Estates Google Business Profile",
+            href: "https://www.google.com/maps/search/?api=1&query=AJ+Estates+Mohali",
+            isExternal: true,
+            variant: "google",
+          },
+        ],
+      },
+      {
+        heading:
+          "Quick comparison: Which Mohali property consultant matches your requirement?",
+        bullets: [
+          "Plotted Land in Aerocity (Blocks A–G) or IT City: Choose Vedang Properties (#171 MCC-2 Aerocity) for on-ground plot verification, GMADA NDC checks, and collector rate accuracy.",
+          "Luxury High-Rise Flats on Airport Road: Consider Whitestone Realty or Alvis Estates for gated society amenities and multi-story developer options.",
+          "Independent Kothis in Mature Sectors (Sec 68–71, 79–80): Consult Royals Property Consultant or Fortune Real Estate for established neighborhood resales.",
+          "Budget Housing & Floors in Kharar / Landran: Look at Taneja Realtors for affordable suburban developments.",
+          "Township Plots & Villas in New Chandigarh: Work with Guru Estates for EcoCity and Mullanpur developments.",
+          "Industrial Warehousing & JLPL Park: Contact Aero Infra for commercial and industrial land parcels.",
+        ],
+      },
+      {
+        heading:
+          "Red flags: When you should immediately walk away from a property dealer",
+        bullets: [
+          "Unreasonable Pressure for Immediate Cash Tokens: Never hand over cash or token amounts before reviewing certified parent title deeds, GMADA allotment papers, and encumbrance records.",
+          "Reluctance to Disclose Exact Sector or Plot Coordinates: Authentic consultants provide exact Khasra, sector, and block details upfront rather than keeping the location vague.",
+          "Evasion Around Circle Rates and Registration Duties: If a broker claims 'registry will be done cheaply' without explaining Section 47-A collector rate rules, they are putting you at risk of state revenue audits and penal interest.",
+          "No Physical Office in Mohali: Avoid consultants who only meet in coffee shops or cars and have no verifiable address in SAS Nagar.",
+          "Unregistered Power of Attorney (PoA) Sales: In Punjab, property transfers on unregistered or dubious General Power of Attorney documents carry massive litigation risk. Demand clear freehold conveyance deeds.",
+        ],
+      },
+      {
+        heading:
+          "How Vedang Properties delivers grounded advisory in GMADA Aerocity",
+        image: "/images/vedang-properties-introduction.png",
+        imageAlt:
+          "Vedang Properties In-Person Consultation Hub in Aerocity Mohali",
+        imageCaption:
+          "Visit Vedang Properties at #171 MCC 2, GMADA Aerocity for verified ground intelligence and document verification.",
+        paragraphs: [
+          "At Vedang Properties, based permanently at #171 MCC 2 in GMADA Aerocity, we operate on a strict philosophy of zero hype, transparent documentation, and client-first due diligence.",
+          "Whether you are purchasing a 200 sq. yard plot in Aerocity Block C, an industrial asset in IT City, or commercial SCO space along Airport Road, we walk you through every step: GMADA allotment letters, non-encumbrance status, statutory stamp duty calculations, and final execution at the Sub-Registrar DAC Sector 76.",
+          "We invite you to visit our office in Aerocity to discuss your real estate requirements over coffee—grounded in real numbers, verified facts, and zero sales pressure.",
+        ],
+        links: [
+          {
+            label: "Open Google Business Profile",
+            href: "https://share.google/OPXRIxW7Er3fVmykt",
+            isExternal: true,
+            variant: "google",
+          },
+          {
+            label: "Get Turn-by-Turn Directions to Aerocity Office",
+            href: "https://www.google.com/maps/dir/?api=1&destination=Vedang%20Properties%20171%20MCC%202%20GMADA%20Aerocity%20Mohali",
+            isExternal: true,
+            variant: "direction",
+          },
+          {
+            label: "Call Office Directly: +91 82646 30736",
+            href: "tel:+918264630736",
+            isExternal: true,
+            variant: "primary",
+          },
+          {
+            label: "WhatsApp Real Estate Advisory Desk",
+            href: "https://wa.me/918264630736?text=Hello%20Vedang%20Properties%2C%20I%20read%20your%20top%20dealers%20guide%20and%20want%20to%20consult%20for%20Mohali.",
+            isExternal: true,
+            variant: "primary",
+          },
+        ],
+      },
+    ],
+  },
   {
     slug: "stamp-duty-and-property-registration-mohali-2026",
     category: "Buyer Guide",

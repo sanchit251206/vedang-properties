@@ -48,7 +48,7 @@ next-env.d.ts
 # local assets & business posts
 google-business/
 scripts/
-vedang-properties-*.png
+/vedang-properties-*.png
 
 # local leads storage
 /data/
