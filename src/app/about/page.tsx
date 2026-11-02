@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
-import { contact } from "@/data/site";
+import { businessHours, contact } from "@/data/site";
 import { absoluteUrl } from "@/data/seo";
 
 export const metadata: Metadata = {
@@ -44,16 +44,14 @@ const values = [
 
 const milestones = [
   {
-    figure: "5.0 ★",
-    label: "35 Google Reviews",
-    subtext:
-      "Verified rating on Google Business Profile from clients across Mohali & Tricity.",
+    figure: "Google",
+    label: "Client feedback",
+    subtext: "Read the latest client feedback on our Google Business Profile.",
   },
   {
     figure: "7 Days",
     label: "Open for Consultations",
-    subtext:
-      "Monday – Sunday 9:30 AM–8:00 PM at MCC-2 Aerocity | Online 24 hours.",
+    subtext: `${businessHours.officeHoursDisplay} at MCC-2 Aerocity.`,
   },
   {
     figure: "100%",
@@ -93,27 +91,12 @@ export default function AboutPage() {
             postalCode: "140306",
             addressCountry: "IN",
           },
-          aggregateRating: {
-            "@type": "AggregateRating",
-            ratingValue: "5.0",
-            reviewCount: "35",
-            bestRating: "5",
-            worstRating: "1",
-          },
           openingHoursSpecification: [
             {
               "@type": "OpeningHoursSpecification",
-              dayOfWeek: [
-                "Sunday",
-                "Monday",
-                "Tuesday",
-                "Wednesday",
-                "Thursday",
-                "Friday",
-                "Saturday",
-              ],
-              opens: "09:30",
-              closes: "20:00",
+              dayOfWeek: businessHours.days,
+              opens: businessHours.opens,
+              closes: businessHours.closes,
             },
           ],
         },

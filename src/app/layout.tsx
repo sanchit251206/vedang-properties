@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import Script from "next/script";
 import { MobileQuickBar } from "@/components/MobileQuickBar";
-import { contact } from "@/data/site";
+import { businessHours, contact } from "@/data/site";
 import { absoluteUrl, coreSeoKeywords, siteUrl } from "@/data/seo";
 import "./globals.css";
 
@@ -51,26 +51,11 @@ const localBusinessJsonLd = {
   openingHoursSpecification: [
     {
       "@type": "OpeningHoursSpecification",
-      dayOfWeek: [
-        "Sunday",
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday",
-      ],
-      opens: "09:30",
-      closes: "20:00",
+      dayOfWeek: businessHours.days,
+      opens: businessHours.opens,
+      closes: businessHours.closes,
     },
   ],
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "5.0",
-    reviewCount: "35",
-    bestRating: "5",
-    worstRating: "1",
-  },
   contactPoint: {
     "@type": "ContactPoint",
     telephone: contact.tel,

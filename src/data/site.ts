@@ -13,6 +13,22 @@ const googleProfileUrl =
 const googleReviewUrl =
   process.env.NEXT_PUBLIC_GOOGLE_REVIEW_URL?.trim() || googleProfileUrl;
 
+export const businessHours = {
+  days: [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ],
+  opens: "09:30",
+  closes: "20:00",
+  officeHoursDisplay: "Monday - Sunday: 9:30 AM - 8:00 PM (Open all 7 days)",
+  onlineInquiryDisplay: "Online inquiries: 24 hours",
+};
+
 export const contact = {
   phoneDisplay: "+91 82646 30736",
   tel: "+918264630736",
@@ -20,9 +36,9 @@ export const contact = {
   addressShort: "#171 MCC 2, Aerocity, Mohali",
   addressFull:
     "171, MCC - 2, GMADA Aerocity, Sahibzada Ajit Singh Nagar, Matran, Punjab 140306",
-  // Office hours: single source of truth (mirrors Google Business Profile dashboard).
-  hoursDisplay:
-    "Monday – Sunday: 9:30 AM – 8:00 PM (Open all 7 days) | Online inquiries: 24 hours",
+  // Update this only after confirming the verified Google Business Profile uses the same hours.
+  officeHoursDisplay: businessHours.officeHoursDisplay,
+  hoursDisplay: `${businessHours.officeHoursDisplay} | ${businessHours.onlineInquiryDisplay}`,
   googleProfileUrl,
   googleReviewUrl,
   googleMapsQuery: vedangGoogleQuery,
@@ -78,6 +94,11 @@ export type ArticleSection = {
   googleProfileCard?: GoogleProfileCard;
 };
 
+export type ArticleFaq = {
+  question: string;
+  answer: string;
+};
+
 export type Article = {
   slug: string;
   category: "Buyer Guide" | "Seller Guide" | "Market Notes";
@@ -95,9 +116,342 @@ export type Article = {
     query: string;
     href: string;
   };
+  faqs?: ArticleFaq[];
 };
 
 export const articles: Article[] = [
+  {
+    slug: "luxury-apartments-airport-road-mohali-marbella-homeland-falcon-hero-homes",
+    category: "Buyer Guide",
+    title:
+      "Luxury Flats on Airport Road Mohali: Marbella Grand, Homeland, Falcon View & Hero Homes (2026 Price List & Guide)",
+    excerpt:
+      "Compare 2026 resale prices, floor plans, appreciation rates & verified location highlights for Marbella Grand, Homeland Heights, Falcon View & Hero Homes in Mohali.",
+    date: "01 Nov 2026",
+    readTime: "14 min read",
+    image: "/images/google-ads-marbella-grand-clean-landscape.jpg",
+    imageAlt:
+      "Luxury flats in Mohali on Airport Road: Marbella Grand, Homeland Heights, Falcon View and Hero Homes",
+    tags: [
+      "Luxury flats in Mohali",
+      "Marbella Grand Mohali",
+      "Homeland Heights Mohali",
+      "Falcon View Mohali",
+      "Hero Homes Mohali",
+      "Flats in Mohali for sale",
+      "3BHK flats in Mohali",
+      "Airport Road Mohali",
+      "Property in Mohali",
+      "Mohali luxury apartments 2026",
+    ],
+    sources: [
+      {
+        label: "Punjab RERA Official Portal",
+        href: "https://rera.punjab.gov.in/",
+      },
+      {
+        label: "GMADA Official Master Plan & Updates",
+        href: "https://gmada.gov.in/en",
+      },
+      {
+        label: "IGRS Punjab Collector Rates (SAS Nagar)",
+        href: "https://igrspunjab.gov.in/",
+      },
+      {
+        label: "NGDRS Punjab Registration Portal",
+        href: "https://punjab.ngdrs.gov.in/",
+      },
+    ],
+    map: {
+      title: "Airport Road Luxury Residential Corridor & Vedang Properties",
+      query:
+        "Airport Road Mohali Marbella Grand Homeland Heights Falcon View",
+      href: "https://www.google.com/maps/search/?api=1&query=Airport+Road+Mohali+Marbella+Grand+Homeland+Heights+Falcon+View",
+    },
+    sections: [
+      {
+        heading:
+          "Airport Road (PR-7): Mohali's premier luxury high-rise residential corridor",
+        paragraphs: [
+          "Over the past five years, the 200-foot-wide PR-7 Airport Road corridor in SAS Nagar (Mohali) has transformed into the most sought-after luxury residential and commercial expressway in the entire Chandigarh Tricity region. Connecting Zirakpur, GMADA Aerocity, IT City, and Kharar with direct, signal-free access to the Shaheed Bhagat Singh International Airport, this belt commands premium attention from corporate executives, business families, and NRI investors searching for high-end flats in Mohali.",
+          "While Mohali was traditionally known for standalone plotted kothis in older sectors, modern high-net-worth buyers increasingly prioritize integrated luxury societies. The demand is driven by multi-tier 24/7 security, professional facility management, resort-grade clubhouses, expansive green podiums, and covered multi-level parking—luxuries that standalone houses cannot replicate.",
+          "Four landmark projects consistently dominate buyer shortlists along this corridor: Marbella Grand (Sector 82A), Homeland Heights (Sector 70), Falcon View (Sector 66A), and Hero Homes (Sector 88). Below is an objective, ground-verified comparison of their architectural layouts, livability, and investment potential—along with how Vedang Properties helps buyers navigate shortlisting and purchase execution.",
+        ],
+      },
+      {
+        heading:
+          "Quick price & specification comparison: 4 landmark societies at a glance",
+        bullets: [
+          "Marbella Grand (Sector 82A / Airport Road): Spanish-inspired architecture, ultra-luxury 3+1 and 4+1 BHK sky-villas (approx. 2,580 to 3,620+ sq. ft.), skywalk amenities, and direct frontage on the IT City / Airport junction.",
+          "Homeland Heights (Sector 70 / Airport Road): The established benchmark of Tricity luxury, 3, 4, and 5 BHK premium apartments and penthouses, unmatched central city connectivity, mature community living, and iconic landmark visibility.",
+          "Falcon View by JLPL (Sector 66A): Sprawling 28.5-acre low-density township development, expansive 3 BHK and 4 BHK layouts (approx. 2,480 to 3,000+ sq. ft.), massive central sports and garden podiums, and immediate proximity to the International Airport traffic corridor.",
+          "Hero Homes (Sector 88): Sustainable, green-certified living engineered by the trusted Hero Group, efficient 2 BHK, 3 BHK, and 3+1 BHK configurations, strong community infrastructure, and superior rental liquidity.",
+        ],
+      },
+      {
+        heading:
+          "1. Marbella Grand (Sector 82A) – Resale prices, 3 & 4 BHK floor plans and amenities",
+        image: "/images/google-ads-marbella-grand-clean-landscape.jpg",
+        imageAlt:
+          "Marbella Grand Luxury Apartments Sector 82A Airport Road Mohali",
+        imageCaption:
+          "Marbella Grand, Sector 82A: Spanish elevations, expansive sunlit balconies, and panoramic views of the Airport Road green corridor.",
+        paragraphs: [
+          "Situated directly on the growth axis of Sector 82A near IT City, Marbella Grand is widely recognized for introducing Spanish-inspired luxury elevations and royal architectural detailing to Mohali. Designed for buyers who desire expansive private living spaces, each apartment features large wrap-around balconies, private foyer entries, dedicated servant quarters, and imported marble flooring.",
+          "The project is celebrated for its multi-level clubhouse amenities, including a climate-controlled indoor swimming pool, open-air skywalk, bowling alley, mini-cineplex, and fitness arenas. With prominent proximity to major multinational IT employers (Infosys, QuarkCity) and world-class universities, Marbella Grand represents the peak of high-end modern living in Greater Mohali.",
+        ],
+        bullets: [
+          "Primary Configurations: 3 BHK + Store + Puja (approx. 2,580–2,601 sq. ft.) and 4 BHK + Store + Puja (approx. 3,612–3,672 sq. ft.), plus limited luxury 5 BHK sky-villas (approx. 7,111 sq. ft.).",
+          "Current Indicative Resale Price List (2025–2026):\n• 3 BHK (2,580–2,601 sq. ft.): ₹2.60 Cr – ₹3.30 Cr (Depending on floor, interior fit-outs & park facing)\n• 4 BHK (3,612–3,672 sq. ft.): ₹3.95 Cr – ₹4.50 Cr+\n• 5 BHK Sky Villas / Penthouses (7,111 sq. ft.): ₹7.80 Cr+",
+          "Price Per Sq. Ft. & Growth Trajectory: Current rates hover between ₹10,500 and ₹14,500+ per sq. ft. The project has recorded over 45%–50% capital appreciation since launch, propelled by the extreme scarcity of 2,600+ sq. ft. high-rise floor plans on the IT City corridor.",
+          "Location & Transit Highlights:\n• Shaheed Bhagat Singh International Airport: 10–12 min (approx. 7 km)\n• Infosys & IT City Mohali Hub: 3–5 min\n• Premier Universities (ISB, Amity, Plaksha): 5–7 min\n• CP67 Mall & High Street Retail: 7–8 min\n• Fortis Hospital Mohali: 12 min\n• Tribune Chowk / Chandigarh Sector 34/35: 15 min",
+          "Best Suited For: C-suite executives, senior IT leaders, NRI families, and industrialists seeking grand scale and resort-grade private amenities.",
+        ],
+        links: [
+          {
+            label: "Explore Airport Road Area Guide",
+            href: "/areas/airport-road-mohali",
+            isExternal: false,
+            variant: "area",
+          },
+          {
+            label: "Consult Vedang on Marbella Grand Resale & Primary Units",
+            href: "/contact",
+            isExternal: false,
+            variant: "primary",
+          },
+        ],
+      },
+      {
+        heading:
+          "2. Homeland Heights (Sector 70) – Verified resale price list, price growth & location",
+        image: "/images/homeland-heights-resale-price-list.png",
+        imageAlt:
+          "Homeland Heights Sector 70 Mohali Resale Price List and Price Growth",
+        imageCaption:
+          "Homeland Heights Sector 70: Transparent 2025–2026 resale price list, 58% capital appreciation since 2018, and central location highlights.",
+        paragraphs: [
+          "Homeland Heights stands prominently at the bustling intersection of Sector 70 and Airport Road. Unlike newer suburban expansions, Homeland Heights enjoys a central Mohali municipal address, meaning residents are within a 5-minute radius of Mohali's most vibrant commercial markets (Phase 7 and Phase 3B2), Fortis Hospital, top ICSE/CBSE schools, and the Chandigarh border.",
+          "The project features an earthquake-resistant RCC shear-wall structure, 3-tier electronic surveillance, an expansive landscaped central podium with zero vehicular movement at ground level, and a refined social community comprising doctors, advocates, corporate leaders, and prominent public figures.",
+        ],
+        bullets: [
+          "Current Resale Price List (2025–2026 Indicative Values):\n• 3 BHK (1,788 – 2,200 sq. ft.): ₹2.5 Cr – ₹3.2 Cr (Available)\n• 4 BHK (2,800 – 3,500 sq. ft.): ₹3.5 Cr – ₹4.5 Cr (Limited Inventory)\n• 5 BHK (3,500 – 4,057 sq. ft.): ₹4.5 Cr – ₹5.5 Cr (Available)\n• Penthouses (4,057+ sq. ft.): ₹5.5 Cr+ (On Request)",
+          "Price Growth Trajectory (Over 58% Appreciation Since 2018):\n• 2018 (Possession): ~₹8,500 per sq. ft.\n• 2020: ~₹9,200 per sq. ft.\n• 2022: ~₹10,500 per sq. ft.\n• 2024: ~₹12,100 per sq. ft.\n• 2025–2026: ~₹13,500 – ₹14,000 per sq. ft. (yielding over 58% cumulative capital gain)",
+          "Location Highlights (Connected to Everything That Matters):\n• Elante Mall (Chandigarh): 10 min\n• North Country Mall (VR Punjab): 10 min\n• Chandigarh University: 10 min\n• IT City Mohali: 15 min\n• Fortis Hospital: 15 min\n• Chandigarh International Airport: 20 min",
+          "Best Suited For: Buyers who refuse to compromise on city center proximity, want immediate ready possession without construction delays, and value an established, prestigious neighborhood.",
+        ],
+        links: [
+          {
+            label: "Punjab Stamp Duty & Registry Calculation Guide",
+            href: "/blog/stamp-duty-and-property-registration-mohali-2026",
+            isExternal: false,
+            variant: "guide",
+          },
+          {
+            label: "Inquire for Verified Homeland Heights Resale Units",
+            href: "/contact",
+            isExternal: false,
+            variant: "primary",
+          },
+        ],
+      },
+      {
+        heading:
+          "3. Falcon View by JLPL (Sector 66A) – 28-acre green campus, prices & transit highlights",
+        paragraphs: [
+          "Developed by Janta Land Promoters Limited (JLPL), Falcon View is an expansive 28.5-acre gated residential marvel in Sector 66A. While many modern high-rises construct towers in tight proximity, Falcon View dedicates a massive percentage of its land parcel to open landscaped gardens, walking plazas, and outdoor sporting infrastructure.",
+          "Located adjacent to the Indian Institute of Science Education and Research (IISER) and within minutes of GMADA Aerocity and the Mohali Railway Station, Falcon View provides unmatched openness, fresh air, and light ventilation. The project is fully gated with dedicated underground parking decks and an active resident community of over 800 families.",
+        ],
+        bullets: [
+          "Primary Configurations: Generously planned 3 BHK + Servant (approx. 2,480–2,490 sq. ft.) and 4 BHK + Servant (approx. 3,008–3,110 sq. ft.), plus limited penthouses (3,800+ sq. ft.).",
+          "Current Indicative Resale Price List (2025–2026):\n• 3 BHK + Servant (2,480–2,490 sq. ft.): ₹2.48 Cr – ₹3.25 Cr\n• 4 BHK + Servant (3,008–3,110 sq. ft.): ₹3.10 Cr – ₹3.85 Cr\n• Penthouses (3,800+ sq. ft.): ₹4.50 Cr+",
+          "Price Per Sq. Ft. & Growth Trajectory: Current market rates average ₹10,000 to ₹12,800 per sq. ft. From early launch pricing around ₹5,500–₹6,500/sq. ft., the project has registered over 90%–100% cumulative appreciation, demonstrating exceptional capital preservation and zero execution risk.",
+          "Location & Transit Highlights:\n• Chandigarh International Airport: 10–12 min (approx. 7.5 km)\n• Mohali Railway Station: 5 min\n• IISER & NABI Biotech Cluster: 2 min\n• GMADA Aerocity Commercial Belt: 4 min\n• CP67 Mall & Bestech Square: 8–10 min\n• Fortis Hospital: 12 min",
+          "Best Suited For: Joint families and multi-generational households prioritizing open outdoor spaces for children and elderly parents, clean environment, and peaceful surroundings.",
+        ],
+        links: [
+          {
+            label: "Explore GMADA Aerocity Location Guide",
+            href: "/areas/aerocity-mohali",
+            isExternal: false,
+            variant: "area",
+          },
+          {
+            label: "Checklist Before Shortlisting Properties in Mohali",
+            href: "/blog/buying-plot-mohali-shortlisting-checks",
+            isExternal: false,
+            variant: "guide",
+          },
+        ],
+      },
+      {
+        heading:
+          "4. Hero Homes (Sector 88) – Sustainable luxury flats, price list & rental yields",
+        paragraphs: [
+          "Backed by the immense trust of the Hero Group (Hero Realty), Hero Homes in Sector 88 brings sustainable engineering and thoughtful master planning to the Airport Road corridor. Guided by the four core pillars of wellness—climate-responsive orientation, water conservation, green landscaping, and active lifestyle infrastructure—Hero Homes offers an ideal balance of modern luxury and practical affordability.",
+          "Its strategic position in Sector 88 places residents close to upcoming GMADA administrative complexes, the Judicial Courts complex, and the connecting arterial road to QuarkCity and Kharar. Hero Homes also demonstrates exceptionally high tenant occupancy and rental liquidity.",
+        ],
+        bullets: [
+          "Primary Configurations: Efficient 2 BHK / 2.5 BHK (approx. 1,095–1,290 sq. ft.), 3 BHK Variants (approx. 1,481–1,950 sq. ft.), and 4 BHK Luxury (approx. 3,490 sq. ft.).",
+          "Current Indicative Price List (2025–2026):\n• 2 BHK / 2.5 BHK (1,095–1,290 sq. ft.): ₹95 Lakhs – ₹1.15 Cr\n• 3 BHK (1,481–1,950 sq. ft.): ₹1.35 Cr – ₹2.10 Cr\n• 4 BHK Luxury (3,490 sq. ft.): ₹2.86 Cr – ₹3.49 Cr",
+          "Price Per Sq. Ft. & Growth Trajectory: Current rates hover between ₹9,300 and ₹11,000 per sq. ft. Hero Homes consistently records 10%–15% year-on-year appreciation, outpacing Sector 88's baseline while generating strong 3.8%–4.5% gross rental yields from nearby corporate IT and institutional tenants.",
+          "Location & Transit Highlights:\n• Judicial Courts Complex & GMADA Administrative Hub: 3 min\n• Top Schools (Manav Mangal Smart School, Oakridge): 5–7 min\n• Sohana Hospital / Fortis Hospital: 8–10 min\n• QuarkCity & Phase 8 Industrial Area: 10 min\n• CP67 Mall: 10 min\n• Chandigarh International Airport: 18–20 min",
+          "Best Suited For: Modern nuclear families, first-time luxury homebuyers, and investors looking for predictable rental income, lower maintenance overheads, and strong corporate brand governance.",
+        ],
+        links: [
+          {
+            label: "Explore IT City Mohali Guide",
+            href: "/areas/it-city-mohali",
+            isExternal: false,
+            variant: "area",
+          },
+          {
+            label: "Contact Vedang for Hero Homes Resale & Builder Inventory",
+            href: "/contact",
+            isExternal: false,
+            variant: "primary",
+          },
+        ],
+      },
+      {
+        heading:
+          "Head-to-head comparison: Marbella Grand vs. Homeland Heights vs. Falcon View vs. Hero Homes",
+        bullets: [
+          "For Grand Scale, High Specifications & International Vibe: Marbella Grand is the top choice, offering the most expansive private apartment footprints and resort-style indoor recreation along the airport axis.",
+          "For Central Municipal Convenience & Established Prestige: Homeland Heights is unmatched, placing you right in Sector 70 with instant connectivity to mature commercial markets and Chandigarh.",
+          "For Open Green Lawns, Outdoor Sports & Peace of Mind: Falcon View (JLPL) leads the category with its 28.5-acre sprawling campus and generous open space-to-building ratios.",
+          "For Eco-Friendly Living, Balanced Budget & Rental Income: Hero Homes provides the highest liquidity, brand reliability, and efficient layouts for nuclear families and investors.",
+        ],
+      },
+      {
+        heading:
+          "Essential buyer checklist: Resale verification & Punjab stamp duty rules",
+        paragraphs: [
+          "Purchasing a luxury apartment in SAS Nagar requires thorough legal and financial checks—especially when evaluating secondary market resales versus developer inventory. Overlooking hidden charges or incomplete paperwork can lead to unexpected outlays at the time of possession.",
+        ],
+        bullets: [
+          "1. Developer Allotment vs. Resale Chain: In resale transactions, ensure that the entire chain of transfer agreements, original allotment letter, and builder endorsements are completely intact without any missing links.",
+          "2. Builder No Dues Certificate (NDC): Before paying any advance token, demand an official No Objection Certificate (NOC) and NDC from the developer confirming that all construction installments, interest charges, and maintenance fees are fully cleared.",
+          "3. Non-Encumbrance Verification (Form 15/16): Verify that the apartment is not pledged against an unpaid home loan or builder mortgage through certified searches at the Sub-Registrar DAC Sector 76.",
+          "4. Clarify Incidental One-Time Charges: Always ask for a written breakdown of one-time charges, including IFMS (Interest-Free Maintenance Security), sinking funds, club membership fees, dual parking allocation charges, and power backup meter connection dues.",
+          "5. Punjab Stamp Duty Math: Calculate statutory charges accurately. Punjab levies 7% stamp duty for male buyers, 5% for female buyers, and 6% for joint ownership, plus 1% registration fee based on SAS Nagar District Collector Rates under Section 47-A.",
+        ],
+      },
+      {
+        heading:
+          "How Vedang Properties helps you buy apartments in these projects",
+        image: "/images/vedang-luxury-advisory-mohali-2026.png",
+        imageAlt:
+          "Vedang Properties (vedangproperties.in) Luxury Residential Projects Advisory Mohali",
+        imageCaption:
+          "Vedang Properties (vedangproperties.in): Unbiased inventory comparison, title scrutiny, and purchase due diligence across Marbella Grand, Homeland Heights, Falcon View, and Hero Homes.",
+        paragraphs: [
+          "Navigating high-ticket luxury real estate along Mohali's Airport Road requires grounded local clarity, not sales talk. At Vedang Properties, headquartered permanently at #171 MCC-2 in GMADA Aerocity, we act as your dedicated buyer advocates throughout the entire property acquisition journey.",
+          "Here is exactly how our advisory team assists you in securing the best home across Marbella Grand, Homeland Heights, Falcon View, Hero Homes, or other premium societies:",
+        ],
+        bullets: [
+          "1. 100% Unbiased Inventory Shortlisting (Primary vs. Resale): Unlike project sales desks incentivized to push specific builder inventory, we represent your interests. We compare direct developer inventory against genuine, distress, or early-allottee resale listings to ensure you secure the most competitive rate per square foot.",
+          "2. Unit-Level Selection Precision: Two apartments in the same society can have vastly different living experiences. We inspect on-ground sunlight orientation (North-East morning sun vs. harsh South-West afternoon exposure), corner ventilation, floor height privacy, elevator proximity, and road traffic noise levels along Airport Road before you shortlist.",
+          "3. Rigorous Document Scrutiny & Title Verification: We inspect the original parent deeds, developer LOI/allotments, builder NOCs, maintenance RWA clearance, and encumbrance certificates so your investment is 100% legally clean and litigation-free.",
+          "4. Total Acquisition Cost Transparency: We provide a clear mathematical breakdown of the total capital outlay—including base price, preferential location charges (PLC), IFMS deposits, club fees, GST (where applicable), and exact Punjab stamp duty and registration fees—eliminating last-minute financial surprises.",
+          "5. Seamless Home Loan & Sub-Registrar Registry Support: We coordinate with approved nationalized and private banking partners (HDFC, SBI, ICICI) for fast title clearances and competitive loan rates. Finally, our senior team physically accompanies you to the Sub-Registrar Tehsil Complex at the Sector 76 District Administrative Complex for smooth biometric execution and certified deed handover.",
+        ],
+        googleProfileCard: {
+          businessName: "Vedang Properties",
+          ratingText: "5.0 ★ Rating on Google (Verified Business Profile)",
+          address:
+            "171, MCC - 2, GMADA Aerocity, Sahibzada Ajit Singh Nagar, Punjab 140306",
+          profileUrl: "https://share.google/OPXRIxW7Er3fVmykt",
+          reviewsUrl: "https://share.google/OPXRIxW7Er3fVmykt",
+          directionsUrl:
+            "https://www.google.com/maps/dir/?api=1&destination=Vedang%20Properties%20171%20MCC%202%20GMADA%20Aerocity%20Mohali",
+          badge: "Verified Real Estate Advisory Hub",
+        },
+        links: [
+          {
+            label: "Open Verified Google Business Profile",
+            href: "https://share.google/OPXRIxW7Er3fVmykt",
+            isExternal: true,
+            variant: "google",
+          },
+          {
+            label: "Get Turn-by-Turn Directions to Aerocity Office",
+            href: "https://www.google.com/maps/dir/?api=1&destination=Vedang%20Properties%20171%20MCC%202%20GMADA%20Aerocity%20Mohali",
+            isExternal: true,
+            variant: "direction",
+          },
+          {
+            label: "Call Office Directly: +91 82646 30736",
+            href: "tel:+918264630736",
+            isExternal: true,
+            variant: "primary",
+          },
+          {
+            label: "WhatsApp Real Estate Advisory Desk",
+            href: "https://wa.me/918264630736?text=Hello%20Vedang%20Properties%2C%20I%20want%20guidance%20on%20luxury%20apartments%20on%20Airport%20Road%20Mohali.",
+            isExternal: true,
+            variant: "primary",
+          },
+          {
+            label: "Explore Airport Road Area Guide",
+            href: "/areas/airport-road-mohali",
+            isExternal: false,
+            variant: "area",
+          },
+          {
+            label: "Punjab Stamp Duty & Registration Guide (2026)",
+            href: "/blog/stamp-duty-and-property-registration-mohali-2026",
+            isExternal: false,
+            variant: "guide",
+          },
+          {
+            label: "Schedule In-Person Advisory at Aerocity Office",
+            href: "/contact",
+            isExternal: false,
+            variant: "primary",
+          },
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question:
+          "Which is the best luxury apartment society on Airport Road Mohali?",
+        answer:
+          "The choice depends on your primary lifestyle priority:\n• Marbella Grand (Sector 82A) is the top choice for grand sky-villa living (2,580 to 3,670+ sq. ft.) with Spanish elevations and resort-grade indoor amenities.\n• Homeland Heights (Sector 70) is ideal for buyers seeking established prestige, mature community living, and instant 5-minute connectivity to Phase 7/Phase 3B2 and Chandigarh.\n• Falcon View by JLPL (Sector 66A) leads in open green spaces with its sprawling 28.5-acre low-density campus and dedicated sports infrastructure.\n• Hero Homes (Sector 88) offers trusted corporate brand governance, sustainable wellness features, and excellent rental liquidity.",
+      },
+      {
+        question:
+          "What is the current resale price in Homeland Heights Sector 70 Mohali?",
+        answer:
+          "As of 2025–2026, indicative resale prices at Homeland Heights range from ₹2.5 Cr to ₹3.2 Cr for 3 BHK (1,788–2,200 sq. ft.), ₹3.5 Cr to ₹4.5 Cr for 4 BHK (2,800–3,500 sq. ft.), ₹4.5 Cr to ₹5.5 Cr for 5 BHK (3,500–4,057 sq. ft.), and ₹5.5 Cr+ for penthouses. The project has registered over 58% capital appreciation since 2018.",
+      },
+      {
+        question:
+          "What are the flat sizes, prices, and rates in Marbella Grand Sector 82A Mohali?",
+        answer:
+          "Marbella Grand offers 3 BHK + Store + Puja (2,580–2,601 sq. ft.) priced between ₹2.60 Cr and ₹3.30 Cr, and 4 BHK + Store + Puja (3,612–3,672 sq. ft.) priced between ₹3.95 Cr and ₹4.50 Cr+. Limited 5 BHK sky villas (approx. 7,111 sq. ft.) start from ₹7.80 Cr+. Average per-square-foot rates range from ₹10,500 to ₹14,500+.",
+      },
+      {
+        question:
+          "What is the Punjab stamp duty and registration charge on luxury apartments in Mohali?",
+        answer:
+          "Stamp duty in SAS Nagar (Mohali) is 7% for male buyers, 5% for female buyers (enjoying a 2% state government concession), and 6% for joint ownership. An additional 1% registration fee and applicable municipal/social infrastructure cesses apply under Section 47-A collector rate valuation. Vedang Properties provides certified pre-registration calculations before token deposits.",
+      },
+      {
+        question:
+          "What legal due diligence should I conduct before purchasing a resale flat on Airport Road?",
+        answer:
+          "Essential checks include:\n1) Verifying the complete allotment and transfer agreement chain back to the original developer\n2) Obtaining an official No Dues Certificate (NDC) and NOC from the builder\n3) Checking Form 15/16 Non-Encumbrance records at the Sub-Registrar DAC Sector 76\n4) Validating one-time charges such as IFMS, sinking funds, and dual parking bay allotments\n5) Reviewing society RWA bylaws and monthly maintenance dues.",
+      },
+      {
+        question:
+          "How can Vedang Properties help me buy an apartment in Marbella Grand, Homeland, Falcon View, or Hero Homes?",
+        answer:
+          "Vedang Properties (headquartered at #171 MCC-2 in GMADA Aerocity) acts as your independent buyer consultant. We compare direct developer inventory with genuine private resale listings to secure the best rates, inspect unit-level sunlight/privacy factors, verify all title and encumbrance papers, and physically accompany you through registry execution at the Sub-Registrar DAC Sector 76.",
+      },
+    ],
+  },
   {
     slug: "top-10-property-dealers-in-mohali-2026-guide",
     category: "Market Notes",

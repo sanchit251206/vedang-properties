@@ -153,6 +153,21 @@ export default async function BlogArticlePage({
     ],
   };
 
+  if (article.faqs && article.faqs.length > 0) {
+    (jsonLd["@graph"] as any[]).push({
+      "@type": "FAQPage",
+      "@id": `${articleUrl}#faq`,
+      mainEntity: article.faqs.map((faq) => ({
+        "@type": "Question",
+        name: faq.question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: faq.answer,
+        },
+      })),
+    });
+  }
+
   return (
     <main className="min-h-screen bg-[#f7f3e8] text-slate-950">
       <script
@@ -243,17 +258,18 @@ export default async function BlogArticlePage({
 
                     {section.image ? (
                       <div className="mt-6 overflow-hidden rounded-lg border border-slate-200 bg-slate-50">
-                        <div className="relative aspect-[16/9] w-full overflow-hidden">
+                        <div className="relative w-full overflow-hidden bg-slate-900/5">
                           <Image
                             src={section.image}
                             alt={section.imageAlt || section.heading}
-                            fill
-                            className="object-cover"
+                            width={1200}
+                            height={1200}
+                            className="h-auto w-full object-contain"
                             sizes="(min-width: 1024px) 760px, 100vw"
                           />
                         </div>
                         {section.imageCaption ? (
-                          <p className="border-t border-slate-200/80 bg-slate-50 px-4 py-2 text-xs font-medium text-slate-600">
+                          <p className="border-t border-slate-200/80 bg-slate-50 px-4 py-2.5 text-xs font-medium text-slate-600">
                             {section.imageCaption}
                           </p>
                         ) : null}
@@ -282,21 +298,10 @@ export default async function BlogArticlePage({
                           <h3 className="text-xl font-bold text-[#10383a]">
                             {section.googleProfileCard.businessName}
                           </h3>
-                          <div className="mt-1 flex items-center gap-2">
-                            <div className="flex text-amber-500">
-                              {[...Array(5)].map((_, i) => (
-                                <svg
-                                  key={i}
-                                  className="h-4 w-4 fill-current"
-                                  viewBox="0 0 20 20"
-                                >
-                                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                </svg>
-                              ))}
-                            </div>
+                          <div className="mt-1">
                             <span className="text-xs font-bold text-slate-700">
                               {section.googleProfileCard.ratingText ||
-                                "5.0 ★ Rating on Google"}
+                                "Read the latest client feedback on Google"}
                             </span>
                           </div>
                           <p className="mt-2 text-sm text-slate-600">
@@ -383,6 +388,37 @@ export default async function BlogArticlePage({
                   </section>
                 ))}
               </div>
+
+              {article.faqs && article.faqs.length > 0 ? (
+                <section className="mt-10 border-t border-slate-200/80 pt-8">
+                  <div className="flex items-center gap-2">
+                    <span className="rounded bg-[#10383a] px-2.5 py-1 text-xs font-bold uppercase tracking-wider text-[#d6a74e]">
+                      Buyer FAQs
+                    </span>
+                    <span className="text-xs font-semibold text-slate-500">
+                      Frequently Asked Questions
+                    </span>
+                  </div>
+                  <h2 className="mt-2 text-2xl font-bold text-[#10383a]">
+                    Frequently asked questions: luxury apartments on Airport Road Mohali
+                  </h2>
+                  <div className="mt-6 grid gap-4">
+                    {article.faqs.map((faq) => (
+                      <div
+                        key={faq.question}
+                        className="rounded-lg border border-slate-200 bg-[#faf8f2] p-5 shadow-xs"
+                      >
+                        <h3 className="text-base font-bold text-[#10383a]">
+                          {faq.question}
+                        </h3>
+                        <p className="mt-2 text-sm leading-7 text-slate-700 whitespace-pre-line">
+                          {faq.answer}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </section>
+              ) : null}
 
               {article.map ? (
                 <section className="mt-10 overflow-hidden rounded-lg border border-slate-200 bg-[#f7f3e8]">

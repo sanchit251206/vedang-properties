@@ -3,7 +3,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { LeadForm } from "@/components/LeadForm";
 import { MapFacade } from "@/components/MapFacade";
-import { contact } from "@/data/site";
+import { businessHours, contact } from "@/data/site";
 import { absoluteUrl, coreSeoKeywords } from "@/data/seo";
 
 export const metadata: Metadata = {
@@ -29,7 +29,7 @@ const contactFaqs = [
   },
   {
     q: "Can I walk into your Aerocity office without an appointment?",
-    a: "Yes, you are welcome to visit our office at 171, MCC - 2, GMADA Aerocity between 9:30 AM and 8:00 PM, Monday through Sunday. We are open all 7 days for in-person consultations, and online inquiries are accepted 24 hours.",
+    a: `Yes, you are welcome to visit our office at 171, MCC - 2, GMADA Aerocity during our office hours: ${businessHours.officeHoursDisplay}. ${businessHours.onlineInquiryDisplay} are accepted through WhatsApp and the website.`,
   },
   {
     q: "How do site visits and property shortlisting work?",
@@ -72,27 +72,12 @@ export default function ContactPage() {
             latitude: "30.6554",
             longitude: "76.8197",
           },
-          aggregateRating: {
-            "@type": "AggregateRating",
-            ratingValue: "5.0",
-            reviewCount: "35",
-            bestRating: "5",
-            worstRating: "1",
-          },
           openingHoursSpecification: [
             {
               "@type": "OpeningHoursSpecification",
-              dayOfWeek: [
-                "Sunday",
-                "Monday",
-                "Tuesday",
-                "Wednesday",
-                "Thursday",
-                "Friday",
-                "Saturday",
-              ],
-              opens: "09:30",
-              closes: "20:00",
+              dayOfWeek: businessHours.days,
+              opens: businessHours.opens,
+              closes: businessHours.closes,
             },
           ],
         },
@@ -170,7 +155,7 @@ export default function ContactPage() {
                       {contact.phoneDisplay}
                     </a>
                     <p className="text-xs text-slate-500">
-                      Monday – Sunday: 9:30 AM – 8:00 PM (Open 7 Days)
+                      {contact.officeHoursDisplay}
                     </p>
                   </div>
                 </div>
