@@ -83,6 +83,16 @@ export type GoogleProfileCard = {
   badge?: string;
 };
 
+export type DownloadCard = {
+  title: string;
+  description: string;
+  buttonText: string;
+  fileUrl: string;
+  fileName: string;
+  fileSize?: string;
+  badge?: string;
+};
+
 export type ArticleSection = {
   heading: string;
   paragraphs?: string[];
@@ -92,6 +102,7 @@ export type ArticleSection = {
   imageCaption?: string;
   links?: SectionLink[];
   googleProfileCard?: GoogleProfileCard;
+  downloadCard?: DownloadCard;
 };
 
 export type ArticleFaq = {
@@ -117,9 +128,339 @@ export type Article = {
     href: string;
   };
   faqs?: ArticleFaq[];
+  metaTitle?: string;
+  metaDescription?: string;
+  faqHeading?: string;
 };
 
 export const articles: Article[] = [
+  {
+    slug: "is-aerocity-mohali-good-investment-2027-guide",
+    category: "Buyer Guide",
+    title:
+      "Is Aerocity Mohali a Good Place to Invest in 2027? (Plot Rates, Blocks A–J & Due Diligence Guide)",
+    metaTitle:
+      "Is Aerocity Mohali Good to Invest in 2027? (Plot Rates & Blocks)",
+    metaDescription:
+      "Detailed 2027 GMADA Aerocity Mohali investment analysis: block-wise plot rates (A–J), plots vs builder floors, PR-7 connectivity, extension fees & due diligence.",
+    faqHeading:
+      "Frequently asked questions: GMADA Aerocity Mohali property investment & plot rates (2027)",
+    excerpt:
+      "Comprehensive 2027 investment guide to GMADA Aerocity Mohali: block-wise plot rates (A–J), plots vs apartments, PR-7/PR-9 connectivity, and buyer due diligence.",
+    date: "07 Nov 2026",
+    readTime: "15 min read",
+    image: "/images/area-aerocity.jpg",
+    imageAlt:
+      "GMADA Aerocity Mohali 2027 Investment Analysis, Master Plan Layout and Plot Price Guide",
+    tags: [
+      "Aerocity Mohali",
+      "GMADA Aerocity plot price",
+      "Invest in Aerocity Mohali 2027",
+      "Aerocity Mohali block wise rates",
+      "Plots in Aerocity Mohali",
+      "Aerocity Mohali builder floors",
+      "Aerocity Mohali resale plots",
+      "Aerocity Mohali 100 sq yard plot price",
+      "Aerocity Mohali 200 sq yard plot price",
+      "Aerocity Mohali 300 sq yard plot price",
+      "Aerocity Mohali 500 sq yard 1 kanal plot",
+      "Airport Road Mohali real estate",
+      "Mohali property investment 2027",
+      "GMADA Aerocity due diligence",
+      "Vedang Properties Aerocity Mohali",
+    ],
+    sources: [
+      {
+        label: "GMADA Official Master Plan & Zoning Layouts",
+        href: "https://gmada.gov.in/en/information/zoning-layout-plans",
+      },
+      {
+        label: "Punjab RERA Registered Projects Portal",
+        href: "https://rera.punjab.gov.in/",
+      },
+      {
+        label: "IGRS Punjab Collector Rates (SAS Nagar Mohali)",
+        href: "https://igrspunjab.gov.in/",
+      },
+      {
+        label: "NGDRS Punjab Online Land Registry Portal",
+        href: "https://punjab.ngdrs.gov.in/",
+      },
+    ],
+    map: {
+      title: "GMADA Aerocity Mohali & Vedang Properties Advisory Hub",
+      query:
+        "GMADA Aerocity Mohali Vedang Properties 171 MCC 2",
+      href: "https://www.google.com/maps/search/?api=1&query=GMADA+Aerocity+Mohali+Vedang+Properties",
+    },
+    sections: [
+      {
+        heading:
+          "Airport Road's premier urban address: Aerocity Mohali 2027 investment outlook",
+        paragraphs: [
+          "Quick Investment Verdict for 2027: GMADA Aerocity stands out as one of the Tricity region's premier plotted townships for capital appreciation, wealth preservation, and high-yield builder-floor construction. With 100% GMADA-planned infrastructure, direct frontage on 200-ft PR-7 Airport Road, 5-minute transit to Shaheed Bhagat Singh International Airport, and proximity to IT City Mohali, current plot values range between ₹65,000 and ₹1,12,000+ per sq. yard across Blocks A through J.",
+          "As real estate investors, end-users, and NRI families look ahead to 2027, GMADA Aerocity in SAS Nagar (Mohali) stands at the pinnacle of high-growth property markets in North India. Spread across roughly 1,000 acres flanking the iconic 200-foot-wide PR-7 Airport Road, Aerocity has completed its crucial transition from an ambitious plotted township into a mature, high-density residential and commercial powerhouse.",
+          "Unlike speculative suburban layouts, Aerocity's foundation was meticulously engineered by the Greater Mohali Area Development Authority (GMADA). It features 100% underground high-tension electricity cabling, broad 40-foot, 60-foot, and 80-foot paved internal avenues, centralized water distribution, stormwater drainage networks, and designated institutional zones. Today, hundreds of families reside in custom luxury kothis and modern builder floors, while prominent retail brands and corporate banks operate thriving commercial branches along its primary avenues.",
+          "With land values escalating from ₹40,000–₹50,000 per sq. yard in 2020–2021 to current benchmarks ranging between ₹65,000 and ₹1,12,000+ per sq. yard depending on the block, the critical question for prospective buyers is clear: Is Aerocity Mohali still a high-conviction investment for 2027? Below is an exhaustive, ground-verified market evaluation covering block dynamics, asset choices, infrastructure triggers, and crucial legal safeguards.",
+        ],
+      },
+      {
+        heading:
+          "Unmatched connectivity: PR-7, PR-9 Southern Bypass & International Airport nexus",
+        image: "/images/map-aerocity-2027.png",
+        imageAlt:
+          "GMADA Aerocity Mohali Master Plan Map showing PR-7 Airport Road, PR-9 Bypass and Blocks A through J",
+        imageCaption:
+          "Strategic positioning: GMADA Aerocity sits directly between PR-7 Airport Road, PR-9 Southern Bypass, and Shaheed Bhagat Singh International Airport.",
+        paragraphs: [
+          "Connectivity is the single largest economic moat separating Aerocity from other Tricity residential sectors. Situated in the immediate catchment of the Shaheed Bhagat Singh International Airport (IXC), residents can access the terminal departures lounge in just 5 to 7 minutes without crossing a single bottleneck.",
+          "The township benefits from multi-directional, signal-free regional expressways that ensure rapid transit across the entire economic corridor:",
+        ],
+        bullets: [
+          "PR-7 Airport Road (200-Foot Arterial Expressway): Serves as Aerocity's primary commercial boulevard, connecting Zirakpur (NH-7 Delhi–Patiala Highway) directly to Kharar (NH-205A) and New Chandigarh. It accommodates premium automobile showrooms, banking headquarters, and multi-cuisine high-street dining.",
+          "PR-9 Southern Peripheral Expressway (Upcoming 200-Foot Bypass): Engineered to bypass congested internal corridors, PR-9 directly links Aerocity and IT City to the Zirakpur–Patiala highway and the Panchkula/Himalayan Expressway, significantly boosting long-term transit efficiency toward Haryana and Himachal Pradesh.",
+          "Direct Signal-Free Chandigarh Linkages: Seamlessly connects into southern Chandigarh sectors (Sectors 48, 49, 50, and 63) and Industrial Area Phase 2 via broad 4-lane and 6-lane master plan dividing roads in under 10–12 minutes.",
+          "Immediate Adjacency to IT City Mohali: Directly borders Sectors 82-A, 83-A, and 101-A, housing global technology hubs (Infosys, QuarkCity), biotech institutes (NABI, IISER), and premier universities (Plaksha University, Amity University, Ashoka University campus). This creates an insatiable white-collar tenant and buyer pipeline.",
+        ],
+      },
+      {
+        heading:
+          "Block-by-block granular price matrix: Blocks A through J compared",
+        image: "/images/gmada-aerocity-master-plan-preview.jpg",
+        imageAlt:
+          "Official GMADA Aerocity Mohali Master Layout Plan Drawing (Blocks A to J Plot Numbers and Road Widths)",
+        imageCaption:
+          "Official GMADA master layout: Approved technical layout-cum-numbering plan of Aerocity SAS Nagar, detailing Blocks A through J, plot allocations, and internal avenue widths.",
+        downloadCard: {
+          badge: "Official GMADA Layout Plan",
+          title: "Download Full GMADA Aerocity Master Plan Map (PDF)",
+          description:
+            "Get the high-resolution official layout-cum-numbering plan (Blocks A through J) published by GMADA. Includes all plot numbers, road widths (40', 60', 80', 200'), commercial pockets, and green belts.",
+          buttonText: "Download Map PDF (3.9 MB)",
+          fileUrl: "/downloads/gmada-aerocity-mohali-master-plan-map.pdf",
+          fileName: "gmada-aerocity-mohali-master-plan-map.pdf",
+          fileSize: "3.98 MB",
+        },
+        paragraphs: [
+          "Aerocity is organized into 10 distinct residential blocks (A, B, C, D, E, F, G, H, I, and J). Because the township spans a vast geographical parcel, pricing, end-user habitation, and capital liquidity vary noticeably across blocks. Below is the ground-verified 2026–2027 pricing matrix across standard plot sizes:",
+        ],
+        bullets: [
+          "Block A & Block B (Chandigarh Gateway & Luxury Villas):\n• Current Market Rates: ₹75,000 – ₹98,000 per sq. yard\n• Plot Sizes: 100, 150, 200, 300, and 500 sq. yards (1 Kanal)\n• Dynamics: Situated closest to the Chandigarh border (near Sector 48/49), these blocks boast dense green belts, quiet internal streets, and a high concentration of bespoke 1 Kanal luxury kothis. Liquidity is exceptional for 300 and 500 sq. yard parcels.",
+          "Block C & Block D (Commercial Heart & PR-7 Frontage):\n• Current Market Rates: ₹85,000 – ₹1,12,000 per sq. yard\n• Plot Sizes: 100, 150, 200, 250, and 300 sq. yards\n• Dynamics: Commands the highest pricing in Aerocity due to immediate frontage on the PR-7 commercial spine and active market complexes. Features dense, high-velocity independent builder-floor construction (Stilt + 3) and premium residential rental yields.",
+          "Block E & Block F (Central Residential Green Enclaves):\n• Current Market Rates: ₹72,000 – ₹92,000 per sq. yard\n• Plot Sizes: 150, 200, 300, and 500 sq. yards\n• Dynamics: Characterized by broad 60-foot and 80-foot sector dividing roads, expansive community parks, and lower vehicular noise. Highly favored by doctors, senior civil officers, and self-use end-builders.",
+          "Block G & Block H (IT City & Airport Proximity Corridor):\n• Current Market Rates: ₹68,000 – ₹88,000 per sq. yard\n• Plot Sizes: 100, 150, 200, and 300 sq. yards\n• Dynamics: Directly faces the IT City technology hub and airport approach road. Strong tenant demand from tech executives and university faculty creates consistent capital turnover for 150 and 200 sq. yard builder floors.",
+          "Block I & Block J (High-Upside Growth Frontiers):\n• Current Market Rates: ₹65,000 – ₹82,000 per sq. yard\n• Plot Sizes: 100, 150, 200, 250, and 300 sq. yards\n• Dynamics: Offers the most attractive entry-level capital ticket in Aerocity. Substantial upside potential as the PR-9 ring road and upcoming Aerotropolis commercial sectors reach operational status.",
+          "Preferential Location Charges (PLC): Add 10% to 15% premium for corner plots, north-east morning sun facing plots, direct park-facing parcels, or plots situated on 60-foot or 80-foot dividing avenues.",
+        ],
+      },
+      {
+        heading:
+          "Asset class comparison: GMADA residential plots vs. builder floors vs. apartments",
+        paragraphs: [
+          "When evaluating Aerocity for 2027, selecting the appropriate asset vehicle is as crucial as picking the right block. The micro-market offers three primary avenues for real estate capital:",
+        ],
+        bullets: [
+          "1. GMADA Freehold Residential Plots (Land Ownership):\n• Ownership: 100% undisputed freehold title over the underlying land plot, fully registered with GMADA and the Punjab Revenue Department.\n• Capital Outlay: ₹70 Lakhs (for 100 sq. yd.) to ₹4.50+ Crore (for 500 sq. yd. / 1 Kanal).\n• ROI & Yield: Zero immediate rental income until developed, but yields the highest long-term unearned capital appreciation and multigenerational wealth preservation.\n• Ideal For: HNIs, NRIs, and long-term land bankers seeking absolute title security.",
+          "2. Independent Builder Floors (Stilt + 3 Floors):\n• Ownership: Freehold floor ownership with undivided proportionate share (UDS) of land and dedicated covered stilt car parking.\n• Capital Outlay: ₹65 Lakhs to ₹85 Lakhs (for 150–200 sq. yd. 3 BHK) up to ₹1.10 Cr – ₹1.45 Cr (for 300–500 sq. yd. luxury 4 BHK floors with private elevator access).\n• ROI & Yield: Strong 3.5% to 4.5% gross annual rental yield driven by corporate and tech tenants; exceptional resale turnover speed.\n• Ideal For: Working professionals, nuclear families, and investors seeking immediate recurring cash flow.",
+          "3. High-Rise Luxury Apartments (Peripheral Aerocity Societies):\n• Societies: High-rise societies along Airport Road (e.g., Marbella Grand in 82A, Falcon View in 66A, Green Lotus Utsav).\n• Capital Outlay: ₹1.60 Cr to ₹4.50+ Cr.\n• ROI & Yield: 3.0% to 3.8% rental yield; comprehensive gated amenities (swimming pool, multi-tier security, clubhouse, power backup), but limited individual land ownership.\n• Ideal For: Buyers desiring resort-style community recreation with minimal property maintenance responsibilities.",
+        ],
+      },
+      {
+        heading:
+          "Resale market dynamics: GMADA transfer permissions, circle rates & collector duties",
+        image: "/images/gmada-aerocity-property-verification.jpg",
+        imageAlt:
+          "GMADA Aerocity Property Document Verification, PUDA Bhawan Transfer Permission and NDC Records",
+        imageCaption:
+          "Official due diligence: Certified GMADA land allotment records, No Dues Certificates (NDC), and title transfer execution.",
+        paragraphs: [
+          "Secondary resale transactions in Aerocity follow well-defined government procedures. Understanding the exact stage of property documentation protects buyers from unauthorized intermediaries and costly administrative delays:",
+        ],
+        bullets: [
+          "Stage 1: Allotment Letter (LOA) Stage: The foundational allotment document issued by GMADA. If the seller has not executed the conveyance deed, the resale proceeds via Official GMADA Transfer Permission at PUDA Bhawan, Sector 62, Mohali. Requires physical biometric attendance of seller and buyer, complete payment of GMADA transfer administrative fees (~2.5% to 3%), and certified clearance of all prior installment dues.",
+          "Stage 2: Conveyance Deed / Freehold Registry: Executed once 100% plot cost is cleared and GMADA issues the official No Objection Certificate (NOC) and No Dues Certificate (NDC). The formal title conveyance deed is executed at the Sub-Registrar Office, District Administrative Complex (DAC), Sector 76, SAS Nagar.",
+          "Punjab Stamp Duty Breakdown (2026–2027): Under SAS Nagar collector rates, stamp duty is levied at 7% for male buyers, 5% for female buyers (availing the 2% Punjab state gender concession), and 6% for joint spousal ownership, plus 1% statutory registration charges and applicable municipal infrastructure cess.",
+          "Circle Rate vs. Market Rate Valuation: Current official collector rates in Aerocity sit between ₹28,000 and ₹38,000 per sq. yard, while market trading values range from ₹65,000 to ₹1,12,000 per sq. yard. Institutional bank home loans calculate eligibility strictly against collector benchmarks unless formal registered developer tri-partite contracts are established.",
+        ],
+      },
+      {
+        heading:
+          "Infrastructure catalysts shaping 2027 appreciation: Aerotropolis & commercial SCO hubs",
+        paragraphs: [
+          "Several landmark infrastructure milestones are driving long-term capital appreciation across Aerocity toward 2027:",
+        ],
+        bullets: [
+          "GMADA Aerotropolis Mega-Expansion: Directly adjacent to Aerocity, GMADA is developing the sprawling 5,500-acre Aerotropolis township spanning both sides of the Zirakpur–Banur expressway. With infrastructure tenders actively executing for Pockets A, B, C, and D, Aerocity will function as the established, fully inhabited urban gateway to this massive modern expansion.",
+          "Booming Commercial SCO Corridors: GMADA's e-auctions along Aerocity's main sector boulevards have drawn record institutional bids from top North Indian builders, hospital chains, and retail developers. Upcoming commercial complexes, corporate offices, and SCO plazas are creating thousands of local jobs within walking distance of residential blocks.",
+          "International Flight & Cargo Expansion: The ongoing enhancement of direct international passenger routes and the dedicated cargo terminal at Shaheed Bhagat Singh International Airport continues to attract NRI capital, export businesses, and multi-locational corporates.",
+          "Civic & Social Infrastructure Maturity: Unlike newer outlying colonies, Aerocity benefits from fully commissioned municipal water works, 66kV electrical substations, LED street-lighting grids, functional stormwater networks, and operational police patrolling beats.",
+        ],
+      },
+      {
+        heading:
+          "Crucial buyer risks & due diligence: Extension fees, Section 47-A & litigation checks",
+        paragraphs: [
+          "While Aerocity is one of Punjab's safest real estate investments, acquiring resale property without rigorous legal due diligence exposes buyers to substantial financial liabilities:",
+        ],
+        bullets: [
+          "1. GMADA Non-Construction Extension Fee Liabilities: GMADA bylaws mandate that plot allottees must complete construction (achieve minimum plinth and roof completion) within 3 years from the offer of possession. If a vacant plot is sold after this window, compounding annual extension fees accumulate—often running into ₹3 Lakh to ₹10+ Lakh. Never pay a token advance without verifying a fresh, certified GMADA No Dues Certificate (NDC).",
+          "2. Section 47-A Indian Stamp Act Scrutiny: Sub-Registrar DAC Sector 76 strictly inspects deeds to ensure property values are not artificially depressed below prevailing circle rates. Any discrepancies can lead to deed impoundment, penal audits, and hefty interest penalties under Section 47-A of the Indian Stamp Act.",
+          "3. Unapproved Sub-Divisions & Stilt Floor Sanctions: GMADA strictly prohibits unauthorized horizontal or vertical physical partitioning of plots. While Stilt + 3 independent builder floors are permitted under revised architectural guidelines, ensure the builder holds an officially sanctioned architectural drawing (DPC certificate) and formal completion certificate.",
+          "4. Original Allotment Paperwork & LOI Verification: If dealing in early-stage land-pooling allotments, inspect the original Letter of Intent (LOI), land acquisition collector awards, and verify that no ongoing partition lawsuits or family inheritance disputes are pending in the Punjab & Haryana High Court.",
+          "5. Unregulated 'Near Aerocity' Marketing Traps: Exercise extreme caution regarding private colonizers marketing unapproved farmland or non-GMADA colonies as 'Aerocity Extension' or 'PR-7 Touching'. Genuine GMADA Aerocity properties reside exclusively within notified GMADA sector grids under SAS Nagar master planning.",
+        ],
+      },
+      {
+        heading:
+          "How Vedang Properties guides your Aerocity property acquisition",
+        image: "/images/vedang-aerocity-advisory-desk.png",
+        imageAlt:
+          "Vedang Properties Real Estate Advisory Office at #171 MCC-2 GMADA Aerocity Mohali",
+        imageCaption:
+          "Vedang Properties (vedangproperties.in): Stationed permanently at #171 MCC-2 GMADA Aerocity for verified direct-owner plot and builder-floor inventory.",
+        paragraphs: [
+          "At Vedang Properties, GMADA Aerocity is not merely a market we track—it is our permanent home. Headquartered right on-ground at #171 MCC-2 in GMADA Aerocity, our advisory team operates with a strict philosophy of grounded reality, verified legal documentation, and zero sales pressure.",
+          "Whether you are acquiring a residential plot for custom kothi construction, securing a high-yield builder floor, or investing in a commercial SCO, here are the verified inventory options currently managed directly by our Aerocity desk:",
+        ],
+        bullets: [
+          "Featured Live Listing — 300 Sq. Yd. Resale Plot in Block E: Available for immediate purchase in well-inhabited Block E. Boasts wide approach road access, clear boundary demarcation, 100% GMADA dues cleared, and direct transfer/registry eligibility. View full details and documents directly on our listings portal.",
+          "Verified GMADA Plot Portfolio (Blocks A to J):\n• 4 & 6 Marla Plots (100 & 150 sq. yd.): Compact residential cuts in Blocks C, D, G, H, and I starting from ₹65L – ₹1.25 Cr—ideal for independent builder floor development.\n• 8 & 10 Marla Plots (200 & 250 sq. yd.): Established family plots in Blocks A, B, E, and F on wide 40-ft and 60-ft roads with park-facing options.\n• 12 Marla & 1 Kanal Plots (300 & 500 sq. yd.): Prime luxury villa inventory in Blocks A, B, and E with wide frontage, north-east morning sun facing, and lush green park views.",
+          "Independent Builder Floors (Stilt + 3 with Lift): Brand-new, ready-to-move 3 BHK and 4 BHK builder floors with private lift access, modular kitchens, and covered stilt parking across Blocks C, D, and E (₹70 Lakhs to ₹1.35 Crore)—generating immediate 3.5%–4.5% gross rental yields.",
+          "Commercial Showrooms & Booths (MCC-1 & MCC-2): Prime SCO plots and constructed retail booths with direct 200-ft Airport Road commercial frontage, offering superior capital appreciation and steady commercial lease incomes.",
+          "100% Direct-Owner Negotiations & Zero Hidden Extension Fees: We bypass broker chains to connect you directly with genuine allottees. Every property undergoes exhaustive title searches and NDC verification at PUDA Bhawan and Sub-Registrar DAC Sector 76.",
+        ],
+        googleProfileCard: {
+          businessName: "Vedang Properties",
+          ratingText: "5.0 ★ Rating on Google (Verified Business Profile)",
+          address:
+            "171, MCC - 2, GMADA Aerocity, Sahibzada Ajit Singh Nagar, Punjab 140306",
+          profileUrl: "https://share.google/OPXRIxW7Er3fVmykt",
+          reviewsUrl: "https://share.google/OPXRIxW7Er3fVmykt",
+          directionsUrl:
+            "https://www.google.com/maps/dir/?api=1&destination=Vedang%20Properties%20171%20MCC%202%20GMADA%20Aerocity%20Mohali",
+          badge: "Verified Aerocity Real Estate Hub",
+        },
+        links: [
+          {
+            label: "Download Official GMADA Aerocity Master Plan Map (PDF)",
+            href: "/downloads/gmada-aerocity-mohali-master-plan-map.pdf",
+            isExternal: true,
+            variant: "primary",
+          },
+          {
+            label: "View Live Listing: 300 Sq Yd Resale Plot in Block E Aerocity",
+            href: "/listings/aerocity-e-block-300-sqyd-resale-plot",
+            isExternal: false,
+            variant: "primary",
+          },
+          {
+            label: "Explore All Verified Mohali Property Listings",
+            href: "/listings",
+            isExternal: false,
+            variant: "guide",
+          },
+          {
+            label: "Open Verified Google Business Profile",
+            href: "https://share.google/OPXRIxW7Er3fVmykt",
+            isExternal: true,
+            variant: "google",
+          },
+          {
+            label: "Get Turn-by-Turn Directions to Aerocity Office",
+            href: "https://www.google.com/maps/dir/?api=1&destination=Vedang%20Properties%20171%20MCC%202%20GMADA%20Aerocity%20Mohali",
+            isExternal: true,
+            variant: "direction",
+          },
+          {
+            label: "Call Office Directly: +91 82646 30736",
+            href: "tel:+918264630736",
+            isExternal: true,
+            variant: "primary",
+          },
+          {
+            label: "WhatsApp Real Estate Advisory Desk",
+            href: "https://wa.me/918264630736?text=Hello%20Vedang%20Properties%2C%20I%20am%20interested%20in%20investing%20in%20GMADA%20Aerocity%20Mohali.",
+            isExternal: true,
+            variant: "primary",
+          },
+          {
+            label: "Explore Dedicated Aerocity Area Guide",
+            href: "/areas/aerocity-mohali",
+            isExternal: false,
+            variant: "area",
+          },
+          {
+            label: "Punjab Stamp Duty & Property Registration Guide",
+            href: "/blog/stamp-duty-and-property-registration-mohali-2026",
+            isExternal: false,
+            variant: "guide",
+          },
+          {
+            label: "Essential Plot Buying Checklist in Mohali",
+            href: "/blog/buying-plot-mohali-shortlisting-checks",
+            isExternal: false,
+            variant: "guide",
+          },
+          {
+            label: "Schedule In-Person Consultation at Aerocity Office",
+            href: "/contact",
+            isExternal: false,
+            variant: "primary",
+          },
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question:
+          "Is Aerocity Mohali a good place to invest for 2027?",
+        answer:
+          "Yes, GMADA Aerocity remains one of the highest-conviction real estate investments in the Tricity region for 2027. Its enduring advantages include 100% GMADA-approved freehold titles, 5-minute transit to Shaheed Bhagat Singh International Airport, direct connectivity via PR-7 and upcoming PR-9, and surging commercial demand from neighboring IT City. Capital appreciation continues to average 12%–18% annually across prime blocks.",
+      },
+      {
+        question:
+          "What is the current plot price per sq. yard in GMADA Aerocity Mohali?",
+        answer:
+          "As of 2026–2027, plot prices in Aerocity range from ₹65,000 to over ₹1,12,000 per sq. yard depending on the block and road width. Prime central blocks (Blocks C and D) command ₹85,000 to ₹1,12,000/sq. yd. due to PR-7 commercial frontage. Chandigarh-adjacent blocks (Blocks A and B) trade at ₹75,000 to ₹98,000/sq. yd., while upcoming growth pockets (Blocks I and J) offer accessible entry points from ₹65,000 to ₹82,000/sq. yd. Corner and park-facing plots carry a 10%–15% premium.",
+      },
+      {
+        question:
+          "Which block is best to buy a plot in Aerocity Mohali?",
+        answer:
+          "The ideal block depends on your objective:\n• For immediate custom homebuilding and prestige: Blocks A and B are premier due to immediate Chandigarh proximity and quiet luxury kothis.\n• For commercial exposure and high builder-floor rental yields: Blocks C and D lead due to PR-7 Airport Road access and active retail.\n• For IT professionals and corporate tenants: Blocks G and H provide immediate walking access to IT City.\n• For maximum capital appreciation upside: Blocks I and J offer lower cost entry with long-term gains driven by the PR-9 bypass.",
+      },
+      {
+        question:
+          "Should I buy a freehold plot or an independent builder floor in Aerocity?",
+        answer:
+          "If your objective is long-term capital compounding and complete land ownership, a GMADA freehold plot (200, 300, or 500 sq. yd.) is the superior choice. If you seek immediate rental cash flows (3.5%–4.5% gross annual yield) or a move-in-ready home at a lower ticket size (₹65L–₹1.25 Cr), independent builder floors (Stilt + 3) offer high liquidity and modern lift amenities.",
+      },
+      {
+        question:
+          "What is the GMADA non-construction extension fee penalty?",
+        answer:
+          "GMADA mandates that plot owners must construct and obtain an occupation or completion certificate within 3 years from the offer of possession. If a plot remains vacant beyond this deadline, GMADA levies an annual compounding non-construction extension fee that can range from ₹3 Lakh to ₹10+ Lakh. Buyers must insist on a verified GMADA No Dues Certificate (NDC) to ensure the seller has cleared all pending extension penalties.",
+      },
+      {
+        question:
+          "What is the official procedure for transferring a plot in GMADA Aerocity?",
+        answer:
+          "For un-registered allotted plots, transfer is executed through GMADA PUDA Bhawan (Sector 62, Mohali) via Official Transfer Permission, requiring biometric verification of both parties, payment of GMADA transfer administrative fees (~2.5%–3%), and clearance of all installment dues. For registered plots, conveyance is executed at the Sub-Registrar Office DAC Sector 76 with Punjab stamp duty (7% male, 5% female, 6% joint) and 1% registration charges.",
+      },
+      {
+        question:
+          "What are the standard residential plot sizes available in GMADA Aerocity Mohali?",
+        answer:
+          "GMADA Aerocity offers six standardized residential plot dimensions across its 10 blocks (A to J):\n• 4 Marla (100 sq. yd. / 900 sq. ft.): Popular for budget-conscious homebuilders and 3-storey builder floors.\n• 6 Marla (150 sq. yd. / 1,350 sq. ft.): Well-proportioned layout for 3 BHK builder floors.\n• 8 Marla (200 sq. yd. / 1,800 sq. ft.): High-demand sweet spot for independent family homes.\n• 10 Marla (250 sq. yd. / 2,250 sq. ft.): Spacious residential cuts on wide interior avenues.\n• 12 Marla (300 sq. yd. / 2,700 sq. ft.): Prime luxury plot size with wide frontage and private front lawns.\n• 1 Kanal (500 sq. yd. / 4,500 sq. ft.): Flagship luxury kothi parcels, predominantly concentrated in Blocks A, B, and E.",
+      },
+      {
+        question:
+          "Where is the Vedang Properties office located in Aerocity Mohali?",
+        answer:
+          "Vedang Properties is permanently stationed on-ground at #171, MCC - 2, GMADA Aerocity, Sahibzada Ajit Singh Nagar, Punjab 140306. Directly accessible from PR-7 Airport Road, our advisory desk is open 7 days a week (9:00 AM to 8:00 PM) for verified plot shortlisting, official GMADA file inspections, title scrutiny, and physical site tours across Blocks A through J.",
+      },
+    ],
+  },
   {
     slug: "luxury-apartments-airport-road-mohali-marbella-homeland-falcon-hero-homes",
     category: "Buyer Guide",

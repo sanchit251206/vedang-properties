@@ -38,7 +38,7 @@ export const areaGuides: AreaGuide[] = [
       "Compare homes, plots, and commercial property in Aerocity Mohali with practical local guidance from Vedang Properties.",
     image: "/images/area-aerocity.jpg",
     imageAlt: "Modern residential house exterior for an Aerocity Mohali area guide",
-    mapImage: "/images/map-aerocity.png",
+    mapImage: "/images/map-aerocity-2027.png",
     copy:
       "Airport-side residential and commercial options with access to MCC 2 and nearby sectors.",
     intro:

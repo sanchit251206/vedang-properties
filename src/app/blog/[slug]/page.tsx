@@ -35,21 +35,25 @@ export async function generateMetadata({
     };
   }
 
+  const metaTitle = article.metaTitle || article.title;
+  const metaDescription = article.metaDescription || article.excerpt;
+
   return {
-    title: article.title,
-    description: article.excerpt,
+    title: metaTitle,
+    description: metaDescription,
     alternates: {
       canonical: `/blog/${article.slug}`,
     },
     keywords: [
       ...coreSeoKeywords,
       ...article.tags,
+      metaTitle,
       article.title,
       "Mohali real estate guide",
     ],
     openGraph: {
-      title: `${article.title} | Vedang Properties`,
-      description: article.excerpt,
+      title: `${metaTitle} | Vedang Properties`,
+      description: metaDescription,
       type: "article",
       url: `/blog/${article.slug}`,
       images: [
@@ -61,8 +65,8 @@ export async function generateMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      title: `${article.title} | Vedang Properties`,
-      description: article.excerpt,
+      title: `${metaTitle} | Vedang Properties`,
+      description: metaDescription,
       images: [absoluteUrl(article.image)],
     },
   };
@@ -102,7 +106,7 @@ export default async function BlogArticlePage({
           description: article.excerpt,
         },
         headline: article.title,
-        description: article.excerpt,
+        description: article.metaDescription || article.excerpt,
         image: absoluteUrl(article.image),
         datePublished: isoDate,
         dateModified: isoDate,
@@ -149,6 +153,23 @@ export default async function BlogArticlePage({
             item: articleUrl,
           },
         ],
+      },
+      {
+        "@type": "RealEstateAgent",
+        "@id": `${absoluteUrl("/")}#realestateagent`,
+        name: "Vedang Properties",
+        url: absoluteUrl("/"),
+        logo: absoluteUrl("/images/vedang-logo-mark.png"),
+        telephone: "+91-8264630736",
+        priceRange: "₹₹₹",
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: "171, MCC - 2, GMADA Aerocity",
+          addressLocality: "Sahibzada Ajit Singh Nagar, Mohali",
+          addressRegion: "Punjab",
+          postalCode: "140306",
+          addressCountry: "IN",
+        },
       },
     ],
   };
@@ -345,6 +366,46 @@ export default async function BlogArticlePage({
                       </div>
                     ) : null}
 
+                    {section.downloadCard ? (
+                      <div className="mt-6 overflow-hidden rounded-xl border-2 border-[#d6a74e]/40 bg-gradient-to-br from-[#10383a] via-[#0d2e30] to-[#0a2426] p-5 sm:p-6 text-white shadow-lg">
+                        <div className="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
+                          <div className="flex items-start gap-4">
+                            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#d6a74e]/20 text-[#d6a74e] border border-[#d6a74e]/40">
+                              <MasterMapIcon />
+                            </div>
+                            <div>
+                              <div className="flex flex-wrap items-center gap-2">
+                                <span className="rounded bg-[#d6a74e] px-2.5 py-0.5 text-[10px] font-extrabold uppercase tracking-wider text-[#10383a]">
+                                  {section.downloadCard.badge || "Official GMADA Layout"}
+                                </span>
+                                {section.downloadCard.fileSize ? (
+                                  <span className="text-xs text-white/70">
+                                    ● High-Resolution PDF ({section.downloadCard.fileSize})
+                                  </span>
+                                ) : null}
+                              </div>
+                              <h3 className="mt-1.5 text-lg font-bold text-white md:text-xl">
+                                {section.downloadCard.title}
+                              </h3>
+                              <p className="mt-1 max-w-xl text-xs leading-relaxed text-white/80">
+                                {section.downloadCard.description}
+                              </p>
+                            </div>
+                          </div>
+                          <a
+                            href={section.downloadCard.fileUrl}
+                            download={section.downloadCard.fileName}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex h-11 shrink-0 items-center justify-center gap-2 rounded-lg bg-[#d6a74e] px-5 text-xs font-bold uppercase tracking-wider text-[#10383a] shadow-md transition hover:bg-[#e0b862] hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-[#d6a74e]/30"
+                          >
+                            <DownloadIcon />
+                            <span>{section.downloadCard.buttonText || "Download Master Plan PDF"}</span>
+                          </a>
+                        </div>
+                      </div>
+                    ) : null}
+
                     {section.links && section.links.length > 0 ? (
                       <div className="mt-6 rounded-lg border border-slate-200 bg-[#faf8f2] p-4">
                         <p className="text-xs font-bold uppercase tracking-wider text-[#b85f45]">
@@ -400,7 +461,8 @@ export default async function BlogArticlePage({
                     </span>
                   </div>
                   <h2 className="mt-2 text-2xl font-bold text-[#10383a]">
-                    Frequently asked questions: luxury apartments on Airport Road Mohali
+                    {article.faqHeading ||
+                      "Frequently asked questions: luxury apartments on Airport Road Mohali"}
                   </h2>
                   <div className="mt-6 grid gap-4">
                     {article.faqs.map((faq) => (
@@ -676,6 +738,44 @@ function GoogleLogoIcon() {
       <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
       <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" />
       <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" />
+    </svg>
+  );
+}
+
+function DownloadIcon() {
+  return (
+    <svg
+      aria-hidden="true"
+      viewBox="0 0 24 24"
+      className="h-4 w-4 shrink-0"
+      fill="none"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2.5"
+    >
+      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+      <polyline points="7 10 12 15 17 10" />
+      <line x1="12" y1="15" x2="12" y2="3" />
+    </svg>
+  );
+}
+
+function MasterMapIcon() {
+  return (
+    <svg
+      aria-hidden="true"
+      viewBox="0 0 24 24"
+      className="h-6 w-6 shrink-0"
+      fill="none"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2"
+    >
+      <polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21" />
+      <line x1="9" y1="3" x2="9" y2="18" />
+      <line x1="15" y1="6" x2="15" y2="21" />
     </svg>
   );
 }
